@@ -20,8 +20,7 @@ Before joining the University of Toledo, I completed my Bachelor’s in Electric
 - **Edge Computing & IoT**
 
 ### 📫 How to reach me:
-[![Gmail](https://img.shields.io/badge/-abrarhossainhimself@gmail.com-DB4437?style=flat&logo=Gmail&logoColor=white)](mailto:abrarhossainhimself@gmail.com)  
-[![LinkedIn](https://img.shields.io/badge/-Abrar_Hossain-2867B2?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/abrarhossainhimself/)  
+[![Gmail](https://img.shields.io/badge/-abrarhossainhimself@gmail.com-DB4437?style=flat&logo=Gmail&logoColor=white)](mailto:abrarhossainhimself@gmail.com)  [![LinkedIn](https://img.shields.io/badge/-Abrar_Hossain-2867B2?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/abrarhossainhimself/) [![Twitter](https://img.shields.io/badge/-Abrar_Hossain-1DA1F2?style=flat&logo=Twitter&logoColor=white)](https://x.com/AbrarHoessain)   
 
 ### 🔭 I’m currently learning:
 - Advanced **Machine Learning Algorithms**  
@@ -29,3 +28,5 @@ Before joining the University of Toledo, I completed my Bachelor’s in Electric
 
 ### ⚡ Fun Fact:
 When I’m not optimizing HPC systems, I’m busy curating my playlists on Spotify or planning my next movie binge on Letterboxd.
+Here's the updated version with your Twitter link included:
+
