@@ -1,5 +1,5 @@
 # Md Abrar Hossain  
-[GitHub](https://github.com/AbrarHossainHimself) | [Google Scholar](https://scholar.google.com/citations?user=NSkFoF4AAAAJ&hl=en) | [LinkedIn]([#](https://www.linkedin.com/in/abrarhossainhimself/)
+[GitHub](https://github.com/AbrarHossainHimself) | [Google Scholar](https://scholar.google.com/citations?user=NSkFoF4AAAAJ&hl=en) | [LinkedIn]([https://www.linkedin.com/in/abrarhossainhimself/]
 
 Hi, I’m **Abrar Hossain**, a **Graduate Research Assistant** at **The University of Toledo**, and a **Visitor Researcher** at the **National Center for Atmospheric Research (NCAR)**. I am currently pursuing my **Master’s in Computer Science** with a focus on **High-Performance Computing (HPC)** and **Stochastic Modeling, Control, and Optimization**. My research involves developing innovative system software solutions to optimize HPC systems for **efficiency, reliability, and cost-effectiveness**.
 
@@ -25,6 +25,5 @@ Before joining the University of Toledo, I completed my Bachelor’s in Electric
 - Advanced **Machine Learning Algorithms**  
 - **System Architecture** for Scalable HPC  
 
-### ⚡ Fun Fact:
 
 
