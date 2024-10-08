@@ -28,5 +28,5 @@ Before joining the University of Toledo, I completed my Bachelor’s in Electric
 
 ### ⚡ Fun Fact:
 When I’m not optimizing HPC systems, I’m busy curating my playlists on Spotify or planning my next movie binge on Letterboxd.
-Here's the updated version with your Twitter link included:
+
 
