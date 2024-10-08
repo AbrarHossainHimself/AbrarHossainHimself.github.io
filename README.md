@@ -1,6 +1,5 @@
 # Abrar Hossain  
-![profile-count](https://komarev.com/ghpvc/?username=AbrarHossainHimself&color=blue&style=plastic)  
-[![GitHub](https://img.shields.io/badge/-@AbrarHossainHimself-181717?style=flat&logo=GitHub&logoColor=white)](https://github.com/AbrarHossainHimself)  
+![profile-count](https://komarev.com/ghpvc/?username=AbrarHossainHimself&color=blue&style=plastic)  [![GitHub](https://img.shields.io/badge/-@AbrarHossainHimself-181717?style=flat&logo=GitHub&logoColor=white)](https://github.com/AbrarHossainHimself)  
 [![GoogleScholar](https://img.shields.io/badge/-Abrar_Hossain-4885ED?style=flat&logo=GoogleScholar&logoColor=white)](https://scholar.google.com/citations?user=NSkFoF4AAAAJ&hl=en)  
 [![LinkedIn](https://img.shields.io/badge/-Abrar_Hossain-2867B2?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/abrarhossainhimself/)  
 [![Gmail](https://img.shields.io/badge/-abrarhossainhimself@gmail.com-DB4437?style=flat&logo=Gmail&logoColor=white)](mailto:abrarhossainhimself@gmail.com)
