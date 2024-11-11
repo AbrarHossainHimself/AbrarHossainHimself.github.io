@@ -2,16 +2,9 @@
 # Display name
 title: Abrar Hossain
 
-# Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
-
 # Full name (for SEO)
-first_name: Abrar 
+first_name: Abrar
 last_name: Hossain
-
-# Status emoji
-status:
-  icon: 💻🎬🎶⚽
 
 # Is this the primary user of the site?
 superuser: true
@@ -25,20 +18,19 @@ organizations:
     url: https://www.utoledo.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Graduate Research Assistant | Stochastic Modelling and Optimization | HPC
+bio: Graduate Research Assistant specializing in High-Performance Computing and Stochastic Optimization.
 
 # Interests to show in About widget
 interests:
-  - Stochastic Modelling and Optimization
-  - High Performance Computing
-  - Information Retrieval
+  - High Performance Computing (HPC)
+  - Stochastic Modeling & Optimization
+  - Parallel Computing
+  - Machine Learning Systems
+  - Cloud Computing
 
 # Education to show in About widget
 education:
   courses:
-    # - course: PhD in Artificial Intelligence
-    #   institution: Stanford University
-    #   year: 2012
     - course: MSc in Computer Science
       institution: The University of Toledo
       year: 2025 (Expected)
@@ -52,56 +44,51 @@ skills:
   - name: Technical
     items:
       - name: Python
-        description: ''
-        percent: 80
+        description: 'Scientific Computing, ML/DL Frameworks, Data Analysis'
+        percent: 90
         icon: python
         icon_pack: fab
-      - name: Data Science
+      - name: High Performance Computing
+        description: 'MPI, OpenMP, CUDA'
+        percent: 85
+        icon: server
+        icon_pack: fas
+      - name: Cloud Computing
+        description: 'AWS, Azure'
+        percent: 75
+        icon: cloud
+        icon_pack: fas
+  - name: Professional
+    color: '#00ff00'
+    color_border: '#00cc00'
+    items:
+      - name: Research
         description: ''
-        percent: 100
+        percent: 95
         icon: chart-line
         icon_pack: fas
-      - name: SQL
+      - name: Technical Writing
         description: ''
-        percent: 40
-        icon: database
+        percent: 85
+        icon: file-alt
         icon_pack: fas
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Hiking
-        description: ''
-        percent: 60
-        icon: person-hiking
-        icon_pack: fas
-      - name: Cats
-        description: ''
-        percent: 100
-        icon: cat
-        icon_pack: fas
-      - name: Photography
+      - name: Project Management
         description: ''
         percent: 80
-        icon: camera-retro
+        icon: tasks
         icon_pack: fas
 
 # Social/Academic Networking
-# For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
-#   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
-#   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 social:
   - icon: envelope
     icon_pack: fas
-    link: '/#contact'
+    link: 'mailto:your.email@utoledo.edu'  # Replace with your email
   - icon: twitter
     icon_pack: fab
     link: https://twitter.com/AbrarHoessain
     label: Follow me on Twitter
-    display:
-      header: true
-  - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
-    icon_pack: fas
+  - icon: google-scholar
+    icon_pack: ai
     link: https://scholar.google.com/citations?user=NSkFoF4AAAAJ&hl=en
   - icon: github
     icon_pack: fab
@@ -109,16 +96,21 @@ social:
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/abrarhossainhimself/
-  # Link to a PDF of your resume/CV.
-  # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
-  # and uncomment the lines below.
   - icon: cv
     icon_pack: ai
     link: uploads/resume.pdf
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
+
+# Organizational groups that you belong to (for People widget)
+#   Set this to `[]` or comment out if you are not using People widget.
+user_groups:
+  - Researchers
 ---
 
-I am currently working as a Graduate Research Assistant at The University of Toledo where I am also pursuing a Master's in Computer Science. My research focuses on High-performance computing (HPC) and Stochastic Modeling, Control, and Optimization. Specifically, I strive to innovate system software solutions for HPC systems to enhance their efficiency, reliability, and cost-effectiveness.
-{style="text-align: justify;"}
+I am a Graduate Research Assistant at The University of Toledo, pursuing my Master's in Computer Science. My research focuses on High-Performance Computing (HPC) and Stochastic Modeling & Optimization. I am passionate about developing innovative system software solutions for HPC systems to enhance their efficiency, reliability, and cost-effectiveness.
+
+My current research involves optimizing scientific workflows on edge computing systems and developing autotuning frameworks for HPC applications. I have experience in parallel computing, distributed systems, and machine learning infrastructure. I am particularly interested in the intersection of HPC and artificial intelligence, exploring ways to leverage high-performance computing resources for advanced AI applications.
+
+Previously, I completed my Bachelor's in Electrical Engineering from Chittagong University of Engineering & Technology, where I developed a strong foundation in systems engineering and computational methods.
