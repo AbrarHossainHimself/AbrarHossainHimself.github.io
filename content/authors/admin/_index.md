@@ -82,7 +82,7 @@ skills:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:your.email@utoledo.edu'  # Replace with your email
+    link: 'mailto:abrarhossainhimself@gmail.com'  # Replace with your email
   - icon: twitter
     icon_pack: fab
     link: https://twitter.com/AbrarHoessain
