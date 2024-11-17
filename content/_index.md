@@ -108,18 +108,30 @@ sections:
     id: publications
     content:
       title: Publications
-      text: |
-        A selected list of my recent publications in conferences and journals.
-      # This line tells the system to include all publications
       count: 0
       filters:
         folders:
           - publication
         exclude_featured: false
+        exclude_future: false
+      # Sort by most recent first
+      sort_by: 'date desc'
+      # Custom citation style
+      citation_style: custom
     design:
       columns: '1'
       view: citation
-      
+      # Custom CSS for title-first format
+      css_style: |
+        .article-title {
+          font-weight: bold;
+          display: block;
+          margin-bottom: 0.5em;
+        }
+        .article-metadata {
+          margin-top: 0.5em;
+        }
+
   - block: collection
     id: talks
     content:
