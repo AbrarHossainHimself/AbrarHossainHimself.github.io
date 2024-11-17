@@ -50,7 +50,7 @@ sections:
       username: admin
     design:
       columns: '1'
-  - block: experience
+  - - block: experience
     content:
       title: Experience
       # Date format for experience
@@ -62,29 +62,47 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: CEO
-          company: GenCoin
-          company_url: ''
-          company_logo: org-gc
-          location: California
-          date_start: '2021-01-01'
+        - title: Research Visitor
+          company: NSF National Center for Atmospheric Research
+          company_url: 'https://ncar.ucar.edu/'
+          company_logo: ''
+          location: Remote
+          date_start: '2024-08-01'
+          date_end: '2024-12-31'
+          description: |2-
+              Responsibilities included:
+              * Set up CouchDB, Chords, and Streampipes on ACCESS Jetstreams for community weather data storage
+              * Built data orchestrator for efficient data routing, achieving 30% transmission efficiency gain
+              * Reduced deployment costs by 25% for communities implementing the project
+
+        - title: Research Intern
+          company: NSF National Center for Atmospheric Research
+          company_url: 'https://ncar.ucar.edu/'
+          company_logo: ''
+          location: Boulder, CO
+          date_start: '2024-05-01'
+          date_end: '2024-08-31'
+          description: |2-
+              Key achievements:
+              * Designed private LoRa network for 6+ data types with Raspberry Pi gateways and central server
+              * Improved wind forecasting with edge-ML, achieving 20% accuracy gain on Raspberry Pi
+              * Image analysis with TensorFlow, 25% accuracy gain, 3x faster training, and 95% precision on 10,000+ images
+
+        - title: Graduate Research Assistant
+          company: The University of Toledo
+          company_url: 'https://www.utoledo.edu/'
+          company_logo: ''
+          location: Toledo, OH
+          date_start: '2023-08-01'
           date_end: ''
           description: |2-
-              Responsibilities include:
-
-              * Analysing
-              * Modelling
-              * Deploying
-        - title: Professor of Semiconductor Physics
-          company: University X
-          company_url: ''
-          company_logo: org-x
-          location: California
-          date_start: '2016-01-01'
-          date_end: '2020-12-31'
-          description: Taught electronic engineering and researched semiconductor physics.
+              Research focus:
+              * Contributed to an NSF-funded project to design HPEE, a new auto-tuning algorithm for optimizing HPC applications on edge devices
+              * Achieved 2.5X more efficiency with HPEE than benchmark methods
+              * Improve High-performance computing (HPC) systems through stochastic modeling and optimization
     design:
-      columns: '2'
+      # Choose how many columns the section has. Valid values: '1' or '2'.
+      columns: '1'
   - block: accomplishments
     content:
       # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
