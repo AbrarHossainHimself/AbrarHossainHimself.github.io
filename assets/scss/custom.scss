@@ -1,0 +1,139 @@
+/* Tech Theme Custom Styles */
+
+/* Glowing text effect for headings */
+h1, h2, h3 {
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
+  }
+  
+  /* Terminal-like blocks */
+  pre {
+    background: #1a1a1a !important;
+    border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  }
+  
+  /* Matrix-inspired links */
+  a {
+    color: #00ff9d;
+    transition: all 0.3s ease;
+    &:hover {
+      color: #00ffcc;
+      text-shadow: 0 0 8px rgba(0, 255, 204, 0.5);
+    }
+  }
+  
+  /* Tech-themed cards */
+  .card {
+    background: rgba(28, 28, 28, 0.95);
+    border: 1px solid #333;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(0, 255, 255, 0.15);
+    }
+  }
+  
+  /* Publication entries with tech style */
+  .publication-title {
+    font-family: 'Fira Code', monospace;
+    color: #00ff9d;
+  }
+  
+  /* Navigation bar tech style */
+  .navbar {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(18, 18, 18, 0.8);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+  }
+  
+  /* Tech-themed buttons */
+  .btn-primary {
+    background: linear-gradient(45deg, #00ff9d, #00ffcc);
+    border: none;
+    color: #000;
+    text-shadow: none;
+    
+    &:hover {
+      background: linear-gradient(45deg, #00ffcc, #00ff9d);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+    }
+  }
+  
+  /* Experience timeline with tech style */
+  .experience .card {
+    border-left: 4px solid #00ff9d;
+  }
+  
+  /* Skills section with tech style */
+  .featurette-icon {
+    color: #00ff9d;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+  
+  /* Dark mode specific styles */
+  [data-theme="dark"] {
+    --primary: #00ff9d;
+    --background: #121212;
+    
+    body {
+      background-color: var(--background);
+      background-image: 
+        linear-gradient(rgba(0, 255, 157, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 157, 0.05) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    
+    .navbar {
+      background: rgba(18, 18, 18, 0.95);
+    }
+  }
+  
+  /* Animation for section transitions */
+  .section {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Code snippet styling */
+  code {
+    color: #00ff9d;
+    background: rgba(0, 255, 157, 0.1);
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+  
+  /* Publication and talk sections */
+  .section-heading {
+    border-bottom: 2px solid #00ff9d;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Add a subtle matrix effect to the background */
+  .matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.03;
+    background: 
+      linear-gradient(rgba(0, 255, 157, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 157, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
