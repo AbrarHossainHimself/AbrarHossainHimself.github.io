@@ -1,0 +1,47 @@
+---
+title: 'Scalable HPC Job Scheduling and Resource Management in SST'
+authors:
+  - Abubeker Abdurahman
+  - admin
+  - Kevin A Brown
+  - Kazutomo Yoshii
+  - Kishwar Ahmed
+
+date: '2024-12-01T00:00:00Z'  # Adjust the date
+doi: ''
+
+# Schedule page publish date (NOT publication's date).
+publishDate: '2024-12-01T00:00:00Z'
+
+# Publication type.
+publication_types: ['1']
+
+# Publication name and optional abbreviated publication name.
+publication: In *Winter Simulation Conference*
+publication_short: In *WSC 2024*
+
+abstract: ''  # Add your abstract here
+
+# Summary. An optional shortened abstract.
+summary: A comprehensive approach to scalable job scheduling and resource management in the Structural Simulation Toolkit.
+
+tags:
+  - HPC
+  - Job Scheduling
+  - Resource Management
+  - SST
+
+featured: true
+
+url_pdf: ''
+url_code: ''
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: ''
+url_video: ''
+
+projects: []
+slides: ''
+---
