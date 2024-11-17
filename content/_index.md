@@ -111,34 +111,48 @@ sections:
         ### 2024
         1. "**HPC Application Parameter Autotuning on Edge Devices: A Bandit Learning Approach**"  
            Abrar Hossain, Abdel-Hameed Badawy, Mohammad Atiqul Islam, Tapasya Patki, Kishwar Ahmed  
-           *IEEE International Conference on High Performance Computing, Data, and Analytics (HiPC)*
+           *IEEE International Conference on High Performance Computing, Data, and Analytics (HiPC'24)*
         
         2. "**Scalable HPC Job Scheduling and Resource Management in SST**"  
            Abubeker Abdurahman, Abrar Hossain, Kevin A Brown, Kazutomo Yoshii, Kishwar Ahmed  
-           *Winter Simulation Conference (WSC)*
+           *Winter Simulation Conference (WSC'24)*
+
+        3. "**Environmental Data Sensing and Monitoring System Using Community-based Private LoRa Network**"  
+            Abrar Hossain, Keith Maull, Agbeli Ameko
+           *American Geophysical Union (AGU'24)*
         
         ### 2023
         3. "**Automating HPC Model Selection on Edge Devices**"  
            Abrar Hossain, Kishwar Ahmed  
-           *International Conference for High Performance Computing, Networking, Storage and Analysis (SC)*
+           *International Conference for High Performance Computing, Networking, Storage and Analysis (SC'23)*
     design:
       columns: '1'
 
-  - block: collection
-    id: talks
+  - block: markdown
     content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - event
+      title: Recorded Talks
+      text: |
+        ### Conference Presentations
+
+        #### Automating HPC Model Selection on Edge Devices
+        <div class="talk-container" style="display: flex; gap: 20px; margin-bottom: 30px;">
+          <div class="talk-details" style="flex: 2;">
+            <p><strong>Conference:</strong> SC23: International Conference for High Performance Computing, Networking, Storage and Analysis</p>
+            <p><strong>Date:</strong> November 2023</p>
+            <p><strong>Abstract:</strong> Presentation of our novel approach to automating HPC model selection for edge computing environments, discussing methodologies, challenges, and results.</p>
+            <p>
+              <a href="https://www.youtube.com/watch?v=_os3F6x1sek" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; text-decoration: none; color: #2962ff;">
+                <i class="fas fa-video"></i> Watch Presentation
+              </a>
+            </p>
+          </div>
+        </div>
     design:
-      columns: '2'
-      view: compact
-  - block: tag_cloud
-    content:
-      title: Popular Topics
-    design:
-      columns: '2'
+      columns: '1'
+      background:
+        color: 'white'
+      spacing:
+        padding: ["20px", "0", "20px", "0"]
   - block: contact
     id: contact
     content:
