@@ -1,14 +1,13 @@
 # SITE SETUP
+# Guide: https://docs.hugoblox.com/tutorial/
 # Documentation: https://docs.hugoblox.com/
 
+# Appearance
 appearance:
   theme_day: minimal
-  theme_night: cyberpunk  # More tech-focused dark theme
+  theme_night: minimal
   font: minimal
   font_size: L
-  # Custom CSS for tech theme
-  custom_css:
-    - custom.css
 
 # SEO
 marketing:
@@ -16,8 +15,12 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: 'The University of Toledo'
-    description: 'Abrar Hossain - HPC Researcher specializing in Edge Computing and Machine Learning'
+    description: 'Abrar Hossain - Graduate Research Assistant at The University of Toledo, specializing in High-Performance Computing and Stochastic Optimization.'
     twitter: 'AbrarHoessain'
+  analytics:
+    google_analytics: ''  # Add your Google Analytics ID here if you have one
+  verification:
+    google: ''
 
 # Site header
 header:
@@ -26,28 +29,33 @@ header:
     align: l
     show_logo: true
     show_language: false
-    show_day_night: true  # Enable dark mode toggle
+    show_day_night: true
     show_search: true
     highlight_active_link: true
-    background: dark  # Dark navbar
     
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Abrar Hossain. Built with Hugo Blox Builder.'
+    notice: '© {year} Abrar Hossain. All rights reserved.'
     license:
       enable: true
       allow_derivatives: false
       share_alike: true
       allow_commercial: false
 
-# Features
+# Localization
+locale:
+  date_format: 'Jan 2, 2006'
+  time_format: '3:04 PM'
+  address_format: en-us
+
+# Site features
 features:
   syntax_highlighter:
     theme_light: github-light
-    theme_dark: dracula  # Cool dark theme for code
+    theme_dark: dracula
   math:
-    enable: true
+    enable: true  # Enable if you plan to write mathematical equations
   privacy_pack:
     enable: true
   repository:
@@ -55,15 +63,24 @@ features:
     content_dir: content
     branch: main
   avatar:
-    shape: circle
+    gravatar: false
+    shape: circle  # Options are circle or square
   comment:
-    provider: ''
+    provider: 'giscus'  # Enable if you want to add comments to your posts
+    giscus:
+      repo: 'AbrarHossainHimself/abrarhossainhimself.github.io'
+      repo_id: ''  # Fill in your repo ID
+      category: 'Comments'
+      category_id: ''  # Fill in your category ID
   search:
     provider: wowchemy
     algolia:
+      app_id: ''
+      api_key: ''
+      index_name: ''
       show_logo: false
   map:
-    provider: ''
+    provider: 'mapnik'
     api_key: ''
     zoom: 15
 
@@ -73,4 +90,8 @@ extensions:
     branch: main
     local_backend: false
   academicons:
-    enable: true
+    enable: true  # Keep true for academic icons like Google Scholar
+
+# Security
+security:
+  allow_frame: true
