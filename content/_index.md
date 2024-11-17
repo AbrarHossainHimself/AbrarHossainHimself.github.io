@@ -105,13 +105,17 @@ sections:
       columns: '1'
   
   - block: collection
-    id: featured
+    id: publications
     content:
       title: Publications
+      text: |
+        A selected list of my recent publications in conferences and journals.
+      # This line tells the system to include all publications
+      count: 0
       filters:
         folders:
           - publication
-        featured_only: true
+        exclude_featured: false
     design:
       columns: '1'
       view: citation
