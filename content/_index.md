@@ -47,7 +47,7 @@ sections:
 
 
 
-  
+
   - block: experience
     content:
       title: Experience
@@ -103,6 +103,7 @@ sections:
       columns: '1'
   
   - block: markdown
+    id: publications
     content:
       title: Publications
       text: |
@@ -127,6 +128,7 @@ sections:
       columns: '1'
 
   - block: markdown
+    id: talks
     content:
       title: Recorded Talks
       text: |
