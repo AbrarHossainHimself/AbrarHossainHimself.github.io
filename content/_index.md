@@ -104,33 +104,25 @@ sections:
       # Choose how many columns the section has. Valid values: '1' or '2'.
       columns: '1'
   
-  - block: collection
-    id: publications
+  - block: markdown
     content:
       title: Publications
-      count: 0
-      filters:
-        folders:
-          - publication
-        exclude_featured: false
-        exclude_future: false
-      # Sort by most recent first
-      sort_by: 'date desc'
-      # Custom citation style
-      citation_style: custom
+      text: |
+        ### 2024
+        1. "**HPC Application Parameter Autotuning on Edge Devices: A Bandit Learning Approach**"  
+           Abrar Hossain, Abdel-Hameed Badawy, Mohammad Atiqul Islam, Tapasya Patki, Kishwar Ahmed  
+           *IEEE International Conference on High Performance Computing, Data, and Analytics (HiPC)*
+        
+        2. "**Scalable HPC Job Scheduling and Resource Management in SST**"  
+           Abubeker Abdurahman, Abrar Hossain, Kevin A Brown, Kazutomo Yoshii, Kishwar Ahmed  
+           *Winter Simulation Conference (WSC)*
+        
+        ### 2023
+        3. "**Automating HPC Model Selection on Edge Devices**"  
+           Abrar Hossain, Kishwar Ahmed  
+           *International Conference for High Performance Computing, Networking, Storage and Analysis (SC)*
     design:
       columns: '1'
-      view: citation
-      # Custom CSS for title-first format
-      css_style: |
-        .article-title {
-          font-weight: bold;
-          display: block;
-          margin-bottom: 0.5em;
-        }
-        .article-metadata {
-          margin-top: 0.5em;
-        }
 
   - block: collection
     id: talks
