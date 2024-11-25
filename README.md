@@ -13,7 +13,7 @@ Before joining the University of Toledo, I completed my Bachelor’s in Electric
 - **HPC Application Autotuning on Edge Devices**  
 - **Optimization of Edge Computing Systems for Scientific Workflows**
 
-### 💡 Areas of Expertise:
+### 💡 Areas of Interests:
 - **High-Performance Computing (HPC)**
 - **Bayesian Optimization and Control**
 - **Stochastic Modeling & Statistical Analysis**
