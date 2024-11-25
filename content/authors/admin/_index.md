@@ -113,4 +113,4 @@ I am a Graduate Research Assistant at The University of Toledo, pursuing my Mast
 
 My current research involves optimizing scientific workflows on edge computing systems and developing autotuning frameworks for HPC applications. I have experience in parallel computing, distributed systems, and machine learning infrastructure. I am particularly interested in the intersection of HPC and artificial intelligence, exploring ways to leverage high-performance computing resources for advanced AI applications.
 
-Previously, I completed my Bachelor's in Electrical Engineering from Chittagong University of Engineering & Technology, where I developed a strong foundation in systems engineering and computational methods.
+Before joining the University of Toledo, I completed my Bachelor’s in Electrical Engineering from Bangladesh.
