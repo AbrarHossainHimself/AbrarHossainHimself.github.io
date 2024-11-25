@@ -138,7 +138,7 @@ sections:
         #### Environmental Data Sensing and Monitoring System Using Community-based Private LoRa Network
         <div class="talk-container" style="display: flex; gap: 20px; margin-bottom: 30px;">
           <div class="talk-details" style="flex: 2;">
-            <p><strong>Venuwe: NCAR Mesa Lab, Boulder, CO </strong> </p>
+            <p><strong>Venue: NCAR Mesa Lab, Boulder, CO </strong> </p>
             <p><strong>Date:</strong> August 2024</p>
             <p><strong>Abstract:</strong> Talk on my summer research with Dr Keith Maull and Agbeli Ameko </p>
             <p>
