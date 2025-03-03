@@ -151,20 +151,20 @@ document.addEventListener('DOMContentLoaded', function() {
       font-family: 'Courier New', monospace !important;
     }
     
-    /* NERV branding */
-    .navbar-brand {
-      position: relative;
-      padding-left: 55px !important;
-    }
+    // /* NERV branding */
+    // .navbar-brand {
+    //   position: relative;
+    //   padding-left: 55px !important;
+    // }
     
-    .navbar-brand::before {
-      content: 'NERV';
-      position: absolute;
-      left: 0;
-      color: var(--eva-orange) !important;
-      font-weight: bold;
-      font-family: 'Courier New', monospace !important;
-    }
+    // .navbar-brand::before {
+    //   content: 'NERV';
+    //   position: absolute;
+    //   left: 0;
+    //   color: var(--eva-orange) !important;
+    //   font-weight: bold;
+    //   font-family: 'Courier New', monospace !important;
+    // }
     
     /* Navigation links */
     .navbar-light .navbar-nav .nav-link {
