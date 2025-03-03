@@ -61,7 +61,7 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Research Visitor
+        - title: Visitor
           company: NSF National Center for Atmospheric Research
           company_url: 'https://ncar.ucar.edu/'
           company_logo: ''
@@ -74,7 +74,7 @@ sections:
               * Built data orchestrator for efficient data routing, achieving 30% transmission efficiency gain
               * Reduced deployment costs by 25% for communities implementing the project
 
-        - title: Research Intern
+        - title: Intern
           company: NSF National Center for Atmospheric Research
           company_url: 'https://ncar.ucar.edu/'
           company_logo: ''
