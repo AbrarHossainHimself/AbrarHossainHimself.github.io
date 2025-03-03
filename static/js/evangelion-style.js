@@ -1,4 +1,4 @@
-// Complete Evangelion UI redesign with layout modifications
+// Refined Evangelion UI with improved layout and 3D sphere
 document.addEventListener('DOMContentLoaded', function() {
   // Create style element
   const style = document.createElement('style');
@@ -261,30 +261,6 @@ document.addEventListener('DOMContentLoaded', function() {
       letter-spacing: 1px !important;
     }
     
-    /* Monitoring elements - like the original Evangelion UI */
-    .monitoring-element {
-      position: fixed;
-      font-family: 'Courier New', monospace;
-      color: var(--eva-cyan);
-      z-index: 1000;
-      font-size: 10px;
-      pointer-events: none;
-    }
-    
-    /* Page status indicator */
-    .page-status {
-      top: 10px;
-      right: 20px;
-    }
-    
-    /* Technical data readout */
-    .tech-readout {
-      bottom: 20px;
-      left: 20px;
-      font-size: 10px;
-      width: 150px;
-    }
-    
     /* Decorative grid */
     .decorative-grid {
       position: fixed;
@@ -313,122 +289,38 @@ document.addEventListener('DOMContentLoaded', function() {
       letter-spacing: 2px !important;
     }
     
-    /* MAGI system monitor */
+    /* Subtle MAGI system monitor in navbar */
     .magi-monitor {
-      position: fixed;
-      top: 70px;
-      left: 20px;
-      border: 1px solid var(--eva-orange);
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 10px;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 80px;
+      height: 60px;
       font-size: 10px;
       z-index: 1000;
-      width: 150px;
-    }
-    
-    .magi-monitor-header {
-      color: var(--eva-orange) !important;
-      border-bottom: 1px solid var(--eva-cyan);
-      padding-bottom: 5px;
-      margin-bottom: 5px;
-      font-size: 10px;
-      text-align: center;
+      padding: 0 10px;
     }
     
     .magi-status {
+      margin-left: 10px;
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 5px;
+      align-items: center;
     }
     
-    /* Target scanner effect for the avatar */
-    .avatar-container {
-      position: relative;
-    }
-    
-    .target-scanner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-      pointer-events: none;
-    }
-    
-    .scanner-line-h {
-      position: absolute;
-      height: 1px;
-      width: 100%;
-      background-color: rgba(0, 255, 255, 0.5);
-      top: 50%;
-      animation: scanVertical 3s infinite linear;
-    }
-    
-    .scanner-line-v {
-      position: absolute;
-      width: 1px;
-      height: 100%;
-      background-color: rgba(0, 255, 255, 0.5);
-      left: 50%;
-      animation: scanHorizontal 3s infinite linear;
-    }
-    
-    @keyframes scanVertical {
-      0% { top: 0; }
-      100% { top: 100%; }
-    }
-    
-    @keyframes scanHorizontal {
-      0% { left: 0; }
-      100% { left: 100%; }
-    }
-    
-    /* Technical readout data */
-    .tech-data {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 3px;
-      font-size: 9px;
-    }
-    
-    .tech-label {
+    .magi-label {
       color: var(--eva-orange) !important;
-    }
-    
-    .tech-value {
-      color: var(--eva-cyan) !important;
-    }
-    
-    /* Animation for tech values */
-    .tech-value {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .tech-value::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: -10px;
-      width: 10px;
-      height: 100%;
-      background: linear-gradient(to right, transparent, var(--eva-cyan), transparent);
-      animation: techScan 2s infinite;
-    }
-    
-    @keyframes techScan {
-      0% { right: 100%; }
-      100% { right: -10px; }
+      margin-right: 5px;
+      font-size: 9px;
     }
     
     /* Status indicators */
     .status-indicator {
       display: inline-block;
-      width: 8px;
-      height: 8px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
-      margin-right: 5px;
+      margin-right: 3px;
     }
     
     .status-normal {
@@ -446,6 +338,19 @@ document.addEventListener('DOMContentLoaded', function() {
     @keyframes pulse {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.5; }
+    }
+    
+    /* T-minus counter in navbar */
+    .countdown {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      color: var(--eva-cyan) !important;
+      font-size: 10px;
+      z-index: 1000;
     }
     
     /* Warning alerts */
@@ -471,6 +376,66 @@ document.addEventListener('DOMContentLoaded', function() {
       font-size: 16px;
       pointer-events: none;
     }
+    
+    /* 3D sphere visualization area */
+    .sphere-container {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 100px;
+      height: 100px;
+      z-index: 999;
+      pointer-events: none;
+    }
+    
+    /* Target crosshair for the sphere */
+    .target-overlay {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 100px;
+      height: 100px;
+      z-index: 1000;
+      pointer-events: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .crosshair-h {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 72, 0, 0.7);
+    }
+    
+    .crosshair-v {
+      position: absolute;
+      height: 100%;
+      width: 1px;
+      background-color: rgba(255, 72, 0, 0.7);
+    }
+    
+    .target-circle {
+      position: absolute;
+      border: 1px solid rgba(255, 72, 0, 0.4);
+      border-radius: 50%;
+    }
+    
+    .target-circle-outer {
+      width: 90%;
+      height: 90%;
+    }
+    
+    .target-circle-middle {
+      width: 60%;
+      height: 60%;
+    }
+    
+    .target-circle-inner {
+      width: 30%;
+      height: 30%;
+    }
   `;
   
   // Add style to document
@@ -495,13 +460,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
   
-  // Add T-minus countdown
+  // Add T-minus countdown to navbar
   const addCountdown = () => {
     const countdown = document.createElement('div');
-    countdown.classList.add('monitoring-element', 'page-status');
+    countdown.classList.add('countdown');
     countdown.id = 'countdown';
     countdown.textContent = 'T-MINUS 24:00:00';
-    document.body.appendChild(countdown);
+    document.querySelector('.navbar').appendChild(countdown);
     
     // Update countdown every second
     let time = 24 * 60 * 60; // 24 hours in seconds
@@ -517,125 +482,53 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 1000);
   };
   
-  // Add MAGI system monitor
+  // Add subtle MAGI system monitor to navbar
   const addMagiMonitor = () => {
     const magiMonitor = document.createElement('div');
     magiMonitor.classList.add('magi-monitor');
     
-    const header = document.createElement('div');
-    header.classList.add('magi-monitor-header');
-    header.textContent = 'MAGI SYSTEM';
+    const systems = [
+      { name: 'MELCHIOR', status: 'normal' },
+      { name: 'BALTHASAR', status: 'normal' },
+      { name: 'CASPER', status: 'normal' }
+    ];
     
-    const melchior = createMagiStatus('MELCHIOR', 'NORMAL');
-    const balthasar = createMagiStatus('BALTHASAR', 'NORMAL');
-    const casper = createMagiStatus('CASPER', 'NORMAL');
-    
-    magiMonitor.appendChild(header);
-    magiMonitor.appendChild(melchior);
-    magiMonitor.appendChild(balthasar);
-    magiMonitor.appendChild(casper);
-    
-    document.body.appendChild(magiMonitor);
-    
-    // Randomly change MAGI status
-    setInterval(() => {
-      const statuses = document.querySelectorAll('.magi-status');
-      const randomIndex = Math.floor(Math.random() * statuses.length);
-      const status = statuses[randomIndex].querySelector('.tech-value');
-      const indicator = statuses[randomIndex].querySelector('.status-indicator');
+    systems.forEach(system => {
+      const statusEl = document.createElement('div');
+      statusEl.classList.add('magi-status');
       
-      if (status.textContent === 'NORMAL') {
-        status.textContent = 'ANALYZING';
+      const label = document.createElement('span');
+      label.classList.add('magi-label');
+      label.textContent = system.name.charAt(0);
+      
+      const indicator = document.createElement('span');
+      indicator.classList.add('status-indicator', 'status-normal');
+      indicator.id = `status-${system.name.toLowerCase()}`;
+      
+      statusEl.appendChild(label);
+      statusEl.appendChild(indicator);
+      magiMonitor.appendChild(statusEl);
+    });
+    
+    document.querySelector('.navbar').appendChild(magiMonitor);
+    
+    // Randomly change MAGI status indicators
+    setInterval(() => {
+      const indicators = document.querySelectorAll('.status-indicator');
+      const randomIndex = Math.floor(Math.random() * indicators.length);
+      const indicator = indicators[randomIndex];
+      
+      if (indicator.classList.contains('status-normal')) {
         indicator.classList.remove('status-normal');
         indicator.classList.add('status-warning');
         
-        // Return to normal after a few seconds
+        // Back to normal after a short time
         setTimeout(() => {
-          status.textContent = 'NORMAL';
           indicator.classList.remove('status-warning');
           indicator.classList.add('status-normal');
-        }, 3000);
+        }, 2000);
       }
     }, 10000);
-  };
-  
-  // Create MAGI status element
-  function createMagiStatus(name, status) {
-    const container = document.createElement('div');
-    container.classList.add('magi-status');
-    
-    const label = document.createElement('div');
-    label.classList.add('tech-label');
-    label.textContent = name;
-    
-    const statusContainer = document.createElement('div');
-    statusContainer.style.display = 'flex';
-    statusContainer.style.alignItems = 'center';
-    
-    const indicator = document.createElement('span');
-    indicator.classList.add('status-indicator', 'status-normal');
-    
-    const value = document.createElement('span');
-    value.classList.add('tech-value');
-    value.textContent = status;
-    
-    statusContainer.appendChild(indicator);
-    statusContainer.appendChild(value);
-    
-    container.appendChild(label);
-    container.appendChild(statusContainer);
-    
-    return container;
-  }
-  
-  // Add technical readout
-  const addTechReadout = () => {
-    const techReadout = document.createElement('div');
-    techReadout.classList.add('monitoring-element', 'tech-readout');
-    
-    const techData = [
-      { label: 'SYS TEMP', value: '37.2°C' },
-      { label: 'CPU LOAD', value: '42.7%' },
-      { label: 'MEM USAGE', value: '3.8GB' },
-      { label: 'NETWORK', value: 'ACTIVE' },
-      { label: 'SECURITY', value: 'ENABLED' }
-    ];
-    
-    techData.forEach(data => {
-      const dataElement = document.createElement('div');
-      dataElement.classList.add('tech-data');
-      
-      const label = document.createElement('span');
-      label.classList.add('tech-label');
-      label.textContent = data.label;
-      
-      const value = document.createElement('span');
-      value.classList.add('tech-value');
-      value.textContent = data.value;
-      
-      dataElement.appendChild(label);
-      dataElement.appendChild(value);
-      techReadout.appendChild(dataElement);
-    });
-    
-    document.body.appendChild(techReadout);
-    
-    // Randomly update values
-    setInterval(() => {
-      const values = document.querySelectorAll('.tech-value');
-      const randomIndex = Math.floor(Math.random() * techData.length);
-      
-      if (randomIndex < values.length) {
-        const value = values[randomIndex];
-        if (value.textContent.includes('%')) {
-          value.textContent = `${(Math.random() * 50 + 30).toFixed(1)}%`;
-        } else if (value.textContent.includes('°C')) {
-          value.textContent = `${(Math.random() * 5 + 35).toFixed(1)}°C`;
-        } else if (value.textContent.includes('GB')) {
-          value.textContent = `${(Math.random() * 5 + 2).toFixed(1)}GB`;
-        }
-      }
-    }, 5000);
   };
   
   // Add warning alerts
@@ -648,14 +541,12 @@ document.addEventListener('DOMContentLoaded', function() {
       'WARNING: A.T. FIELD DETECTED',
       'WARNING: PATTERN BLUE DETECTED',
       'WARNING: SYNCHRONIZATION RATE UNSTABLE',
-      'WARNING: ENERGY SPIKE DETECTED',
-      'WARNING: SECURITY PERIMETER BREACH',
-      'WARNING: UNIDENTIFIED ACCESS ATTEMPT'
+      'WARNING: ENERGY SPIKE DETECTED'
     ];
     
     // Show random warnings occasionally
     setInterval(() => {
-      if (Math.random() > 0.7) {
+      if (Math.random() > 0.8) {
         const randomWarning = warnings[Math.floor(Math.random() * warnings.length)];
         warningAlert.textContent = randomWarning;
         warningAlert.style.display = 'block';
@@ -663,34 +554,122 @@ document.addEventListener('DOMContentLoaded', function() {
         // Hide warning after a few seconds
         setTimeout(() => {
           warningAlert.style.display = 'none';
-        }, 4000);
+        }, 3000);
       }
-    }, 15000);
+    }, 20000);
   };
   
-  // Add target scanner to avatar
-  const addTargetScanner = () => {
-    // Find avatar container
-    setTimeout(() => {
-      const avatar = document.querySelector('.avatar img');
-      if (avatar) {
-        const parent = avatar.parentElement;
-        parent.style.position = 'relative';
+  // Add 3D sphere visualization
+  const add3DSphere = () => {
+    // Create sphere container
+    const sphereContainer = document.createElement('div');
+    sphereContainer.classList.add('sphere-container');
+    document.body.appendChild(sphereContainer);
+    
+    // Create target overlay
+    const targetOverlay = document.createElement('div');
+    targetOverlay.classList.add('target-overlay');
+    
+    const crosshairH = document.createElement('div');
+    crosshairH.classList.add('crosshair-h');
+    
+    const crosshairV = document.createElement('div');
+    crosshairV.classList.add('crosshair-v');
+    
+    const targetCircleOuter = document.createElement('div');
+    targetCircleOuter.classList.add('target-circle', 'target-circle-outer');
+    
+    const targetCircleMiddle = document.createElement('div');
+    targetCircleMiddle.classList.add('target-circle', 'target-circle-middle');
+    
+    const targetCircleInner = document.createElement('div');
+    targetCircleInner.classList.add('target-circle', 'target-circle-inner');
+    
+    targetOverlay.appendChild(crosshairH);
+    targetOverlay.appendChild(crosshairV);
+    targetOverlay.appendChild(targetCircleOuter);
+    targetOverlay.appendChild(targetCircleMiddle);
+    targetOverlay.appendChild(targetCircleInner);
+    
+    document.body.appendChild(targetOverlay);
+    
+    // Try to load Three.js
+    const loadThreeJs = () => {
+      return new Promise((resolve, reject) => {
+        if (typeof THREE !== 'undefined') {
+          resolve();
+          return;
+        }
         
-        const scanner = document.createElement('div');
-        scanner.classList.add('target-scanner');
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+        script.onload = () => resolve();
+        script.onerror = () => reject("Failed to load Three.js");
+        document.head.appendChild(script);
+      });
+    };
+    
+    loadThreeJs()
+      .then(() => {
+        // Initialize Three.js scene
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+        camera.position.z = 5;
         
-        const lineH = document.createElement('div');
-        lineH.classList.add('scanner-line-h');
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setSize(100, 100);
+        renderer.setClearColor(0x000000, 0);
+        sphereContainer.appendChild(renderer.domElement);
         
-        const lineV = document.createElement('div');
-        lineV.classList.add('scanner-line-v');
+        // Create sphere geometry
+        const sphereGeometry = new THREE.SphereGeometry(2, 32, 32);
+        const wireframeMaterial = new THREE.MeshBasicMaterial({ 
+          color: 0x00FFFF, 
+          wireframe: true,
+          transparent: true,
+          opacity: 0.6
+        });
         
-        scanner.appendChild(lineH);
-        scanner.appendChild(lineV);
-        parent.appendChild(scanner);
-      }
-    }, 1000);
+        const innerMaterial = new THREE.MeshBasicMaterial({
+          color: 0x0077FF,
+          transparent: true,
+          opacity: 0.2
+        });
+        
+        const wireframeSphere = new THREE.Mesh(sphereGeometry, wireframeMaterial);
+        const innerSphere = new THREE.Mesh(sphereGeometry, innerMaterial);
+        innerSphere.scale.set(0.8, 0.8, 0.8);
+        
+        scene.add(wireframeSphere);
+        scene.add(innerSphere);
+        
+        // Animation loop
+        function animate() {
+          requestAnimationFrame(animate);
+          
+          wireframeSphere.rotation.x += 0.01;
+          wireframeSphere.rotation.y += 0.01;
+          
+          innerSphere.rotation.x -= 0.005;
+          innerSphere.rotation.y -= 0.005;
+          
+          // Pulse inner sphere
+          const scale = 0.8 + 0.1 * Math.sin(Date.now() * 0.001);
+          innerSphere.scale.set(scale, scale, scale);
+          
+          // Randomly change wireframe opacity for glitch effect
+          if (Math.random() > 0.98) {
+            wireframeMaterial.opacity = 0.3 + Math.random() * 0.4;
+          }
+          
+          renderer.render(scene, camera);
+        }
+        
+        animate();
+      })
+      .catch(error => {
+        console.log("Could not initialize 3D sphere:", error);
+      });
   };
   
   // Apply forced text visibility
@@ -714,9 +693,8 @@ document.addEventListener('DOMContentLoaded', function() {
   addHebrewChars();
   addCountdown();
   addMagiMonitor();
-  addTechReadout();
   addWarningAlerts();
-  addTargetScanner();
+  add3DSphere();
   
   // Force text visibility initially and after delay
   forceTextVisibility();
