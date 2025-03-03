@@ -5,9 +5,6 @@
 
 Hi, I’m **Abrar Hossain**, a **Graduate Research Assistant** at **The University of Toledo**, and a **Visitor Researcher** at the **National Center for Atmospheric Research (NCAR)**. I am currently pursuing my **Master’s in Computer Science** with a focus on **High-Performance Computing (HPC)** and **Stochastic Modeling, Control, and Optimization**. My research involves developing innovative system software solutions to optimize HPC systems for **efficiency, reliability, and cost-effectiveness**.
 
-Previously, I have contributed to various research projects and published papers addressing real-world challenges in edge computing and resource-constrained environments. I’m passionate about pushing the boundaries of **HPC applications** and enjoy solving complex computational problems using **Bayesian methods** and **machine learning techniques**.
-
-Before joining the University of Toledo, I completed my Bachelor’s in Electrical Engineering from Bangladesh.
 
 ### 👨‍💻 What I’m currently working on:
 - **HPC Application Autotuning on Edge Devices**  
