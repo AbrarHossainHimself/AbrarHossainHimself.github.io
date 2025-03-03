@@ -129,6 +129,20 @@ sections:
       columns: '1'
 
   - block: markdown
+    id: review-volunteer
+    content:
+      title: Review and Volunteer Activity
+      text: |
+        ### Reviewer
+        - **PEARC'25 Tutorials and Workshops**
+        
+        ### Student Volunteer
+        - **HiPC'24**
+        - **AGU'24**
+    design:
+      columns: '1'
+
+  - block: markdown
     id: talks
     content:
       title: Recorded Talks
