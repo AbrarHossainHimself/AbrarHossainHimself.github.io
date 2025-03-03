@@ -9,7 +9,7 @@ appearance:
   font: minimal
   font_size: L
   custom_css:
-    - css/custom/evangelion.css
+    - scss/custom.scss
 
 # SEO
 marketing:
