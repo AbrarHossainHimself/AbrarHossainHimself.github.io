@@ -8,6 +8,8 @@ appearance:
   theme_night: minimal
   font: minimal
   font_size: L
+  custom_css:
+    - css/custom/evangelion.css
 
 # SEO
 marketing:
