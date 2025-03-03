@@ -108,6 +108,12 @@ sections:
     content:
       title: Publications
       text: |
+
+        ### 2025
+        1. "**Enhanced Intrusion Detection in IIoT Networks: A Lightweight Approach with Autoencoder-Based Feature Learning**"  
+           Tasnimul Hasan, Abrar Hossain, Mufakir Qamar Ansari, Talha Hussain Syed   
+           *International Conference on Internet of Things, Big Data and Security (IoTBDS 2025)*   
+
         ### 2024
         1. "**HPC Application Parameter Autotuning on Edge Devices: A Bandit Learning Approach**"  
            Abrar Hossain, Abdel-Hameed Badawy, Mohammad Atiqul Islam, Tapasya Patki, Kishwar Ahmed  
