@@ -1,0 +1,70 @@
+<!-- Custom head code - Evangelion style -->
+<style>
+    /* Evangelion-inspired UI styles */
+    :root {
+      --eva-orange: #FF4800;
+      --eva-cyan: #00FFFF;
+      --eva-dark: #111111;
+      --eva-blue: #0077FF;
+    }
+    
+    /* Basic overlay effects */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%, 
+        rgba(0, 0, 0, 0.1) 50%
+      );
+      background-size: 100% 4px;
+      z-index: 9999;
+      pointer-events: none;
+    }
+    
+    /* Dark background */
+    body {
+      background-color: var(--eva-dark);
+      color: #FFFFFF;
+    }
+    
+    /* Styling for section headers */
+    .section-heading {
+      color: var(--eva-cyan) !important;
+      font-family: 'Courier New', monospace !important;
+      border-bottom: 1px solid var(--eva-orange);
+    }
+    
+    /* Styling for headings */
+    h1, h2, h3 {
+      font-family: 'Courier New', monospace !important;
+    }
+    
+    h1 {
+      color: var(--eva-orange) !important;
+    }
+    
+    /* Navigation bar styling */
+    .navbar {
+      background-color: rgba(17, 17, 17, 0.9) !important;
+      border-bottom: 1px solid var(--eva-orange) !important;
+    }
+    
+    /* Card styling */
+    .card {
+      background-color: rgba(17, 17, 17, 0.8) !important;
+      border: 1px solid var(--eva-orange) !important;
+    }
+    
+    /* NERV logo in header */
+    .navbar-brand::before {
+      content: 'NERV';
+      color: var(--eva-orange);
+      margin-right: 10px;
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+    }
+    </style>
