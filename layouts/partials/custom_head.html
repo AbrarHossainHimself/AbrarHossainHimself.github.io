@@ -30,53 +30,41 @@
   html, body, .page-wrapper, .page-body, main, article, 
   .home-section, .article-container, .docs-article-container, 
   .wg-about, .wg-accomplishments, .wg-experience, .wg-pages,
-  .universal-wrapper, .biography-title, footer,
-  #talks, /* Target talks section specifically */
-  [id^="talks-"], /* Target any element with id starting with "talks-" */
-  .wg-blank, /* Target blank widget sections */
-  .wg-markdown /* Target markdown widget sections */ {
+  .universal-wrapper, .biography-title, footer {
     background-color: var(--eva-dark) !important;
     color: #FFFFFF !important;
   }
   
-  /* Specifically target any divs with "talks" in the id */
-  div[id*="talks"], 
-  div[id*="recorded"],
-  section[id*="talks"],
-  #recorded-talks,
-  .talk-container {
+  /* Force background for full page */
+  body, html {
     background-color: var(--eva-dark) !important;
-    color: #FFFFFF !important;
+    background-image: 
+      linear-gradient(to right, rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 255, 255, 0.03) 1px, transparent 1px) !important;
+    background-size: 20px 20px !important;
   }
   
-  /* Force the background for sections with horizontal line styling */
-  div:has(> hr), /* Select divs containing horizontal lines */
-  div:has(> h2), /* Select divs containing headings */
-  div:has(> h3) {
+  /* CRITICAL: Remove horizontal stripes from specific sections */
+  body > div:not(.navbar):not(.page-footer):not(.page-header) {
     background-color: var(--eva-dark) !important;
+    background-image: none !important;
   }
   
-  /* Target the horizontal line patterns */
-  hr, .horizontal-rule {
-    border-color: var(--eva-orange) !important;
-    background-color: transparent !important;
+  /* Target any container with RECORDED TALKS title */
+  div:has(> h2), div:has(> h3), 
+  div:has(> p), div:has(> span),
+  div:has(> div > h2), div:has(> div > h3),
+  div:has(> div > p), div:has(> div > span) {
+    background-color: var(--eva-dark) !important;
+    background-image: none !important;
   }
   
   /* Force all text to be white for readability */
   p, span, div, li, ul, ol, a:not(.btn), h4, h5, h6, 
   .card-text, .card-title, .article-style, .pub-title,
   .talk-title, .exp-meta, .exp-title, .exp-company, 
-  .biography-title, .form-control, .form-control::placeholder,
-  h2, h3 /* Additional headings */ {
+  .biography-title, .form-control, .form-control::placeholder {
     color: #FFFFFF !important;
-  }
-  
-  /* Specifically target headings in talk sections */
-  #talks h2, #talks h3,
-  div[id*="talks"] h2, div[id*="talks"] h3,
-  div[id*="recorded"] h2, div[id*="recorded"] h3,
-  .talk-container h2, .talk-container h3 {
-    color: var(--eva-cyan) !important;
   }
   
   /* Override any default white backgrounds */
@@ -176,16 +164,6 @@
     margin-bottom: 0.5rem;
   }
   
-  /* Grid background */
-  body {
-    background-image: 
-      linear-gradient(to right, rgba(0, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 20px 20px;
-    font-family: 'Courier New', monospace;
-    font-size: 0.95rem;
-  }
-  
   /* Avatar styling */
   .avatar {
     border: 2px solid var(--eva-orange) !important;
@@ -225,11 +203,6 @@
     border-bottom: 1px solid var(--eva-cyan);
   }
   
-  /* Make all section backgrounds dark */
-  #experience, #publications, #talks, #review-volunteer, #recorded-talks {
-    background-color: var(--eva-dark) !important;
-  }
-  
   /* Links styling */
   a {
     color: var(--eva-cyan) !important;
@@ -253,82 +226,16 @@
     color: #FFFFFF !important;
   }
   
-  /* Skills section */
-  .skill-item {
-    margin-bottom: 8px;
-  }
-  
-  /* Publication items */
-  .media.stream-item {
-    background-color: rgba(0, 0, 0, 0.3) !important;
-    padding: 10px;
-    border-left: 2px solid var(--eva-orange);
-    margin-bottom: 15px;
-  }
-  
-  .article-title a {
-    color: var(--eva-cyan) !important;
-  }
-  
-  /* Fix for metadata text */
-  .article-metadata, .pub-metadata {
-    color: #AAAAAA !important;
-  }
-  
-  /* Fix for lists */
-  ul.ul-interests li, ul.ul-edu li {
-    color: #FFFFFF !important;
-  }
-  
-  /* Horizontal rules */
-  hr {
-    border-top: 1px solid var(--eva-orange) !important;
-  }
-  
-  /* Table styling */
-  table {
-    background-color: rgba(0, 0, 0, 0.3) !important;
-    color: #FFFFFF !important;
-  }
-  
-  table th {
-    background-color: rgba(255, 72, 0, 0.2) !important;
-  }
-  
-  /* Force dark mode for any widgets not explicitly handled */
-  .dark, .dark .article-container {
-    color: #FFFFFF !important;
+  /* CRITICAL: Remove horizontal stripes specifically */
+  .row:has(> div:contains("RECORDED TALKS")) {
     background-color: var(--eva-dark) !important;
+    background-image: none !important;
   }
   
-  /* Override the section colors for talks */
-  #talks, #recorded-talks, #recorded, 
-  .markdown-section, .widget-blank {
+  /* Target horizontal rules and their containers */
+  hr, hr + *, * + hr, hr ~ * {
     background-color: var(--eva-dark) !important;
-  }
-  
-  /* Override any horizontal line sections */
-  .horizontal-line-section {
-    background-color: var(--eva-dark) !important;
-  }
-  
-  /* Target section with header "RECORDED TALKS" specifically */
-  div:has(> h1:contains("RECORDED TALKS")),
-  div:has(> h2:contains("RECORDED TALKS")),
-  div:has(> h3:contains("RECORDED TALKS")),
-  div:has(> p:contains("RECORDED TALKS")),
-  div:has(> span:contains("RECORDED TALKS")) {
-    background-color: var(--eva-dark) !important;
-  }
-  
-  /* Target entire page */
-  body, html, #top, .page-wrapper {
-    background-color: var(--eva-dark) !important;
-  }
-  
-  /* Target section above and below horizontal rules */
-  hr + div, div + hr, hr + section, section + hr {
-    background-color: var(--eva-dark) !important;
+    background-image: none !important;
   }
 </style>
 
@@ -340,92 +247,61 @@ if (navbarBrand) {
   navbarBrand.innerHTML = navbarBrand.innerHTML.replace('NERV', '');
 }
 
-// Force dark theme on all sections
-const sections = document.querySelectorAll('.home-section, section, [id^="talks"], [id*="recorded"], [id*="talks"]');
-sections.forEach(section => {
-  section.style.backgroundColor = '#111111';
-  section.style.color = '#FFFFFF';
-});
-
-// Force white text on all elements
-const textElements = document.querySelectorAll('p, span, div, li, h4, h5, h6');
-textElements.forEach(el => {
-  el.style.color = '#FFFFFF';
-});
-
-// Add section title styling
-const sectionHeadings = document.querySelectorAll('.section-heading, h1, h2, h3');
-sectionHeadings.forEach(heading => {
-  heading.style.color = '#00FFFF';
-  heading.style.borderBottom = '1px solid #FF4800';
-});
-
-// Force dark background on any section with RECORDED TALKS
-const recordedTalksElements = document.querySelectorAll('h1, h2, h3, p, span, div');
-recordedTalksElements.forEach(el => {
-  if (el.textContent.includes('RECORDED TALKS')) {
-    // Find the parent section or div
-    let parent = el;
-    while (parent && !parent.classList.contains('home-section') && parent.tagName !== 'SECTION') {
-      parent = parent.parentElement;
-    }
-    
-    if (parent) {
-      parent.style.backgroundColor = '#111111';
-      // Also style any parent sections
-      let currentParent = parent.parentElement;
-      while (currentParent) {
-        currentParent.style.backgroundColor = '#111111';
-        currentParent = currentParent.parentElement;
-      }
-    }
-  }
-});
-
-// Find all horizontal rules and ensure their parent sections are dark
-const horizontalRules = document.querySelectorAll('hr');
-horizontalRules.forEach(hr => {
-  const parent = hr.parentElement;
-  if (parent) {
-    parent.style.backgroundColor = '#111111';
-    
-    // Also get the next and previous siblings
-    if (parent.previousElementSibling) {
-      parent.previousElementSibling.style.backgroundColor = '#111111';
-    }
-    if (parent.nextElementSibling) {
-      parent.nextElementSibling.style.backgroundColor = '#111111';
-    }
-  }
-});
-
-// Add a more aggressive approach - find the RECORDED TALKS section by content
+// CRITICAL: Find and fix the recorded talks section
+// Look for elements containing "RECORDED TALKS" text
 const allElements = document.querySelectorAll('*');
 allElements.forEach(el => {
   if (el.textContent && el.textContent.includes('RECORDED TALKS')) {
-    // Force dark background on this element and all its parents
-    let currentEl = el;
-    while (currentEl) {
-      currentEl.style.backgroundColor = '#111111';
-      currentEl.style.color = '#FFFFFF';
-      currentEl = currentEl.parentElement;
+    // Find all parents and siblings
+    let parent = el.parentElement;
+    while (parent) {
+      // Apply dark style to parent and all its children
+      parent.style.backgroundColor = '#111111';
+      parent.style.backgroundImage = 'none';
+      
+      // Apply to all siblings
+      if (parent.parentElement) {
+        Array.from(parent.parentElement.children).forEach(sibling => {
+          sibling.style.backgroundColor = '#111111';
+          sibling.style.backgroundImage = 'none';
+        });
+      }
+      
+      parent = parent.parentElement;
     }
   }
 });
 
-// Darkened entire page with !important override
-document.body.setAttribute('style', 'background-color: #111111 !important');
+// Force dark background on horizontal stripes sections
+const horizontalStripes = document.querySelectorAll('body > div:not(.navbar):not(.page-footer)');
+horizontalStripes.forEach(stripe => {
+  stripe.style.backgroundColor = '#111111';
+  stripe.style.backgroundImage = 'none';
+});
 
-// Create a dark overlay for the entire page to force dark theme
-const darkOverlay = document.createElement('div');
-darkOverlay.style.position = 'fixed';
-darkOverlay.style.top = '0';
-darkOverlay.style.left = '0';
-darkOverlay.style.width = '100%';
-darkOverlay.style.height = '100%';
-darkOverlay.style.backgroundColor = 'rgba(0,0,0,0.85)';
-darkOverlay.style.pointerEvents = 'none';
-darkOverlay.style.zIndex = '-1'; // Behind content
-document.body.appendChild(darkOverlay);
+// Create a fullscreen dark overlay
+const overlay = document.createElement('div');
+overlay.style.position = 'fixed';
+overlay.style.top = '0';
+overlay.style.left = '0';
+overlay.style.width = '100%';
+overlay.style.height = '100%';
+overlay.style.backgroundColor = 'rgba(0,0,0,0.85)';
+overlay.style.zIndex = '-1';
+overlay.style.pointerEvents = 'none';
+document.body.appendChild(overlay);
+
+// Force direct removal of any line pattern backgrounds
+const allDivs = document.querySelectorAll('div');
+allDivs.forEach(div => {
+  const computedStyle = window.getComputedStyle(div);
+  const bgImage = computedStyle.backgroundImage;
+  
+  // If it has stripes or lines, remove them
+  if (bgImage && (bgImage.includes('linear-gradient') || bgImage.includes('repeating-linear-gradient'))) {
+    div.style.backgroundImage = 'none';
+    div.style.backgroundColor = '#111111';
+  }
+});
 });
 </script>
