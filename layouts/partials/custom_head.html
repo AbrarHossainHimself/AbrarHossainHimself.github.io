@@ -1,70 +1,29 @@
 <!-- Custom head code - Evangelion style -->
-<style>
-    /* Evangelion-inspired UI styles */
-    :root {
-      --eva-orange: #FF4800;
-      --eva-cyan: #00FFFF;
-      --eva-dark: #111111;
-      --eva-blue: #0077FF;
-    }
-    
-    /* Basic overlay effects */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        rgba(18, 16, 16, 0) 50%, 
-        rgba(0, 0, 0, 0.1) 50%
-      );
-      background-size: 100% 4px;
-      z-index: 9999;
-      pointer-events: none;
-    }
-    
-    /* Dark background */
-    body {
-      background-color: var(--eva-dark);
-      color: #FFFFFF;
-    }
-    
-    /* Styling for section headers */
-    .section-heading {
-      color: var(--eva-cyan) !important;
-      font-family: 'Courier New', monospace !important;
-      border-bottom: 1px solid var(--eva-orange);
-    }
-    
-    /* Styling for headings */
-    h1, h2, h3 {
-      font-family: 'Courier New', monospace !important;
-    }
-    
-    h1 {
-      color: var(--eva-orange) !important;
-    }
-    
-    /* Navigation bar styling */
-    .navbar {
-      background-color: rgba(17, 17, 17, 0.9) !important;
-      border-bottom: 1px solid var(--eva-orange) !important;
-    }
-    
-    /* Card styling */
-    .card {
-      background-color: rgba(17, 17, 17, 0.8) !important;
-      border: 1px solid var(--eva-orange) !important;
-    }
-    
-    /* NERV logo in header */
-    .navbar-brand::before {
-      content: 'NERV';
-      color: var(--eva-orange);
-      margin-right: 10px;
-      font-family: 'Courier New', monospace;
-      font-weight: bold;
-    }
-    </style>
+<link rel="stylesheet" href="{{ "css/evangelion-master.css" | relURL }}">
+
+<!-- Add dynamic page background -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Create background grid
+  const background = document.createElement('div');
+  background.classList.add('page-background');
+  document.body.appendChild(background);
+  
+  // Add tech decorations
+  const phrases = [
+    'SYSTEM ACTIVE', 'TERMINAL MODE', 'DEBUG:0', 'ACCESS GRANTED',
+    'MAGI ONLINE', 'SYNC RATIO 98.7%', 'PATTERN BLUE', 'TERMINAL DOGMA',
+    'AT FIELD', 'LCL STATUS OK', 'EVA-01 ACTIVATED', 'NERV HQ'
+  ];
+  
+  for (let i = 0; i < 10; i++) {
+    const decoration = document.createElement('div');
+    decoration.classList.add('tech-decoration');
+    decoration.textContent = phrases[Math.floor(Math.random() * phrases.length)];
+    decoration.style.top = `${Math.random() * 100}vh`;
+    decoration.style.left = `${Math.random() * 100}vw`;
+    decoration.style.transform = `rotate(${Math.random() * 90 - 45}deg)`;
+    document.body.appendChild(decoration);
+  }
+});
+</script>

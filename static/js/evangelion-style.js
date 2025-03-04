@@ -1,130 +1,169 @@
 // Refined Evangelion UI with improved retro tech layout
 document.addEventListener('DOMContentLoaded', function() {
-  // Add data status indicators to sections
-  function addStatusIndicators() {
+  // Add timer to navbar
+  function addTimer() {
+    // Check if timer already exists
+    if (document.getElementById('eva-timer')) return;
+    
+    const timerContainer = document.createElement('div');
+    timerContainer.id = 'eva-timer';
+    timerContainer.style.position = 'absolute';
+    timerContainer.style.right = '20px';
+    timerContainer.style.top = '50%';
+    timerContainer.style.transform = 'translateY(-50%)';
+    timerContainer.style.fontSize = '10px';
+    timerContainer.style.fontFamily = 'Courier New, monospace';
+    timerContainer.style.color = 'var(--eva-cyan)';
+    
+    // Update time every second
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
+      timerContainer.textContent = `T:${timeString}`;
+    }
+    
+    updateTime();
+    setInterval(updateTime, 1000);
+    
+    // Append to navbar
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+      navbar.style.position = 'relative';
+      navbar.appendChild(timerContainer);
+    }
+  }
+  
+  // Add tech frames to widgets
+  function addTechFrames() {
     const sections = document.querySelectorAll('.home-section');
-    sections.forEach(section => {
-      const statusIndicator = document.createElement('span');
-      statusIndicator.classList.add('status', 'status-green');
-      statusIndicator.style.position = 'absolute';
-      statusIndicator.style.top = '5px';
-      statusIndicator.style.left = '15px';
+    
+    sections.forEach((section, index) => {
+      // Skip sections that already have eva-terminal class
+      if (section.querySelector('.eva-terminal')) return;
       
-      // Random blink effect
-      setInterval(() => {
-        if (Math.random() > 0.7) {
-          statusIndicator.style.opacity = '0.5';
-          setTimeout(() => {
-            statusIndicator.style.opacity = '1';
-          }, 300);
-        }
-      }, 2000);
-      
+      // Create tech border
+      section.style.border = '1px solid var(--eva-orange)';
+      section.style.borderRadius = '5px';
+      section.style.padding = '20px';
+      section.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
       section.style.position = 'relative';
-      section.prepend(statusIndicator);
-    });
-  }
-  
-  // Add circuit pattern to background
-  function addCircuitPattern() {
-    const circuit = document.createElement('div');
-    circuit.style.position = 'fixed';
-    circuit.style.top = '0';
-    circuit.style.left = '0';
-    circuit.style.width = '100%';
-    circuit.style.height = '100%';
-    circuit.style.backgroundImage = 'url("data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M10 10 H90 V90 H10 Z\' fill=\'none\' stroke=\'%2300FFFF10\' stroke-width=\'1\'/%3E%3C/svg%3E")';
-    circuit.style.pointerEvents = 'none';
-    circuit.style.zIndex = '-1';
-    document.body.appendChild(circuit);
-  }
-  
-  // Add terminal timestamps to experience items
-  function addTimestamps() {
-    const timeElements = document.querySelectorAll('.experience .card-subtitle');
-    timeElements.forEach(el => {
-      el.innerHTML = '[TIMESTAMP: ' + el.innerHTML + '] > ' + el.innerHTML;
-      el.style.color = '#00FF00';
-      el.style.fontSize = '0.8rem';
-    });
-  }
-  
-  // Add tech frame to profile section
-  function enhanceProfileSection() {
-    const profileSection = document.querySelector('#about');
-    if (profileSection) {
-      // Add tech border
-      profileSection.style.border = '1px solid #FF4800';
-      profileSection.style.borderRadius = '5px';
-      profileSection.style.padding = '20px';
-      profileSection.style.background = 'rgba(0, 0, 0, 0.5)';
+      section.style.marginBottom = '30px';
       
       // Add section identifier
+      const sectionId = section.id || `section-${index}`;
       const sectionTag = document.createElement('div');
       sectionTag.style.position = 'absolute';
       sectionTag.style.top = '-10px';
       sectionTag.style.left = '20px';
-      sectionTag.style.background = '#111111';
+      sectionTag.style.backgroundColor = 'var(--eva-dark)';
       sectionTag.style.padding = '0 10px';
-      sectionTag.style.color = '#00FFFF';
+      sectionTag.style.color = 'var(--eva-cyan)';
       sectionTag.style.fontSize = '12px';
-      sectionTag.textContent = 'PROFILE_DATA';
+      sectionTag.style.textTransform = 'uppercase';
+      sectionTag.textContent = sectionId.replace('-', '_');
       
-      profileSection.style.position = 'relative';
-      profileSection.prepend(sectionTag);
-    }
-  }
-  
-  // Make publication list more compact
-  function compactPublications() {
-    const pubs = document.querySelectorAll('.pub-list-item');
-    pubs.forEach(pub => {
-      pub.style.padding = '10px';
-      pub.style.marginBottom = '10px';
-      pub.style.fontSize = '0.9rem';
-      pub.style.lineHeight = '1.3';
+      // Add status indicators
+      const statusContainer = document.createElement('div');
+      statusContainer.style.position = 'absolute';
+      statusContainer.style.top = '-5px';
+      statusContainer.style.right = '20px';
+      statusContainer.style.backgroundColor = 'var(--eva-dark)';
+      statusContainer.style.padding = '0 10px';
+      statusContainer.style.display = 'flex';
+      statusContainer.style.gap = '5px';
       
-      // Add tech decoration
-      const pubDate = pub.querySelector('.article-metadata');
-      if (pubDate) {
-        pubDate.style.fontSize = '0.75rem';
-        pubDate.style.color = '#00FFFF';
+      for (let i = 0; i < 3; i++) {
+        const status = document.createElement('span');
+        status.classList.add('status');
+        
+        if (i === 0) status.classList.add('status-cyan');
+        else if (i === 1) status.classList.add('status-orange');
+        else status.classList.add('status-green');
+        
+        statusContainer.appendChild(status);
       }
+      
+      section.prepend(sectionTag);
+      section.prepend(statusContainer);
     });
   }
   
-  // Random glitch effect on page
-  function randomGlitchEffect() {
-    setInterval(() => {
-      if (Math.random() > 0.95) {
-        const glitchOverlay = document.createElement('div');
-        glitchOverlay.style.position = 'fixed';
-        glitchOverlay.style.top = '0';
-        glitchOverlay.style.left = '0';
-        glitchOverlay.style.width = '100%';
-        glitchOverlay.style.height = '100%';
-        glitchOverlay.style.background = 'rgba(0, 255, 255, 0.03)';
-        glitchOverlay.style.zIndex = '9999';
-        glitchOverlay.style.pointerEvents = 'none';
-        document.body.appendChild(glitchOverlay);
-        
-        setTimeout(() => {
-          document.body.removeChild(glitchOverlay);
-        }, 150);
-      }
-    }, 5000);
+  // Add circuit pattern to avatar
+  function enhanceAvatar() {
+    const avatar = document.querySelector('.avatar');
+    if (avatar) {
+      avatar.style.border = '2px solid var(--eva-orange)';
+      avatar.style.boxShadow = '0 0 10px var(--eva-cyan)';
+      
+      // Create circuit pattern overlay
+      const circuitOverlay = document.createElement('div');
+      circuitOverlay.style.position = 'absolute';
+      circuitOverlay.style.top = '0';
+      circuitOverlay.style.left = '0';
+      circuitOverlay.style.width = '100%';
+      circuitOverlay.style.height = '100%';
+      circuitOverlay.style.borderRadius = '50%';
+      circuitOverlay.style.border = '2px dashed var(--eva-cyan)';
+      circuitOverlay.style.animation = 'rotate 20s linear infinite';
+      circuitOverlay.style.pointerEvents = 'none';
+      
+      // Position relative for absolute positioning of overlay
+      const parent = avatar.parentElement;
+      parent.style.position = 'relative';
+      parent.appendChild(circuitOverlay);
+    }
   }
   
-  // Execute all enhancements
-  function enhanceUI() {
-    addStatusIndicators();
-    addCircuitPattern();
-    addTimestamps();
-    enhanceProfileSection();
-    compactPublications();
-    randomGlitchEffect();
+  // Add random data points to background
+  function addDataPoints() {
+    const container = document.createElement('div');
+    container.style.position = 'fixed';
+    container.style.top = '0';
+    container.style.left = '0';
+    container.style.width = '100%';
+    container.style.height = '100%';
+    container.style.zIndex = '-1';
+    container.style.pointerEvents = 'none';
+    
+    for (let i = 0; i < 50; i++) {
+      const dataPoint = document.createElement('div');
+      dataPoint.style.position = 'absolute';
+      dataPoint.style.width = '2px';
+      dataPoint.style.height = '2px';
+      dataPoint.style.backgroundColor = 'var(--eva-cyan)';
+      dataPoint.style.borderRadius = '50%';
+      dataPoint.style.opacity = Math.random() * 0.5;
+      dataPoint.style.top = `${Math.random() * 100}vh`;
+      dataPoint.style.left = `${Math.random() * 100}vw`;
+      dataPoint.style.boxShadow = '0 0 5px var(--eva-cyan)';
+      
+      // Random pulse animation
+      dataPoint.style.animation = `pulse ${2 + Math.random() * 3}s infinite`;
+      
+      container.appendChild(dataPoint);
+    }
+    
+    document.body.appendChild(container);
+  }
+  
+  // Initialize enhancements
+  function initEnhancements() {
+    addTimer();
+    addTechFrames();
+    enhanceAvatar();
+    addDataPoints();
   }
   
   // Wait a bit to ensure the page is fully loaded
-  setTimeout(enhanceUI, 500);
+  setTimeout(initEnhancements, 500);
+  
+  // Create keyframe animation for rotation
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  `;
+  document.head.appendChild(style);
 });

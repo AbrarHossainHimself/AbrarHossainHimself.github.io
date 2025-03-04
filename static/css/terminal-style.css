@@ -1,0 +1,231 @@
+/* Terminal-style components for Evangelion theme */
+
+/* Terminal container */
+.eva-terminal {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--eva-orange);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Terminal header */
+  .terminal-header {
+    background-color: rgba(40, 40, 40, 0.9);
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--eva-orange);
+  }
+  
+  .terminal-title {
+    color: var(--eva-cyan);
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  
+  .terminal-controls {
+    display: flex;
+    gap: 8px;
+  }
+  
+  /* Terminal content */
+  .terminal-content {
+    padding: 15px;
+  }
+  
+  .terminal-text {
+    color: var(--eva-cyan) !important;
+    font-family: 'Courier New', monospace !important;
+    margin-bottom: 10px !important;
+    letter-spacing: 1px;
+    font-size: 1.5rem !important;
+  }
+  
+  .terminal-subtitle {
+    color: var(--eva-orange) !important;
+    font-family: 'Courier New', monospace !important;
+    font-size: 1rem !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .terminal-org {
+    color: #FFFFFF !important;
+    font-family: 'Courier New', monospace !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 15px !important;
+  }
+  
+  /* Terminal prompt */
+  .terminal-prompt {
+    color: var(--eva-green);
+    font-family: 'Courier New', monospace;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .terminal-output {
+    color: #FFFFFF;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  /* Terminal sections */
+  .terminal-section {
+    margin-bottom: 20px;
+    border-left: 2px solid var(--eva-orange);
+    padding-left: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+  }
+  
+  .terminal-section-title {
+    color: var(--eva-cyan) !important;
+    font-family: 'Courier New', monospace !important;
+    font-size: 1rem !important;
+    margin-bottom: 10px !important;
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .terminal-section-title::before {
+    content: '>';
+    color: var(--eva-green);
+    margin-right: 5px;
+  }
+  
+  /* Terminal lists */
+  .terminal-list {
+    list-style-type: none;
+    padding-left: 10px;
+    margin-bottom: 0;
+  }
+  
+  .terminal-list li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+  }
+  
+  .terminal-list li::before {
+    content: '>';
+    color: var(--eva-orange);
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Course specific styling */
+  .course-item {
+    margin-bottom: 8px;
+  }
+  
+  .course-title {
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+  
+  .institution {
+    color: var(--eva-orange);
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+  
+  /* Skills section */
+  .skills-section {
+    margin-top: 20px;
+  }
+  
+  .skill-category {
+    margin-bottom: 20px;
+  }
+  
+  .skill-item {
+    margin-bottom: 8px;
+  }
+  
+  .skill-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+    font-size: 0.85rem;
+  }
+  
+  .skill-icon {
+    margin-right: 8px;
+    color: var(--eva-orange);
+  }
+  
+  .skill-meter {
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .skill-fill {
+    height: 100%;
+    position: relative;
+  }
+  
+  .skill-fill span {
+    position: absolute;
+    right: 5px;
+    top: -8px;
+    font-size: 9px;
+    color: #000;
+  }
+  
+  /* Avatar styling */
+  .avatar-circle {
+    border: 2px solid var(--eva-orange) !important;
+    box-shadow: 0 0 10px var(--eva-cyan);
+  }
+  
+  /* Typing animation */
+  .terminal-text-container {
+    position: relative;
+  }
+  
+  /* Blinking cursor */
+  .terminal-text-container::after {
+    content: '|';
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: var(--eva-green);
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  /* Compact network icons */
+  .network-icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 15px !important;
+  }
+  
+  .network-icon li {
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .network-icon a {
+    color: var(--eva-cyan) !important;
+    transition: all 0.3s ease;
+  }
+  
+  .network-icon a:hover {
+    color: var(--eva-orange) !important;
+    transform: scale(1.1);
+  }

@@ -1,0 +1,259 @@
+/* Evangelion master stylesheet */
+
+/* Root variables */
+:root {
+    --eva-orange: #FF4800;
+    --eva-cyan: #00FFFF;
+    --eva-dark: #111111;
+    --eva-blue: #0077FF;
+    --eva-green: #00FF00;
+  }
+  
+  /* Import component styles */
+  @import url('evangelion-style.css');
+  @import url('terminal-style.css');
+  @import url('experience-style.css');
+  @import url('publications-style.css');
+  
+  /* Global Evangelion tech style */
+  body {
+    background-color: var(--eva-dark);
+    color: #FFFFFF;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    font-size: 0.95rem;
+  }
+  
+  /* Scan line effect */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      rgba(18, 16, 16, 0) 50%, 
+      rgba(0, 0, 0, 0.1) 50%
+    );
+    background-size: 100% 4px;
+    z-index: 9999;
+    pointer-events: none;
+  }
+  
+  /* Compact navigation */
+  .navbar {
+    background-color: rgba(17, 17, 17, 0.9) !important;
+    border-bottom: 1px solid var(--eva-orange) !important;
+    height: 50px !important;
+    padding: 0 20px !important;
+  }
+  
+  .navbar-brand {
+    font-size: 1.1rem !important;
+    color: var(--eva-orange) !important;
+    letter-spacing: 1px;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color: #FFFFFF !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 10px !important;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: var(--eva-cyan) !important;
+  }
+  
+  /* Compact section spacing */
+  .home-section {
+    padding: 30px 0 !important;
+  }
+  
+  /* Terminal heading style */
+  .terminal-heading {
+    color: var(--eva-cyan) !important;
+    font-family: 'Courier New', monospace !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.4rem !important;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--eva-orange);
+    margin-bottom: 15px;
+  }
+  
+  /* Terminal intro text */
+  .terminal-intro {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #DDDDDD;
+  }
+  
+  /* Grid background pattern */
+  .page-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(to right, rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+ /* Compact footer */
+.site-footer {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    border-top: 1px solid var(--eva-orange) !important;
+    padding: 15px 0 !important;
+    font-size: 0.8rem !important;
+    color: #AAAAAA;
+  }
+  
+  .site-footer a {
+    color: var(--eva-cyan) !important;
+  }
+  
+  .site-footer a:hover {
+    color: var(--eva-orange) !important;
+    text-decoration: none;
+  }
+  
+  /* Section transitions */
+  .home-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSection 0.5s ease forwards;
+  }
+  
+  @keyframes fadeInSection {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Add animation delay to sections */
+  .home-section:nth-child(2) { animation-delay: 0.1s; }
+  .home-section:nth-child(3) { animation-delay: 0.2s; }
+  .home-section:nth-child(4) { animation-delay: 0.3s; }
+  .home-section:nth-child(5) { animation-delay: 0.4s; }
+  
+  /* Status indicator animation */
+  .status {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+  
+  /* Tech decorations */
+  .tech-decoration {
+    position: absolute;
+    font-family: 'Courier New', monospace;
+    color: rgba(0, 255, 255, 0.2);
+    font-size: 10px;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .terminal-content {
+      padding: 10px;
+    }
+    
+    .experience-timeline::before {
+      left: 5px;
+    }
+    
+    .experience-item {
+      padding-left: 20px;
+    }
+    
+    .experience-item::before {
+      left: 1px;
+    }
+    
+    .skill-item {
+      margin-bottom: 12px;
+    }
+  }
+  
+  /* Link styling */
+  a {
+    color: var(--eva-cyan);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--eva-orange);
+    text-decoration: none;
+  }
+  
+  /* Button styling */
+  .btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--eva-orange);
+    color: var(--eva-cyan);
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    padding: 5px 15px;
+  }
+  
+  .btn:hover {
+    background-color: rgba(255, 72, 0, 0.2);
+    color: #FFFFFF;
+  }
+  
+  /* Card styling */
+  .card {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid var(--eva-orange) !important;
+    margin-bottom: 15px;
+  }
+  
+  .card-title {
+    color: var(--eva-cyan) !important;
+    font-size: 1.1rem !important;
+  }
+  
+  .card-body {
+    padding: 15px !important;
+  }
+  
+  /* Add tech highlights */
+  ::selection {
+    background-color: var(--eva-orange);
+    color: #000000;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--eva-dark);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--eva-orange);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--eva-cyan);
+  }

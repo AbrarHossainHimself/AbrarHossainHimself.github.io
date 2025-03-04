@@ -1,0 +1,59 @@
+{{ $ := .root }}
+{{ $page := .page }}
+{{ $columns := $page.Params.design.columns | default "2" }}
+
+<!-- Experience widget Evangelion style -->
+<div class="eva-terminal">
+  <!-- Terminal header -->
+  <div class="terminal-header">
+    <span class="terminal-title">CAREER_DATA_RECORD</span>
+    <div class="terminal-controls">
+      <span class="status status-cyan"></span>
+      <span class="status status-orange"></span>
+      <span class="status status-green"></span>
+    </div>
+  </div>
+
+  <!-- Terminal content -->
+  <div class="terminal-content">
+    <div class="terminal-prompt">> VIEW EXPERIENCE_LOG</div>
+    
+    <h1 class="terminal-heading">{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
+    
+    {{ with $page.Content }}<div class="terminal-intro">{{ . }}</div>{{ end }}
+    
+    {{ if $page.Params.content.items }}
+    <div class="experience-timeline">
+      {{ range $idx, $item := $page.Params.content.items }}
+      <div class="experience-item" data-id="{{ $idx }}">
+        <div class="experience-header">
+          <div class="exp-title">
+            {{ with .title }}<span class="exp-title-text">{{ . | markdownify | emojify }}</span>{{ end }}
+            {{ with .company }}<span class="exp-company">{{ . | markdownify | emojify }}</span>{{ end }}
+          </div>
+          <div class="exp-date-loc">
+            {{ with .date_start }}
+            <span class="exp-date">
+              {{ (time .).Format ($page.Params.content.date_format | default "Jan 2006") }} –
+              {{ if .date_end }}
+                {{ (time .date_end).Format ($page.Params.content.date_format | default "Jan 2006") }}
+              {{ else }}
+                <span class="exp-current">Present</span>
+              {{ end }}
+            </span>
+            {{ end }}
+            {{ with .location }}<span class="exp-location">{{ . }}</span>{{ end }}
+          </div>
+        </div>
+        
+        {{ with .description }}
+        <div class="exp-description">
+          {{ if eq (substr . 0 2) "- " }}{{ $.Page.RenderString (substr . 2) }}{{ else }}{{ . | markdownify | emojify }}{{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</div>

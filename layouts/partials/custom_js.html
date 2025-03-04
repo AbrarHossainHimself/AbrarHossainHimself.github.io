@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="{{ "css/evangelion-style.css" | relURL }}">
 <script src="{{ "js/evangelion-style.js" | relURL }}"></script>
 
 <script>
@@ -6,19 +5,71 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add terminal-like command prefix to section headings
   const sections = document.querySelectorAll('.section-heading');
   sections.forEach(section => {
-    section.innerHTML = '> ' + section.innerHTML;
+    if (!section.innerHTML.startsWith('&gt;')) {
+      section.innerHTML = '&gt; ' + section.innerHTML;
+    }
   });
   
-  // Add typing effect to biography intro
-  const bioIntro = document.querySelector('#about p:first-of-type');
-  if (bioIntro) {
-    bioIntro.classList.add('typing-effect');
+  // Add data timestamp to experience items
+  const timeElements = document.querySelectorAll('.exp-date');
+  timeElements.forEach(el => {
+    const dateText = el.textContent;
+    if (!dateText.includes('[TIMESTAMP:')) {
+      el.innerHTML = '<span style="color: var(--eva-green); font-size: 0.8rem;">[TIMESTAMP: ' + dateText + ']</span> ' + dateText;
+    }
+  });
+  
+  // Random terminal glitch effect
+  function randomGlitch() {
+    if (Math.random() > 0.95) {
+      const glitchOverlay = document.createElement('div');
+      glitchOverlay.style.position = 'fixed';
+      glitchOverlay.style.top = '0';
+      glitchOverlay.style.left = '0';
+      glitchOverlay.style.width = '100%';
+      glitchOverlay.style.height = '100%';
+      glitchOverlay.style.backgroundColor = 'rgba(0, 255, 255, 0.03)';
+      glitchOverlay.style.zIndex = '9999';
+      glitchOverlay.style.pointerEvents = 'none';
+      document.body.appendChild(glitchOverlay);
+      
+      setTimeout(() => {
+        document.body.removeChild(glitchOverlay);
+      }, 100);
+    }
   }
-
+  
+  // Random terminal messages in console
+  const messages = [
+    '[SYSTEM] Terminal mode activated',
+    '[MAGI] Synchronization rate: 98.7%',
+    '[WARNING] A.T. Field detected',
+    '[NERV HQ] All systems operational',
+    '[EVA-01] Initialization sequence complete',
+    '[LCL] Life support systems online'
+  ];
+  
+  // Show periodic messages
+  setInterval(() => {
+    console.log('%c' + messages[Math.floor(Math.random() * messages.length)], 'color: #00FFFF; background: #111111; padding: 3px;');
+  }, 10000);
+  
+  // Add data attribute for glitch effect
+  const headings = document.querySelectorAll('h1, h2, h3');
+  headings.forEach(heading => {
+    heading.setAttribute('data-text', heading.textContent);
+    if (Math.random() > 0.7) {
+      heading.classList.add('glitch');
+    }
+  });
+  
   // Remove NERV from navbar (in case custom_head.html changes don't take effect)
   const navbarBrand = document.querySelector('.navbar-brand');
-  if (navbarBrand) {
+  if (navbarBrand && navbarBrand.innerHTML.includes('NERV')) {
     navbarBrand.innerHTML = navbarBrand.innerHTML.replace('NERV', '');
   }
+  
+  // Execute glitch effect periodically
+  setInterval(randomGlitch, 5000);
 });
 </script>

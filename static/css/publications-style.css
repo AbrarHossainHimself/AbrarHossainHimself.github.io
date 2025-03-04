@@ -1,0 +1,97 @@
+/* Publications Evangelion style */
+
+.pubs-container {
+  margin-top: 20px;
+}
+
+/* Citation style */
+.pub-list-item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 12px;
+  border-left: 2px solid var(--eva-orange);
+}
+
+.pub-list-item::before {
+  content: '[DOC]';
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  background-color: var(--eva-dark);
+  padding: 0 5px;
+  font-size: 10px;
+  color: var(--eva-cyan);
+  letter-spacing: 1px;
+}
+
+.pub-list-item .article-metadata {
+  font-size: 0.75rem;
+  color: #AAAAAA;
+  margin-bottom: 5px;
+}
+
+.pub-list-item .pub-title {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--eva-cyan);
+  margin-bottom: 5px;
+}
+
+.pub-list-item .pub-authors {
+  font-size: 0.8rem;
+  color: var(--eva-orange);
+}
+
+.pub-list-item .pub-publication {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.pub-list-item .btn-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.pub-list-item .btn-links .btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--eva-orange);
+  color: var(--eva-cyan);
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pub-list-item .btn-links .btn:hover {
+  background-color: rgba(255, 72, 0, 0.2);
+}
+
+/* See all link */
+.see-all {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.see-all-link {
+  color: var(--eva-cyan);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--eva-orange);
+}
+
+.see-all-link:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+  color: var(--eva-orange);
+  text-decoration: none;
+}

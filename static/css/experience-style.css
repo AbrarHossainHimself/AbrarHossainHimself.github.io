@@ -1,0 +1,104 @@
+/* Experience widget Evangelion style */
+
+.experience-timeline {
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .experience-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    width: 2px;
+    background-color: var(--eva-orange);
+    z-index: 1;
+  }
+  
+  .experience-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 25px;
+  }
+  
+  .experience-item::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--eva-cyan);
+    border: 2px solid var(--eva-orange);
+    z-index: 2;
+  }
+  
+  .experience-header {
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-left: 2px solid var(--eva-cyan);
+  }
+  
+  .exp-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+  
+  .exp-title-text {
+    color: var(--eva-cyan);
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+  
+  .exp-company {
+    color: var(--eva-orange);
+    font-size: 0.9rem;
+  }
+  
+  .exp-date-loc {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    color: #AAAAAA;
+  }
+  
+  .exp-current {
+    color: var(--eva-green);
+    animation: blink 1s step-end infinite;
+  }
+  
+  .exp-location {
+    margin-top: 3px;
+    font-style: italic;
+  }
+  
+  .exp-description {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-left: 1px dashed var(--eva-orange);
+  }
+  
+  .exp-description ul {
+    list-style-type: none;
+    padding-left: 15px;
+  }
+  
+  .exp-description ul li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .exp-description ul li::before {
+    content: '>';
+    color: var(--eva-green);
+    position: absolute;
+    left: 0;
+  }
