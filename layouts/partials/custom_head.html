@@ -26,15 +26,53 @@
     pointer-events: none;
   }
   
-  /* Dark background */
-  body {
-    background-color: var(--eva-dark);
-    color: #FFFFFF;
-    font-family: 'Courier New', monospace;
-    font-size: 0.95rem;
+  /* GLOBAL DARK THEME - Force dark background everywhere */
+  html, body, .page-wrapper, .page-body, main, article, 
+  .home-section, .article-container, .docs-article-container, 
+  .wg-about, .wg-accomplishments, .wg-experience, .wg-pages,
+  .universal-wrapper, .biography-title, footer {
+    background-color: var(--eva-dark) !important;
+    color: #FFFFFF !important;
   }
   
-  /* More compact design for content */
+  /* Force all text to be white for readability */
+  p, span, div, li, ul, ol, a:not(.btn), h4, h5, h6, 
+  .card-text, .card-title, .article-style, .pub-title,
+  .talk-title, .exp-meta, .exp-title, .exp-company, 
+  .biography-title, .form-control, .form-control::placeholder {
+    color: #FFFFFF !important;
+  }
+  
+  /* Override any default white backgrounds */
+  .card, .experience .m-2, .home-section,
+  .article-container, .pub-list-item, .media-body {
+    background-color: rgba(17, 17, 17, 0.8) !important;
+  }
+  
+  /* Dark footer */
+  .page-footer, .site-footer {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: #AAAAAA !important;
+  }
+  
+  /* Force all headings to use consistent styling */
+  h1, h2, h3 {
+    font-family: 'Courier New', monospace !important;
+    color: var(--eva-cyan) !important;
+  }
+  
+  h1 {
+    color: var(--eva-orange) !important;
+    font-size: 1.6rem !important;
+  }
+  
+  /* Remove default white backgrounds from all sections */
+  .home-section {
+    padding: 30px 0 !important;
+    border-bottom: 1px solid var(--eva-orange);
+  }
+  
+  /* More compact design */
   .container, .container-fluid {
     padding: 10px 20px;
   }
@@ -51,16 +89,6 @@
     margin-bottom: 20px !important;
   }
   
-  /* Styling for headings */
-  h1, h2, h3 {
-    font-family: 'Courier New', monospace !important;
-  }
-  
-  h1 {
-    color: var(--eva-orange) !important;
-    font-size: 1.6rem !important;
-  }
-  
   /* Navigation bar styling - removing NERV */
   .navbar {
     background-color: rgba(17, 17, 17, 0.9) !important;
@@ -72,14 +100,22 @@
     font-family: 'Courier New', monospace;
     font-weight: bold;
     font-size: 1.1rem !important;
+    color: var(--eva-orange) !important;
   }
   
-  /* More compact menu items */
+  /* Navbar links */
   .navbar-light .navbar-nav .nav-link {
+    color: #FFFFFF !important;
     font-size: 0.85rem !important;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0 10px !important;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link:focus,
+  .navbar-light .navbar-nav .active > .nav-link {
+    color: var(--eva-cyan) !important;
   }
   
   /* Card styling - more compact */
@@ -110,6 +146,8 @@
       linear-gradient(to right, rgba(0, 255, 255, 0.03) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 20px 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
   }
   
   /* Avatar styling */
@@ -141,9 +179,90 @@
     font-size: 0.85rem !important;
   }
   
+  /* Experience section heading */
+  #experience .section-heading,
+  #publications .section-heading,
+  #talks .section-heading,
+  #review-volunteer .section-heading {
+    color: var(--eva-orange) !important;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--eva-cyan);
+  }
+  
+  /* Make all section backgrounds dark */
+  #experience, #publications, #talks, #review-volunteer {
+    background-color: var(--eva-dark) !important;
+  }
+  
+  /* Links styling */
+  a {
+    color: var(--eva-cyan) !important;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--eva-orange) !important;
+    text-decoration: none;
+  }
+  
+  /* Buttons */
+  .btn {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid var(--eva-orange) !important;
+    color: var(--eva-cyan) !important;
+  }
+  
+  .btn:hover {
+    background-color: rgba(255, 72, 0, 0.2) !important;
+    color: #FFFFFF !important;
+  }
+  
   /* Skills section */
   .skill-item {
     margin-bottom: 8px;
+  }
+  
+  /* Publication items */
+  .media.stream-item {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    padding: 10px;
+    border-left: 2px solid var(--eva-orange);
+    margin-bottom: 15px;
+  }
+  
+  .article-title a {
+    color: var(--eva-cyan) !important;
+  }
+  
+  /* Fix for metadata text */
+  .article-metadata, .pub-metadata {
+    color: #AAAAAA !important;
+  }
+  
+  /* Fix for lists */
+  ul.ul-interests li, ul.ul-edu li {
+    color: #FFFFFF !important;
+  }
+  
+  /* Horizontal rules */
+  hr {
+    border-top: 1px solid var(--eva-orange) !important;
+  }
+  
+  /* Table styling */
+  table {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    color: #FFFFFF !important;
+  }
+  
+  table th {
+    background-color: rgba(255, 72, 0, 0.2) !important;
+  }
+  
+  /* Force dark mode for any widgets not explicitly handled */
+  .dark, .dark .article-container {
+    color: #FFFFFF !important;
+    background-color: var(--eva-dark) !important;
   }
 </style>
 
@@ -154,5 +273,25 @@ const navbarBrand = document.querySelector('.navbar-brand');
 if (navbarBrand) {
   navbarBrand.innerHTML = navbarBrand.innerHTML.replace('NERV', '');
 }
+
+// Force dark theme on all sections
+const sections = document.querySelectorAll('.home-section');
+sections.forEach(section => {
+  section.style.backgroundColor = '#111111';
+  section.style.color = '#FFFFFF';
+});
+
+// Force white text on all elements
+const textElements = document.querySelectorAll('p, span, div, li, h4, h5, h6');
+textElements.forEach(el => {
+  el.style.color = '#FFFFFF';
+});
+
+// Add section title styling
+const sectionHeadings = document.querySelectorAll('.section-heading');
+sectionHeadings.forEach(heading => {
+  heading.style.color = '#00FFFF';
+  heading.style.borderBottom = '1px solid #FF4800';
+});
 });
 </script>
