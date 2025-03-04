@@ -30,17 +30,53 @@
   html, body, .page-wrapper, .page-body, main, article, 
   .home-section, .article-container, .docs-article-container, 
   .wg-about, .wg-accomplishments, .wg-experience, .wg-pages,
-  .universal-wrapper, .biography-title, footer {
+  .universal-wrapper, .biography-title, footer,
+  #talks, /* Target talks section specifically */
+  [id^="talks-"], /* Target any element with id starting with "talks-" */
+  .wg-blank, /* Target blank widget sections */
+  .wg-markdown /* Target markdown widget sections */ {
     background-color: var(--eva-dark) !important;
     color: #FFFFFF !important;
+  }
+  
+  /* Specifically target any divs with "talks" in the id */
+  div[id*="talks"], 
+  div[id*="recorded"],
+  section[id*="talks"],
+  #recorded-talks,
+  .talk-container {
+    background-color: var(--eva-dark) !important;
+    color: #FFFFFF !important;
+  }
+  
+  /* Force the background for sections with horizontal line styling */
+  div:has(> hr), /* Select divs containing horizontal lines */
+  div:has(> h2), /* Select divs containing headings */
+  div:has(> h3) {
+    background-color: var(--eva-dark) !important;
+  }
+  
+  /* Target the horizontal line patterns */
+  hr, .horizontal-rule {
+    border-color: var(--eva-orange) !important;
+    background-color: transparent !important;
   }
   
   /* Force all text to be white for readability */
   p, span, div, li, ul, ol, a:not(.btn), h4, h5, h6, 
   .card-text, .card-title, .article-style, .pub-title,
   .talk-title, .exp-meta, .exp-title, .exp-company, 
-  .biography-title, .form-control, .form-control::placeholder {
+  .biography-title, .form-control, .form-control::placeholder,
+  h2, h3 /* Additional headings */ {
     color: #FFFFFF !important;
+  }
+  
+  /* Specifically target headings in talk sections */
+  #talks h2, #talks h3,
+  div[id*="talks"] h2, div[id*="talks"] h3,
+  div[id*="recorded"] h2, div[id*="recorded"] h3,
+  .talk-container h2, .talk-container h3 {
+    color: var(--eva-cyan) !important;
   }
   
   /* Override any default white backgrounds */
@@ -190,7 +226,7 @@
   }
   
   /* Make all section backgrounds dark */
-  #experience, #publications, #talks, #review-volunteer {
+  #experience, #publications, #talks, #review-volunteer, #recorded-talks {
     background-color: var(--eva-dark) !important;
   }
   
@@ -264,6 +300,36 @@
     color: #FFFFFF !important;
     background-color: var(--eva-dark) !important;
   }
+  
+  /* Override the section colors for talks */
+  #talks, #recorded-talks, #recorded, 
+  .markdown-section, .widget-blank {
+    background-color: var(--eva-dark) !important;
+  }
+  
+  /* Override any horizontal line sections */
+  .horizontal-line-section {
+    background-color: var(--eva-dark) !important;
+  }
+  
+  /* Target section with header "RECORDED TALKS" specifically */
+  div:has(> h1:contains("RECORDED TALKS")),
+  div:has(> h2:contains("RECORDED TALKS")),
+  div:has(> h3:contains("RECORDED TALKS")),
+  div:has(> p:contains("RECORDED TALKS")),
+  div:has(> span:contains("RECORDED TALKS")) {
+    background-color: var(--eva-dark) !important;
+  }
+  
+  /* Target entire page */
+  body, html, #top, .page-wrapper {
+    background-color: var(--eva-dark) !important;
+  }
+  
+  /* Target section above and below horizontal rules */
+  hr + div, div + hr, hr + section, section + hr {
+    background-color: var(--eva-dark) !important;
+  }
 </style>
 
 <script>
@@ -275,7 +341,7 @@ if (navbarBrand) {
 }
 
 // Force dark theme on all sections
-const sections = document.querySelectorAll('.home-section');
+const sections = document.querySelectorAll('.home-section, section, [id^="talks"], [id*="recorded"], [id*="talks"]');
 sections.forEach(section => {
   section.style.backgroundColor = '#111111';
   section.style.color = '#FFFFFF';
@@ -288,10 +354,78 @@ textElements.forEach(el => {
 });
 
 // Add section title styling
-const sectionHeadings = document.querySelectorAll('.section-heading');
+const sectionHeadings = document.querySelectorAll('.section-heading, h1, h2, h3');
 sectionHeadings.forEach(heading => {
   heading.style.color = '#00FFFF';
   heading.style.borderBottom = '1px solid #FF4800';
 });
+
+// Force dark background on any section with RECORDED TALKS
+const recordedTalksElements = document.querySelectorAll('h1, h2, h3, p, span, div');
+recordedTalksElements.forEach(el => {
+  if (el.textContent.includes('RECORDED TALKS')) {
+    // Find the parent section or div
+    let parent = el;
+    while (parent && !parent.classList.contains('home-section') && parent.tagName !== 'SECTION') {
+      parent = parent.parentElement;
+    }
+    
+    if (parent) {
+      parent.style.backgroundColor = '#111111';
+      // Also style any parent sections
+      let currentParent = parent.parentElement;
+      while (currentParent) {
+        currentParent.style.backgroundColor = '#111111';
+        currentParent = currentParent.parentElement;
+      }
+    }
+  }
+});
+
+// Find all horizontal rules and ensure their parent sections are dark
+const horizontalRules = document.querySelectorAll('hr');
+horizontalRules.forEach(hr => {
+  const parent = hr.parentElement;
+  if (parent) {
+    parent.style.backgroundColor = '#111111';
+    
+    // Also get the next and previous siblings
+    if (parent.previousElementSibling) {
+      parent.previousElementSibling.style.backgroundColor = '#111111';
+    }
+    if (parent.nextElementSibling) {
+      parent.nextElementSibling.style.backgroundColor = '#111111';
+    }
+  }
+});
+
+// Add a more aggressive approach - find the RECORDED TALKS section by content
+const allElements = document.querySelectorAll('*');
+allElements.forEach(el => {
+  if (el.textContent && el.textContent.includes('RECORDED TALKS')) {
+    // Force dark background on this element and all its parents
+    let currentEl = el;
+    while (currentEl) {
+      currentEl.style.backgroundColor = '#111111';
+      currentEl.style.color = '#FFFFFF';
+      currentEl = currentEl.parentElement;
+    }
+  }
+});
+
+// Darkened entire page with !important override
+document.body.setAttribute('style', 'background-color: #111111 !important');
+
+// Create a dark overlay for the entire page to force dark theme
+const darkOverlay = document.createElement('div');
+darkOverlay.style.position = 'fixed';
+darkOverlay.style.top = '0';
+darkOverlay.style.left = '0';
+darkOverlay.style.width = '100%';
+darkOverlay.style.height = '100%';
+darkOverlay.style.backgroundColor = 'rgba(0,0,0,0.85)';
+darkOverlay.style.pointerEvents = 'none';
+darkOverlay.style.zIndex = '-1'; // Behind content
+document.body.appendChild(darkOverlay);
 });
 </script>
