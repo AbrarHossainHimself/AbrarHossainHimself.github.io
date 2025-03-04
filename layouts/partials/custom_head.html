@@ -1,29 +1,158 @@
 <!-- Custom head code - Evangelion style -->
-<link rel="stylesheet" href="{{ "css/evangelion-master.css" | relURL }}">
+<style>
+  /* Evangelion-inspired UI styles */
+  :root {
+    --eva-orange: #FF4800;
+    --eva-cyan: #00FFFF;
+    --eva-dark: #111111;
+    --eva-blue: #0077FF;
+    --eva-green: #00FF00;
+  }
+  
+  /* Basic overlay effects */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      rgba(18, 16, 16, 0) 50%, 
+      rgba(0, 0, 0, 0.1) 50%
+    );
+    background-size: 100% 4px;
+    z-index: 9999;
+    pointer-events: none;
+  }
+  
+  /* Dark background */
+  body {
+    background-color: var(--eva-dark);
+    color: #FFFFFF;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+  }
+  
+  /* More compact design for content */
+  .container, .container-fluid {
+    padding: 10px 20px;
+  }
+  
+  /* Styling for section headers */
+  .section-heading {
+    color: var(--eva-cyan) !important;
+    font-family: 'Courier New', monospace !important;
+    border-bottom: 1px solid var(--eva-orange);
+    font-size: 1.4rem !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-bottom: 8px !important;
+    margin-bottom: 20px !important;
+  }
+  
+  /* Styling for headings */
+  h1, h2, h3 {
+    font-family: 'Courier New', monospace !important;
+  }
+  
+  h1 {
+    color: var(--eva-orange) !important;
+    font-size: 1.6rem !important;
+  }
+  
+  /* Navigation bar styling - removing NERV */
+  .navbar {
+    background-color: rgba(17, 17, 17, 0.9) !important;
+    border-bottom: 1px solid var(--eva-orange) !important;
+    height: 50px !important;
+  }
+  
+  .navbar-brand {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 1.1rem !important;
+  }
+  
+  /* More compact menu items */
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 0.85rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 10px !important;
+  }
+  
+  /* Card styling - more compact */
+  .card {
+    background-color: rgba(17, 17, 17, 0.8) !important;
+    border: 1px solid var(--eva-orange) !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .card-body {
+    padding: 15px !important;
+  }
+  
+  /* CRITICAL: Remove NERV logo in header */
+  .navbar-brand::before {
+    content: none !important;
+  }
+  
+  /* Compact text */
+  p, div, span, li {
+    line-height: 1.4 !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Grid background */
+  body {
+    background-image: 
+      linear-gradient(to right, rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  /* Avatar styling */
+  .avatar {
+    border: 2px solid var(--eva-orange) !important;
+    box-shadow: 0 0 10px var(--eva-cyan);
+  }
+  
+  /* Publication styling */
+  .pub-list-item {
+    border-left: 2px solid var(--eva-orange);
+    padding-left: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+  
+  /* Experience cards - more compact */
+  #experience .card {
+    margin-bottom: 10px !important;
+  }
+  
+  #experience .card-title {
+    font-size: 1rem !important;
+    color: var(--eva-cyan) !important;
+  }
+  
+  #experience .card-subtitle {
+    font-size: 0.85rem !important;
+  }
+  
+  /* Skills section */
+  .skill-item {
+    margin-bottom: 8px;
+  }
+</style>
 
-<!-- Add dynamic page background -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Create background grid
-  const background = document.createElement('div');
-  background.classList.add('page-background');
-  document.body.appendChild(background);
-  
-  // Add tech decorations
-  const phrases = [
-    'SYSTEM ACTIVE', 'TERMINAL MODE', 'DEBUG:0', 'ACCESS GRANTED',
-    'MAGI ONLINE', 'SYNC RATIO 98.7%', 'PATTERN BLUE', 'TERMINAL DOGMA',
-    'AT FIELD', 'LCL STATUS OK', 'EVA-01 ACTIVATED', 'NERV HQ'
-  ];
-  
-  for (let i = 0; i < 10; i++) {
-    const decoration = document.createElement('div');
-    decoration.classList.add('tech-decoration');
-    decoration.textContent = phrases[Math.floor(Math.random() * phrases.length)];
-    decoration.style.top = `${Math.random() * 100}vh`;
-    decoration.style.left = `${Math.random() * 100}vw`;
-    decoration.style.transform = `rotate(${Math.random() * 90 - 45}deg)`;
-    document.body.appendChild(decoration);
-  }
+// Additional script to ensure NERV is removed
+const navbarBrand = document.querySelector('.navbar-brand');
+if (navbarBrand) {
+  navbarBrand.innerHTML = navbarBrand.innerHTML.replace('NERV', '');
+}
 });
 </script>
