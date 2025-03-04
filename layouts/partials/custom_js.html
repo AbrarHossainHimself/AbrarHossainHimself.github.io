@@ -1,1 +1,24 @@
+<link rel="stylesheet" href="{{ "css/evangelion-style.css" | relURL }}">
 <script src="{{ "js/evangelion-style.js" | relURL }}"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Add terminal-like command prefix to section headings
+  const sections = document.querySelectorAll('.section-heading');
+  sections.forEach(section => {
+    section.innerHTML = '> ' + section.innerHTML;
+  });
+  
+  // Add typing effect to biography intro
+  const bioIntro = document.querySelector('#about p:first-of-type');
+  if (bioIntro) {
+    bioIntro.classList.add('typing-effect');
+  }
+
+  // Remove NERV from navbar (in case custom_head.html changes don't take effect)
+  const navbarBrand = document.querySelector('.navbar-brand');
+  if (navbarBrand) {
+    navbarBrand.innerHTML = navbarBrand.innerHTML.replace('NERV', '');
+  }
+});
+</script>

@@ -1,0 +1,171 @@
+/* Evangelion retro-tech theme */
+/* Grid pattern background */
+body {
+    background-image: 
+      linear-gradient(to right, rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  /* Terminal-like text animation */
+  .typing-effect {
+    border-right: 2px solid var(--eva-cyan);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--eva-cyan) }
+  }
+  
+  /* Glitch text effect */
+  .glitch {
+    position: relative;
+  }
+  
+  .glitch::before, .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--eva-dark);
+  }
+  
+  .glitch::before {
+    left: 2px;
+    text-shadow: -1px 0 var(--eva-cyan);
+    animation: glitch-1 2s infinite linear alternate-reverse;
+  }
+  
+  .glitch::after {
+    left: -2px;
+    text-shadow: 1px 0 var(--eva-orange);
+    animation: glitch-2 3s infinite linear alternate-reverse;
+  }
+  
+  @keyframes glitch-1 {
+    0% { clip-path: inset(20% 0 80% 0); }
+    20% { clip-path: inset(60% 0 40% 0); }
+    40% { clip-path: inset(40% 0 60% 0); }
+    60% { clip-path: inset(80% 0 20% 0); }
+    80% { clip-path: inset(10% 0 90% 0); }
+    100% { clip-path: inset(30% 0 70% 0); }
+  }
+  
+  @keyframes glitch-2 {
+    0% { clip-path: inset(10% 0 90% 0); }
+    20% { clip-path: inset(30% 0 70% 0); }
+    40% { clip-path: inset(50% 0 50% 0); }
+    60% { clip-path: inset(70% 0 30% 0); }
+    80% { clip-path: inset(90% 0 10% 0); }
+    100% { clip-path: inset(5% 0 95% 0); }
+  }
+  
+  /* Data display components */
+  .data-box {
+    border: 1px solid var(--eva-orange);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    position: relative;
+  }
+  
+  .data-box::before {
+    content: attr(data-title);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: var(--eva-dark);
+    padding: 0 5px;
+    font-size: 12px;
+    color: var(--eva-cyan);
+  }
+  
+  /* Status indicators */
+  .status {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .status-green {
+    background-color: var(--eva-green);
+    box-shadow: 0 0 5px var(--eva-green);
+  }
+  
+  .status-orange {
+    background-color: var(--eva-orange);
+    box-shadow: 0 0 5px var(--eva-orange);
+  }
+  
+  .status-cyan {
+    background-color: var(--eva-cyan);
+    box-shadow: 0 0 5px var(--eva-cyan);
+  }
+  
+  /* Publication items - more compact & techy */
+  .pub-list-item {
+    border-left: 2px solid var(--eva-orange);
+    padding-left: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+  
+  /* Compact experience timeline */
+  .experience .card {
+    margin-bottom: 10px !important;
+  }
+  
+  .experience .card-title {
+    font-size: 1rem !important;
+    color: var(--eva-cyan) !important;
+  }
+  
+  .experience .card-subtitle {
+    font-size: 0.85rem !important;
+  }
+  
+  /* Profile image with circuit border */
+  .avatar-circle {
+    border: 2px solid var(--eva-orange) !important;
+    position: relative;
+  }
+  
+  .avatar-circle::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px dashed var(--eva-cyan);
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Skill bars */
+  .skill-bar {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid var(--eva-orange) !important;
+  }
+  
+  .progress-bar {
+    background-color: var(--eva-cyan) !important;
+  }
