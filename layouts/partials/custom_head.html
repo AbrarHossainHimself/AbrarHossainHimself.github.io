@@ -1,307 +1,275 @@
 <!-- Custom head code - Evangelion style -->
+<link rel="stylesheet" href="{{ "css/remove-stripes.css" | relURL }}">
+
 <style>
-  /* Evangelion-inspired UI styles */
-  :root {
-    --eva-orange: #FF4800;
-    --eva-cyan: #00FFFF;
-    --eva-dark: #111111;
-    --eva-blue: #0077FF;
-    --eva-green: #00FF00;
-  }
-  
-  /* Basic overlay effects */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      rgba(18, 16, 16, 0) 50%, 
-      rgba(0, 0, 0, 0.1) 50%
-    );
-    background-size: 100% 4px;
-    z-index: 9999;
-    pointer-events: none;
-  }
-  
-  /* GLOBAL DARK THEME - Force dark background everywhere */
-  html, body, .page-wrapper, .page-body, main, article, 
-  .home-section, .article-container, .docs-article-container, 
-  .wg-about, .wg-accomplishments, .wg-experience, .wg-pages,
-  .universal-wrapper, .biography-title, footer {
-    background-color: var(--eva-dark) !important;
-    color: #FFFFFF !important;
-  }
-  
-  /* Force background for full page */
-  body, html {
-    background-color: var(--eva-dark) !important;
-    background-image: 
-      linear-gradient(to right, rgba(0, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 255, 255, 0.03) 1px, transparent 1px) !important;
-    background-size: 20px 20px !important;
-  }
-  
-  /* CRITICAL: Remove horizontal stripes from specific sections */
-  body > div:not(.navbar):not(.page-footer):not(.page-header) {
-    background-color: var(--eva-dark) !important;
-    background-image: none !important;
-  }
-  
-  /* Target any container with RECORDED TALKS title */
-  div:has(> h2), div:has(> h3), 
-  div:has(> p), div:has(> span),
-  div:has(> div > h2), div:has(> div > h3),
-  div:has(> div > p), div:has(> div > span) {
-    background-color: var(--eva-dark) !important;
-    background-image: none !important;
-  }
-  
-  /* Force all text to be white for readability */
-  p, span, div, li, ul, ol, a:not(.btn), h4, h5, h6, 
-  .card-text, .card-title, .article-style, .pub-title,
-  .talk-title, .exp-meta, .exp-title, .exp-company, 
-  .biography-title, .form-control, .form-control::placeholder {
-    color: #FFFFFF !important;
-  }
-  
-  /* Override any default white backgrounds */
-  .card, .experience .m-2, .home-section,
-  .article-container, .pub-list-item, .media-body {
-    background-color: rgba(17, 17, 17, 0.8) !important;
-  }
-  
-  /* Dark footer */
-  .page-footer, .site-footer {
-    background-color: rgba(0, 0, 0, 0.8) !important;
-    color: #AAAAAA !important;
-  }
-  
-  /* Force all headings to use consistent styling */
-  h1, h2, h3 {
-    font-family: 'Courier New', monospace !important;
-    color: var(--eva-cyan) !important;
-  }
-  
-  h1 {
-    color: var(--eva-orange) !important;
-    font-size: 1.6rem !important;
-  }
-  
-  /* Remove default white backgrounds from all sections */
-  .home-section {
-    padding: 30px 0 !important;
-    border-bottom: 1px solid var(--eva-orange);
-  }
-  
-  /* More compact design */
-  .container, .container-fluid {
-    padding: 10px 20px;
-  }
-  
-  /* Styling for section headers */
-  .section-heading {
-    color: var(--eva-cyan) !important;
-    font-family: 'Courier New', monospace !important;
-    border-bottom: 1px solid var(--eva-orange);
-    font-size: 1.4rem !important;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding-bottom: 8px !important;
-    margin-bottom: 20px !important;
-  }
-  
-  /* Navigation bar styling - removing NERV */
-  .navbar {
-    background-color: rgba(17, 17, 17, 0.9) !important;
-    border-bottom: 1px solid var(--eva-orange) !important;
-    height: 50px !important;
-  }
-  
-  .navbar-brand {
-    font-family: 'Courier New', monospace;
-    font-weight: bold;
-    font-size: 1.1rem !important;
-    color: var(--eva-orange) !important;
-  }
-  
-  /* Navbar links */
-  .navbar-light .navbar-nav .nav-link {
-    color: #FFFFFF !important;
-    font-size: 0.85rem !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0 10px !important;
-  }
-  
-  .navbar-light .navbar-nav .nav-link:hover,
-  .navbar-light .navbar-nav .nav-link:focus,
-  .navbar-light .navbar-nav .active > .nav-link {
-    color: var(--eva-cyan) !important;
-  }
-  
-  /* Card styling - more compact */
-  .card {
-    background-color: rgba(17, 17, 17, 0.8) !important;
-    border: 1px solid var(--eva-orange) !important;
-    margin-bottom: 15px !important;
-  }
-  
-  .card-body {
-    padding: 15px !important;
-  }
-  
-  /* CRITICAL: Remove NERV logo in header */
-  .navbar-brand::before {
-    content: none !important;
-  }
-  
-  /* Compact text */
-  p, div, span, li {
-    line-height: 1.4 !important;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Avatar styling */
-  .avatar {
-    border: 2px solid var(--eva-orange) !important;
-    box-shadow: 0 0 10px var(--eva-cyan);
-  }
-  
-  /* Publication styling */
-  .pub-list-item {
-    border-left: 2px solid var(--eva-orange);
-    padding-left: 15px;
-    margin-bottom: 15px;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 10px;
-  }
-  
-  /* Experience cards - more compact */
-  #experience .card {
-    margin-bottom: 10px !important;
-  }
-  
-  #experience .card-title {
-    font-size: 1rem !important;
-    color: var(--eva-cyan) !important;
-  }
-  
-  #experience .card-subtitle {
-    font-size: 0.85rem !important;
-  }
-  
-  /* Experience section heading */
-  #experience .section-heading,
-  #publications .section-heading,
-  #talks .section-heading,
-  #review-volunteer .section-heading {
-    color: var(--eva-orange) !important;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--eva-cyan);
-  }
-  
-  /* Links styling */
-  a {
-    color: var(--eva-cyan) !important;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: var(--eva-orange) !important;
-    text-decoration: none;
-  }
-  
-  /* Buttons */
-  .btn {
-    background-color: rgba(0, 0, 0, 0.5) !important;
-    border: 1px solid var(--eva-orange) !important;
-    color: var(--eva-cyan) !important;
-  }
-  
-  .btn:hover {
-    background-color: rgba(255, 72, 0, 0.2) !important;
-    color: #FFFFFF !important;
-  }
-  
-  /* CRITICAL: Remove horizontal stripes specifically */
-  .row:has(> div:contains("RECORDED TALKS")) {
-    background-color: var(--eva-dark) !important;
-    background-image: none !important;
-  }
-  
-  /* Target horizontal rules and their containers */
-  hr, hr + *, * + hr, hr ~ * {
-    background-color: var(--eva-dark) !important;
-    background-image: none !important;
-  }
+    /* Evangelion-inspired UI styles */
+    :root {
+      --eva-orange: #FF4800;
+      --eva-cyan: #00FFFF;
+      --eva-dark: #111111;
+      --eva-blue: #0077FF;
+      --eva-green: #00FF00;
+    }
+    
+    /* Basic overlay effects - MODIFIED to be darker */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        rgba(18, 16, 16, 0.8) 50%, 
+        rgba(0, 0, 0, 0.9) 50%
+      );
+      background-size: 100% 4px;
+      z-index: 9999;
+      pointer-events: none;
+    }
+    
+    /* CRITICAL: Completely block any horizontal stripes */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #111111;
+      z-index: -10;
+      pointer-events: none;
+    }
+    
+    /* GLOBAL DARK THEME - Force dark background everywhere */
+    html, body, .page-wrapper, .page-body, main, article, 
+    .home-section, .article-container, .docs-article-container, 
+    .wg-about, .wg-accomplishments, .wg-experience, .wg-pages,
+    .universal-wrapper, .biography-title, footer {
+      background-color: var(--eva-dark) !important;
+      color: #FFFFFF !important;
+    }
+    
+    /* Force all text to be white for readability */
+    p, span, div, li, ul, ol, a:not(.btn), h4, h5, h6, 
+    .card-text, .card-title, .article-style, .pub-title,
+    .talk-title, .exp-meta, .exp-title, .exp-company, 
+    .biography-title, .form-control, .form-control::placeholder {
+      color: #FFFFFF !important;
+    }
+    
+    /* Override any default white backgrounds */
+    .card, .experience .m-2, .home-section,
+    .article-container, .pub-list-item, .media-body {
+      background-color: rgba(17, 17, 17, 0.8) !important;
+    }
+    
+    /* Dark footer */
+    .page-footer, .site-footer {
+      background-color: rgba(0, 0, 0, 0.8) !important;
+      color: #AAAAAA !important;
+    }
+    
+    /* Force all headings to use consistent styling */
+    h1, h2, h3 {
+      font-family: 'Courier New', monospace !important;
+      color: var(--eva-cyan) !important;
+    }
+    
+    h1 {
+      color: var(--eva-orange) !important;
+      font-size: 1.6rem !important;
+    }
+    
+    /* Remove default white backgrounds from all sections */
+    .home-section {
+      padding: 30px 0 !important;
+      border-bottom: 1px solid var(--eva-orange);
+    }
+    
+    /* More compact design */
+    .container, .container-fluid {
+      padding: 10px 20px;
+    }
+    
+    /* Styling for section headers */
+    .section-heading {
+      color: var(--eva-cyan) !important;
+      font-family: 'Courier New', monospace !important;
+      border-bottom: 1px solid var(--eva-orange);
+      font-size: 1.4rem !important;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding-bottom: 8px !important;
+      margin-bottom: 20px !important;
+    }
+    
+    /* Navigation bar styling - removing NERV */
+    .navbar {
+      background-color: rgba(17, 17, 17, 0.9) !important;
+      border-bottom: 1px solid var(--eva-orange) !important;
+      height: 50px !important;
+    }
+    
+    .navbar-brand {
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+      font-size: 1.1rem !important;
+      color: var(--eva-orange) !important;
+    }
+    
+    /* Navbar links */
+    .navbar-light .navbar-nav .nav-link {
+      color: #FFFFFF !important;
+      font-size: 0.85rem !important;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0 10px !important;
+    }
+    
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link:focus,
+    .navbar-light .navbar-nav .active > .nav-link {
+      color: var(--eva-cyan) !important;
+    }
+    
+    /* Card styling - more compact */
+    .card {
+      background-color: rgba(17, 17, 17, 0.8) !important;
+      border: 1px solid var(--eva-orange) !important;
+      margin-bottom: 15px !important;
+    }
+    
+    .card-body {
+      padding: 15px !important;
+    }
+    
+    /* CRITICAL: Remove NERV logo in header */
+    .navbar-brand::before {
+      content: none !important;
+    }
+    
+    /* Compact text */
+    p, div, span, li {
+      line-height: 1.4 !important;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Grid background */
+    body {
+      background-image: 
+        linear-gradient(to right, rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 20px 20px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+    }
+    
+    /* Avatar styling */
+    .avatar {
+      border: 2px solid var(--eva-orange) !important;
+      box-shadow: 0 0 10px var(--eva-cyan);
+    }
+    
+    /* Links styling */
+    a {
+      color: var(--eva-cyan) !important;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color: var(--eva-orange) !important;
+      text-decoration: none;
+    }
+    
+    /* Buttons */
+    .btn {
+      background-color: rgba(0, 0, 0, 0.5) !important;
+      border: 1px solid var(--eva-orange) !important;
+      color: var(--eva-cyan) !important;
+    }
+    
+    .btn:hover {
+      background-color: rgba(255, 72, 0, 0.2) !important;
+      color: #FFFFFF !important;
+    }
+    
+    /* EXTREME MEASURE: Force black background on specific areas */
+    /* This targets the section dividers and forces them black */
+    body > div {
+      background-color: #111111 !important;
+      background-image: none !important;
+    }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-// Additional script to ensure NERV is removed
-const navbarBrand = document.querySelector('.navbar-brand');
-if (navbarBrand) {
-  navbarBrand.innerHTML = navbarBrand.innerHTML.replace('NERV', '');
-}
-
-// CRITICAL: Find and fix the recorded talks section
-// Look for elements containing "RECORDED TALKS" text
-const allElements = document.querySelectorAll('*');
-allElements.forEach(el => {
-  if (el.textContent && el.textContent.includes('RECORDED TALKS')) {
-    // Find all parents and siblings
-    let parent = el.parentElement;
-    while (parent) {
-      // Apply dark style to parent and all its children
-      parent.style.backgroundColor = '#111111';
-      parent.style.backgroundImage = 'none';
-      
-      // Apply to all siblings
-      if (parent.parentElement) {
-        Array.from(parent.parentElement.children).forEach(sibling => {
-          sibling.style.backgroundColor = '#111111';
-          sibling.style.backgroundImage = 'none';
-        });
-      }
-      
-      parent = parent.parentElement;
-    }
+  // Additional script to ensure NERV is removed
+  const navbarBrand = document.querySelector('.navbar-brand');
+  if (navbarBrand) {
+    navbarBrand.innerHTML = navbarBrand.innerHTML.replace('NERV', '');
   }
-});
-
-// Force dark background on horizontal stripes sections
-const horizontalStripes = document.querySelectorAll('body > div:not(.navbar):not(.page-footer)');
-horizontalStripes.forEach(stripe => {
-  stripe.style.backgroundColor = '#111111';
-  stripe.style.backgroundImage = 'none';
-});
-
-// Create a fullscreen dark overlay
-const overlay = document.createElement('div');
-overlay.style.position = 'fixed';
-overlay.style.top = '0';
-overlay.style.left = '0';
-overlay.style.width = '100%';
-overlay.style.height = '100%';
-overlay.style.backgroundColor = 'rgba(0,0,0,0.85)';
-overlay.style.zIndex = '-1';
-overlay.style.pointerEvents = 'none';
-document.body.appendChild(overlay);
-
-// Force direct removal of any line pattern backgrounds
-const allDivs = document.querySelectorAll('div');
-allDivs.forEach(div => {
-  const computedStyle = window.getComputedStyle(div);
-  const bgImage = computedStyle.backgroundImage;
   
-  // If it has stripes or lines, remove them
-  if (bgImage && (bgImage.includes('linear-gradient') || bgImage.includes('repeating-linear-gradient'))) {
-    div.style.backgroundImage = 'none';
-    div.style.backgroundColor = '#111111';
+  // EXTREME MEASURE: Create multiple overlays to catch any stripes
+  for (let i = 0; i < 5; i++) {
+    const overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = '#111111';
+    overlay.style.zIndex = (-5 - i).toString();
+    overlay.style.pointerEvents = 'none';
+    document.body.appendChild(overlay);
   }
-});
+  
+  // More aggressive approach - reset all backgrounds
+  document.querySelectorAll('*').forEach(el => {
+    const computedStyle = window.getComputedStyle(el);
+    
+    // If the background is light or has stripes, force it to be dark
+    if (computedStyle.backgroundImage.includes('gradient') || 
+        computedStyle.backgroundColor !== 'rgb(17, 17, 17)') {
+      el.style.backgroundColor = '#111111';
+      el.style.backgroundImage = 'none';
+    }
+  });
+  
+  // Add a new HTML element to replace the striped section
+  // This is a very direct approach to override the problematic area
+  const stripedSections = document.querySelectorAll('body > div:not(.navbar):not(.page-footer)');
+  stripedSections.forEach(section => {
+    if (section.innerHTML.includes('RECORDED TALKS')) {
+      // Create a wrapper to replace the striped section
+      const wrapper = document.createElement('div');
+      wrapper.style.backgroundColor = '#111111';
+      wrapper.style.color = '#FFFFFF';
+      wrapper.style.padding = '20px 0';
+      wrapper.style.width = '100%';
+      
+      // Move the content to the new wrapper
+      wrapper.innerHTML = section.innerHTML;
+      
+      // Replace the old section with the new wrapper
+      section.parentNode.replaceChild(wrapper, section);
+    }
+  });
+  
+  // Last resort - inject style directly into head
+  const fixStyle = document.createElement('style');
+  fixStyle.innerHTML = `
+    body > div:not(.navbar):not(.page-footer) {
+      background-color: #111111 !important;
+      background-image: none !important;
+    }
+    
+    /* Target specific HTML structure where stripes appear */
+    body > div > div {
+      background-color: #111111 !important;
+      background-image: none !important;
+    }
+  `;
+  document.head.appendChild(fixStyle);
 });
 </script>
