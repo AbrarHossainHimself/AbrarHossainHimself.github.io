@@ -109,8 +109,5 @@ user_groups:
   - Researchers
 ---
 
-I am a Graduate Research Assistant at The University of Toledo, pursuing my Master's in Computer Science. My research focuses on High-Performance Computing (HPC) and Stochastic Modeling & Optimization. I am passionate about developing innovative system software solutions for HPC systems to enhance their efficiency, reliability, and cost-effectiveness.
+I am a Graduate Research Assistant at The University of Toledo, pursuing my Master's in Computer Science. My research focuses on High-Performance Computing (HPC) and Stochastic Modeling & Optimization. My current research involves optimizing scientific workflows and HPC systems resource management. I have experience in distributed systems, and machine learning infrastructure. I am particularly interested in the intersection of HPC and Machine Learning.
 
-My current research involves optimizing scientific workflows on edge computing systems and developing autotuning frameworks for HPC applications. I have experience in parallel computing, distributed systems, and machine learning infrastructure. I am particularly interested in the intersection of HPC and artificial intelligence, exploring ways to leverage high-performance computing resources for advanced AI applications.
-
-Before joining the University of Toledo, I completed my Bachelor’s in Electrical Engineering from Bangladesh.
