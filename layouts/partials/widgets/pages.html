@@ -30,25 +30,25 @@
 
     {{ $query := where site.RegularPages "Type" $page.Params.content.page_type }}
     {{ with $page.Params.content.filters.tags }}
-      {{ $query = $query | intersect (site.RegularPages | filter (site.Params.publications.citation_style | default "apa") .tags) }}
+      {{ $query = $query | intersect (site.RegularPages | filter .tags) }}
     {{ end }}
     {{ with $page.Params.content.filters.category }}
-      {{ $query = $query | intersect (site.RegularPages | filter (site.Params.publications.citation_style | default "apa") .categories) }}
+      {{ $query = $query | intersect (site.RegularPages | filter .categories) }}
     {{ end }}
     {{ with $page.Params.content.filters.publication_type }}
-      {{ $query = $query | intersect (site.RegularPages | filter (site.Params.publications.citation_style | default "apa") .publication_types) }}
+      {{ $query = $query | intersect (site.RegularPages | filter .publication_types) }}
     {{ end }}
     {{ with $page.Params.content.filters.author }}
-      {{ $query = $query | intersect (site.RegularPages | filter (site.Params.publications.citation_style | default "apa") "author" .) }}
+      {{ $query = $query | intersect (site.RegularPages | filter "author" .) }}
     {{ end }}
     {{ with $page.Params.content.filters.exclude_featured }}
-      {{ $query = $query | filter (site.Params.publications.citation_style | default "apa") "featured" false }}
+      {{ $query = $query | filter "featured" false }}
     {{ end }}
     {{ with $page.Params.content.filters.exclude_past }}
-      {{ $query = $query | intersect (site.RegularPages | filter (site.Params.publications.citation_style | default "apa") "date" (now.Format "2006-01-02") "ge") }}
+      {{ $query = $query | intersect (site.RegularPages | filter "date" (now.Format "2006-01-02") "ge") }}
     {{ end }}
     {{ with $page.Params.content.filters.exclude_future }}
-      {{ $query = $query | intersect (site.RegularPages | filter (site.Params.publications.citation_style | default "apa") "date" (now.Format "2006-01-02") "le") }}
+      {{ $query = $query | intersect (site.RegularPages | filter "date" (now.Format "2006-01-02") "le") }}
     {{ end }}
     
     {{ $count := len $query }}
