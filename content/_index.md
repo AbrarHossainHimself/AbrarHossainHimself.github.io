@@ -42,6 +42,20 @@ sections:
       title: Biography
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
+      hide_interests: true
+
+  - block: markdown
+    id: education
+    content:
+      title: Education
+      text: |
+        ### MSc in Computer Science, 2025 (Expected)
+        **The University of Toledo**
+        
+        ### BSc in Electrical and Electronic Engineering, 2019
+        **Chittagong University of Engineering & Technology**
+    design:
+      columns: '1'
   
 
   - block: markdown
@@ -131,7 +145,7 @@ sections:
     content:
       title: News
       text: |
-        • **[March'25]** Our paper got accepted to JSSPP'25
+        • **[March'25]** Our paper got accepted to IPDPS JSSPP'25
 
         • **[March'25]** Received 2025 Midwest Research Computing and Data Travel Grant
 
@@ -139,7 +153,7 @@ sections:
 
         • **[February'25]** Served as Reviewer for PEARC'25
 
-        • **[February'25]** Our paper got accepted to IoTBDSPC'24
+        • **[February'25]** Our paper got accepted to IoTBDS'24
 
         • **[December'24]** Received 2024 IEEE HiPC TCPP Travel Grant
 
@@ -154,6 +168,8 @@ sections:
         • **[June'24]** Our paper got accepted to WSC'24
 
         • **[March'24]** Received 2024 CRA-WP Grad Cohort for IDEALS Scholarship
+
+        • **[September'23]** Our poster got accepted to SC'23
     design:
       columns: '1'
 
