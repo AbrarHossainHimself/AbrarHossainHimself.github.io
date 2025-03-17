@@ -44,38 +44,34 @@ sections:
       username: admin
   
 
-
-
-
-
   - block: markdown
-  id: experience
-  content:
-    title: Experience
-    text: |
-      ### Graduate Research Assistant
-      **The University of Toledo**  
-      August 2023 - Present · Toledo, OH
+    id: experience
+    content:
+      title: Experience
+      text: |
+        ### Graduate Research Assistant
+        **The University of Toledo**  
+        August 2023 - Present · Toledo, OH
 
-      * Developed TARDIS, a power-aware HPC scheduler using GNNs, cost reduction: 18% (temporal), 10-20% (spatial)
-      * Developed LASP, a multi-armed bandit-based tuning strategy for HPC on edge devices, achieving 2.5% average performance gain over default settings.
-      * Developed a SST-based scalable job scheduler, ensuring high accuracy in wait times, node usage, parallelization
+        * Developed TARDIS, a power-aware HPC scheduler using GNNs, cost reduction: 18% (temporal), 10-20% (spatial)
+        * Developed LASP, a multi-armed bandit-based tuning strategy for HPC on edge devices, achieving 2.5% average performance gain over default settings.
+        * Developed a SST-based scalable job scheduler, ensuring high accuracy in wait times, node usage, parallelization
 
-      ### Visitor
-      **NSF National Center for Atmospheric Research**  
-      August 2024 - December 2024 · Remote
+        ### Visitor
+        **NSF National Center for Atmospheric Research**  
+        August 2024 - December 2024 · Remote
 
-      * Set up CouchDB, Chords, and Streampipes on ACCESS Jetstreams for community weather data storage
-      * Built data orchestrator for efficient data routing, achieving 30% transmission efficiency gain
-      * Reduced deployment costs by 25% for communities implementing the project
+        * Set up CouchDB, Chords, and Streampipes on ACCESS Jetstreams for community weather data storage
+        * Built data orchestrator for efficient data routing, achieving 30% transmission efficiency gain
+        * Reduced deployment costs by 25% for communities implementing the project
 
-      ### Intern
-      **NSF National Center for Atmospheric Research**  
-      May 2024 - August 2024 · Boulder, CO
+        ### Intern
+        **NSF National Center for Atmospheric Research**  
+        May 2024 - August 2024 · Boulder, CO
 
-      * Designed private LoRa network for 6+ data types with Raspberry Pi gateways and central server
-      * Improved wind forecasting with edge-ML, achieving 20% accuracy gain on Raspberry Pi
-      * Image analysis with TensorFlow, 25% accuracy gain, 3x faster training, and 95% precision on 10,000+ images
+        * Designed private LoRa network for 6+ data types with Raspberry Pi gateways and central server
+        * Improved wind forecasting with edge-ML, achieving 20% accuracy gain on Raspberry Pi
+        * Image analysis with TensorFlow, 25% accuracy gain, 3x faster training, and 95% precision on 10,000+ images
   design:
     columns: '1'
   
