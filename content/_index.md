@@ -61,6 +61,19 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
+        - title: Graduate Research Assistant
+          company: The University of Toledo
+          company_url: 'https://www.utoledo.edu/'
+          company_logo: ''
+          location: Toledo, OH
+          date_start: '2023-08-01'
+          date_end: ''
+          description: |2-
+              Research focus:
+              * Developed TARDIS, a power-aware HPC scheduler using GNNs, cost reduction: 18% (temporal), 10-20% (spatial)
+              * Developed LASP, a multi-armed bandit-based tuning strategy for HPC on edge devices, achieving 2.5% average performance gain over default settings.
+              * Developed a SST-based scalable job scheduler, ensuring high accuracy in wait times, node usage, parallelization
+
         - title: Visitor
           company: NSF National Center for Atmospheric Research
           company_url: 'https://ncar.ucar.edu/'
@@ -87,18 +100,7 @@ sections:
               * Improved wind forecasting with edge-ML, achieving 20% accuracy gain on Raspberry Pi
               * Image analysis with TensorFlow, 25% accuracy gain, 3x faster training, and 95% precision on 10,000+ images
 
-        - title: Graduate Research Assistant
-          company: The University of Toledo
-          company_url: 'https://www.utoledo.edu/'
-          company_logo: ''
-          location: Toledo, OH
-          date_start: '2023-08-01'
-          date_end: ''
-          description: |2-
-              Research focus:
-              * Developed TARDIS, a power-aware HPC scheduler using GNNs, cost reduction: 18% (temporal), 10-20% (spatial)
-              * Developed LASP, a multi-armed bandit-based tuning strategy for HPC on edge devices, achieving 2.5% average performance gain over default settings.
-              * Developed a SST-based scalable job scheduler, ensuring high accuracy in wait times, node usage, parallelization
+    
     design:
       # Choose how many columns the section has. Valid values: '1' or '2'.
       columns: '1'
