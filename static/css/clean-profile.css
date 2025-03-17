@@ -1,32 +1,66 @@
-/* Target ALL possible orbital animations with multiple selectors */
-#about .avatar-circle::after,
-#about .avatar::after,
-#about #profile .avatar-circle::after,
-#about #profile .avatar::after,
-#about .col-12.col-lg-4 .avatar::after,
-#about .col-12.col-lg-4 .avatar-circle::after,
-body .home-section#about .avatar::after,
-body .home-section#about .avatar-circle::after,
+/* Target ALL possible orbital animations with extreme specificity */
 .avatar-circle::after,
 .avatar::after,
-[class*="avatar"]::after,
-[class*="profile"] [class*="avatar"]::after {
+div .avatar-circle::after,
+div .avatar::after,
+#about .avatar-circle::after,
+#about .avatar::after,
+.home-section .avatar-circle::after,
+.home-section .avatar::after,
+#profile .avatar-circle::after,
+#profile .avatar::after,
+[id*="about"] [class*="avatar"]::after,
+[class*="profile"] [class*="avatar"]::after,
+div[class*="col"] .avatar::after,
+div[class*="col"] .avatar-circle::after {
   display: none !important;
   content: none !important;
-  border: none !important;
-  background: none !important;
-  animation: none !important;
-  opacity: 0 !important;
   visibility: hidden !important;
-  pointer-events: none !important;
+  opacity: 0 !important;
+  border: none !important;
+  animation: none !important;
+  background: none !important;
+  position: static !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
-/* Prevent any animations on the profile altogether */
+/* Directly target any element that might be creating the oval */
+[style*="border-radius: 50%"]:not(.avatar):not(.avatar-circle),
+[style*="border: 1px dashed"],
+[style*="animation: rotate"],
+[style*="position: absolute"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Apply clean styling to avatar */
+.avatar, 
+.avatar-circle {
+  border: 2px solid #FF4800 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.5) !important;
+  position: relative !important;
+  z-index: 10 !important;
+  overflow: visible !important;
+}
+
+/* Stop all animations on the profile */
 #about #profile *,
 #about .avatar,
 #about .avatar-circle,
 .avatar,
-.avatar-circle {
+.avatar-circle,
+.portrait-title *,
+#profile * {
   animation: none !important;
   transition: none !important;
+}
+
+/* Ensure parent elements don't have relative positioning */
+.avatar-wrapper, 
+.portrait-title,
+#profile {
+  position: static !important;
 }
