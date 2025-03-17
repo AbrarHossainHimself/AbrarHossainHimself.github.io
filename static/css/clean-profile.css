@@ -1,0 +1,54 @@
+/* Remove orbital circle animation around profile picture */
+#about .avatar-circle::after {
+    display: none !important;
+  }
+  
+  /* Hide the name and affiliation under the profile picture */
+  #about .portrait-title h2,
+  #about .portrait-title h3,
+  #about .terminal-text,
+  #about .terminal-subtitle,
+  #about .terminal-org {
+    display: none !important;
+  }
+  
+  /* Make social icons smaller and centered */
+  #about .network-icon {
+    margin-top: 15px !important;
+    justify-content: center !important;
+  }
+  
+  #about .network-icon .big-icon {
+    font-size: 1.2rem !important;
+    height: 1.2rem !important;
+    width: 1.2rem !important;
+  }
+  
+  /* Reduce empty space */
+  #about .terminal-content {
+    padding-bottom: 0 !important;
+  }
+  
+  /* Expand biography text to fill available space */
+  #about .terminal-output {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Center profile image */
+  #about .avatar {
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  
+  /* Increase size of bio text slightly to fill more space */
+  #about .terminal-output p {
+    font-size: 1.05rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* Add some padding at bottom of biography text to prevent cutoff */
+  #about .terminal-text-container {
+    padding-bottom: 20px !important;
+  }
