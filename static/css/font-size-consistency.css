@@ -1,0 +1,68 @@
+/* Match font sizes between Experience and Publications sections */
+
+/* Publication title font size */
+#publications h3 {
+    font-size: 1.2rem !important;
+    color: #00FFFF !important;
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+  }
+  
+  /* Match experience title to publication item titles */
+  #experience .exp-title-text {
+    font-size: 0.9rem !important; /* Match publication titles */
+    font-weight: bold !important;
+    color: #FFFFFF !important;
+  }
+  
+  /* Match company name to publication authors */
+  #experience .exp-company {
+    font-size: 0.85rem !important; /* Match author names */
+    color: #FF6600 !important;
+  }
+  
+  /* Match dates/location to publication venue */
+  #experience .exp-date-loc {
+    font-size: 0.8rem !important; /* Match publication venue */
+    font-style: italic !important;
+    color: #AAAAAA !important;
+  }
+  
+  /* Match description bullet points to publication text */
+  #experience .exp-description ul li {
+    font-size: 0.85rem !important; /* Increase from 0.8rem to match publications */
+    line-height: 1.4 !important; /* Slightly increased line height */
+    color: #CCCCFF !important; /* Match text color */
+    margin-bottom: 4px !important;
+  }
+  
+  /* Match section headings */
+  #experience .terminal-heading,
+  #publications .terminal-heading {
+    font-size: 1.4rem !important;
+    text-align: center !important;
+    margin-bottom: 15px !important;
+    color: #FF6600 !important;
+  }
+  
+  /* Force equal padding/margins in both sections */
+  #experience .experience-item,
+  #publications .publication-item {
+    margin-bottom: 15px !important;
+    padding: 0 !important;
+  }
+  
+  /* Make sure both sections have consistent spacing */
+  #experience, #publications {
+    padding: 20px 0 !important;
+  }
+  
+  /* Make sure the description margin matches publications */
+  #experience .exp-description {
+    margin-top: 5px !important;
+  }
+  
+  /* Increase list item width */
+  #experience .exp-description ul {
+    width: 100% !important;
+  }
