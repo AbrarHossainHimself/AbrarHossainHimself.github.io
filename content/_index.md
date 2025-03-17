@@ -96,9 +96,9 @@ sections:
           date_end: ''
           description: |2-
               Research focus:
-              * Contributed to an NSF-funded project to design HPEE, a new auto-tuning algorithm for optimizing HPC applications on edge devices
-              * Achieved 2.5X more efficiency with HPEE than benchmark methods
-              * Improve High-performance computing (HPC) systems through stochastic modeling and optimization
+              * Developed TARDIS, a power-aware HPC scheduler using GNNs, cost reduction: 18% (temporal), 10-20% (spatial)
+              * Developed LASP, a multi-armed bandit-based tuning strategy for HPC on edge devices, achieving 2.5% average performance gain over default settings.
+              * Developed a SST-based scalable job scheduler, ensuring high accuracy in wait times, node usage, parallelization
     design:
       # Choose how many columns the section has. Valid values: '1' or '2'.
       columns: '1'
@@ -110,13 +110,15 @@ sections:
       text: |
 
         ### 2025
-        1. "**Enhanced Intrusion Detection in IIoT Networks: A Lightweight Approach with Autoencoder-Based Feature Learning**"  
+        1. "**Power-Aware Scheduling for Multi-Center HPC Electricity Cost Optimization**"  
+           Abrar Hossain, Abubeker Abdurahman, Mohammad Atiqul Islam, Kishwar Ahmed   
+           *International Parallel and Distributed Processing Symposium (IPDPS JSSPP 2025)*  
+
+        2. "**Enhanced Intrusion Detection in IIoT Networks: A Lightweight Approach with Autoencoder-Based Feature Learning**"  
            Tasnimul Hasan, Abrar Hossain, Mufakir Qamar Ansari, Talha Hussain Syed   
            *International Conference on Internet of Things, Big Data and Security (IoTBDS 2025)*   
         
-        2. "**Power-Aware Scheduling for Multi-Center HPC Electricity Cost Optimization**"  
-           Abrar Hossain, Abubeker Abdurahman, Mohammad Atiqul Islam, Kishwar Ahmed   
-           *International Parallel and Distributed Processing Symposium (IPDPS JSSPP 2025)*   
+         
 
         ### 2024
         1. "**HPC Application Parameter Autotuning on Edge Devices: A Bandit Learning Approach**"  
