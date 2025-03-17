@@ -208,6 +208,37 @@
     }
 </style>
 
+<style>
+  /* Force override for experience section */
+  #experience .experience-item {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    margin-bottom: 10px !important;
+  }
+  
+  #experience .experience-timeline::before {
+    left: 10px !important;
+    width: 1px !important;
+    background-color: var(--eva-cyan) !important;
+    opacity: 0.7 !important;
+  }
+  
+  /* Remove all red borders */
+  #experience * {
+    border-color: transparent !important;
+  }
+  
+  /* Then specifically set the borders we want */
+  #experience .exp-title-text {
+    color: var(--eva-cyan) !important;
+  }
+  
+  #experience .exp-company {
+    color: var(--eva-orange) !important;
+  }
+</style>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // Additional script to ensure NERV is removed
