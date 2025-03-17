@@ -20,22 +20,22 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: Graduate Research Assistant specializing in High-Performance Computing and Stochastic Optimization.
 
-# Interests to show in About widget
-# interests:
-#   - High Performance Computing (HPC)
-#   - Stochastic Modeling & Optimization
-#   - Parallel and Distributed Computing
-#   - Cloud Computing
+Interests to show in About widget
+interests:
+  - High Performance Computing (HPC)
+  - Stochastic Modeling & Optimization
+  - Parallel and Distributed Computing
+  - Cloud Computing
 
-# # Education to show in About widget
-# education:
-#   courses:
-#     - course: MSc in Computer Science
-#       institution: The University of Toledo
-#       year: 2025 (Expected)
-#     - course: BSc in Electrical and Electronic Engineering
-#       institution: Chittagong University of Engineering & Technology
-#       year: 2019
+# Education to show in About widget
+education:
+  courses:
+    - course: MSc in Computer Science
+      institution: The University of Toledo
+      year: 2025 (Expected)
+    - course: BSc in Electrical and Electronic Engineering
+      institution: Chittagong University of Engineering & Technology
+      year: 2019
 
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons

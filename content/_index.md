@@ -47,18 +47,18 @@ sections:
       css_class: "biography-custom-layout"
       hide_interests: true
 
-  - block: markdown
-    id: education
-    content:
-      title: Education
-      text: |
-        ### MSc in Computer Science, 2025 (Expected)
-        **The University of Toledo**
+  # - block: markdown
+  #   id: education
+  #   content:
+  #     title: Education
+  #     text: |
+  #       ### MSc in Computer Science, 2025 (Expected)
+  #       **The University of Toledo**
         
-        ### BSc in Electrical and Electronic Engineering, 2019
-        **Chittagong University of Engineering & Technology**
-    design:
-      columns: '1'
+  #       ### BSc in Electrical and Electronic Engineering, 2019
+  #       **Chittagong University of Engineering & Technology**
+  #   design:
+  #     columns: '1'
   
 
   - block: markdown
