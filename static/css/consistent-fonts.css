@@ -1,0 +1,66 @@
+/* Consistent font styling for the entire site */
+body,
+p, 
+span, 
+div, 
+a, 
+h1, h2, h3, h4, h5, h6,
+button,
+input,
+textarea,
+select,
+li, 
+ul, 
+ol,
+.navbar,
+.navbar-brand,
+.dropdown-menu,
+.card-title,
+.card-text,
+.btn,
+.section-heading,
+.article-title,
+.article-metadata,
+.pub-title,
+.talk-title,
+.page-title,
+.page-subtitle,
+.profile-header,
+.bio-text,
+footer {
+  font-family: 'Courier New', monospace !important;
+}
+
+/* Add some retro tech Evangelion-inspired text coloring */
+h1, h2, h3 {
+  color: #00FFFF !important; /* Cyan color for headings */
+}
+
+p, div, span, li {
+  color: #CCCCFF !important; /* Light blue-purple for regular text */
+}
+
+a:not(.btn) {
+  color: #FF6600 !important; /* Orange color for links */
+}
+
+a:hover:not(.btn) {
+  color: #00FFFF !important; /* Cyan color for link hover states */
+}
+
+.navbar-brand, 
+.navbar-light .navbar-nav .nav-link {
+  color: #00FFFF !important; /* Cyan for navigation */
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #FF6600 !important; /* Orange for hover states in navigation */
+}
+
+/* Terminal-like text styling */
+code, pre {
+  font-family: 'Courier New', monospace !important;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid #FF6600;
+  color: #00FFFF;
+}

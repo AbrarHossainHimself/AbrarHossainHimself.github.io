@@ -1,13 +1,17 @@
 /* Evangelion master stylesheet */
 
 /* Root variables */
+/* Root variables */
 :root {
-    --eva-orange: #FF4800;
-    --eva-cyan: #00FFFF;
-    --eva-dark: #111111;
-    --eva-blue: #0077FF;
-    --eva-green: #00FF00;
-  }
+  --eva-orange: #FF6600;
+  --eva-cyan: #00FFFF;
+  --eva-dark: #111111;
+  --eva-blue: #0077FF;
+  --eva-green: #00FF00;
+  --eva-text: #CCCCFF;
+  --eva-bg-dark: rgba(0, 0, 0, 0.7);
+  --eva-grid-color: rgba(0, 255, 255, 0.03);
+}
   
   /* Import component styles */
   @import url('evangelion-style.css');

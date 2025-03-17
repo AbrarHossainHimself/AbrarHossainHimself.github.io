@@ -1,0 +1,130 @@
+/* Enhanced terminal appearance for content sections */
+
+/* Terminal window styling for content sections */
+.home-section {
+    border: 1px solid var(--eva-orange);
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Terminal header for sections */
+  .home-section::before {
+    content: attr(id);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(40, 40, 40, 0.9);
+    padding: 5px 15px;
+    color: var(--eva-cyan);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--eva-orange);
+  }
+  
+  /* Adjusting content to not overlap with pseudo header */
+  .home-section .section-heading {
+    margin-top: 30px !important;
+  }
+  
+  /* Terminal command prompt for headings */
+  .section-heading::before {
+    content: ">";
+    margin-right: 10px;
+    color: var(--eva-orange);
+  }
+  
+  /* Glowing text effect for important elements */
+  .pub-title, 
+  .exp-title-text, 
+  .terminal-text, 
+  .card-title {
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+  }
+  
+  /* Typing cursor animation at the end of headings */
+  .section-heading::after {
+    content: "|";
+    margin-left: 5px;
+    color: var(--eva-cyan);
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  /* Terminal status indicators for each section */
+  .home-section .container::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--eva-green);
+    box-shadow: 0 0 5px var(--eva-green);
+  }
+  
+  .home-section .container::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 35px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--eva-orange);
+    box-shadow: 0 0 5px var(--eva-orange);
+  }
+  
+  /* Grid background for content sections */
+  .home-section .container {
+    position: relative;
+    background-image: 
+      linear-gradient(to right, rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  
+  /* System info-style labels for skills and other lists */
+  .terminal-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .terminal-list li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--eva-green);
+  }
+  
+  /* Card styling to match terminal look */
+  .card {
+    border: 1px solid var(--eva-orange) !important;
+    border-radius: 5px !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    position: relative;
+  }
+  
+  .card::before {
+    content: "DATA";
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background-color: var(--eva-dark);
+    padding: 0 8px;
+    color: var(--eva-cyan);
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
