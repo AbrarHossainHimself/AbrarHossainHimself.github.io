@@ -45,7 +45,7 @@ sections:
       username: admin
     design: 
       css_class: "biography-custom-layout"
-      hide_interests: true
+      # hide_interests: true
 
   # - block: markdown
   #   id: education
