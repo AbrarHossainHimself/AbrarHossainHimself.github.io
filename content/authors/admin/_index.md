@@ -24,8 +24,7 @@ bio: Graduate Research Assistant specializing in High-Performance Computing and 
 interests:
   - High Performance Computing (HPC)
   - Stochastic Modeling & Optimization
-  - Parallel Computing
-  - Machine Learning Systems
+  - Parallel and Distributed Computing
   - Cloud Computing
 
 # Education to show in About widget
@@ -109,5 +108,4 @@ user_groups:
   - Researchers
 ---
 
-I am a Graduate Research Assistant at The University of Toledo, pursuing my Master's in Computer Science. My research focuses on High-Performance Computing (HPC) and Stochastic Modeling & Optimization. My current research involves optimizing scientific workflows and HPC systems resource management. I have experience in distributed systems, and machine learning infrastructure. I am particularly interested in the intersection of HPC and Machine Learning.
-
+I’m Graduate Research Assistant at The University of Toledo, and a Visitor at the NSF National Center for Atmospheric Research (NCAR). My research focuses on High-Performance Computing (HPC) and  Parallel and Distributed Computing. My current research involves optimizing scientific workflows and HPC systems resource management. 
