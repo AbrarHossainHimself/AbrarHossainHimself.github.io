@@ -72,8 +72,8 @@ sections:
         * Designed private LoRa network for 6+ data types with Raspberry Pi gateways and central server
         * Improved wind forecasting with edge-ML, achieving 20% accuracy gain on Raspberry Pi
         * Image analysis with TensorFlow, 25% accuracy gain, 3x faster training, and 95% precision on 10,000+ images
-  design:
-    columns: '1'
+    design:
+      columns: '1'
   
   - block: markdown
     id: publications
