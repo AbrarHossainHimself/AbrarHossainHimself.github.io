@@ -1,0 +1,108 @@
+/* Ultra-compact styling for Experience section */
+
+/* Reduce overall section padding */
+#experience {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  /* Compress the terminal content padding */
+  #experience .terminal-content {
+    padding: 5px !important;
+  }
+  
+  /* Significantly reduce spacing between experience items */
+  #experience .experience-item {
+    margin-bottom: 5px !important; /* Was 15px */
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  /* Reduce spacing for the title */
+  #experience .exp-title {
+    margin-bottom: 0 !important;
+    line-height: 1.1 !important;
+  }
+  
+  /* Make title and company on same line */
+  #experience .exp-title-text,
+  #experience .exp-company {
+    display: inline !important;
+    margin-right: 5px !important;
+    font-size: 0.85rem !important; /* Slightly smaller */
+  }
+  
+  /* Make date and location more compact */
+  #experience .exp-date-loc {
+    margin: 0 !important;
+    line-height: 1.1 !important;
+    margin-bottom: 2px !important;
+  }
+  
+  /* Reduce list item spacing */
+  #experience .exp-description ul {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+    padding-left: 12px !important; /* Reduce left padding */
+  }
+  
+  #experience .exp-description ul li {
+    margin-bottom: 1px !important;
+    line-height: 1.2 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  /* Add spacing between experience entries but not within them */
+  #experience .experience-item {
+    margin-top: 15px !important;
+  }
+  
+  #experience .experience-item:first-child {
+    margin-top: 5px !important;
+  }
+  
+  /* Reduce vertical spacing between sections */
+  .home-section {
+    padding: 10px 0 !important;
+    margin-bottom: 15px !important;
+  }
+  
+  /* Remove extra spaces around bullet points */
+  #experience .exp-description ul li::before {
+    content: "•";
+    position: absolute;
+    left: -10px;
+    color: var(--eva-orange);
+  }
+  
+  /* Reduce overall container vertical margins */
+  #experience .container,
+  #experience .row,
+  #experience .col-12 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+  
+  /* Make section heading smaller and more compact */
+  #experience .terminal-heading {
+    margin-bottom: 5px !important;
+    padding-bottom: 5px !important;
+    font-size: 1.2rem !important;
+  }
+  
+  /* Aggressively remove all extra paragraph margins */
+  #experience p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* Compress the description text */
+  #experience .exp-description {
+    font-size: 0.75rem !important; /* Even smaller font */
+    line-height: 1.2 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
