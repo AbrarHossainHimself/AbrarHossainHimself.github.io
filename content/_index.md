@@ -43,6 +43,8 @@ sections:
       title: Biography
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
+    design: 
+      css_class: "biography-custom-layout"
       hide_interests: true
 
   - block: markdown

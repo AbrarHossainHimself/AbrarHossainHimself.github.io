@@ -1,0 +1,59 @@
+/* Custom Biography Layout */
+#about .row {
+    display: flex;
+    flex-direction: row-reverse; /* Switch columns order */
+  }
+  
+  #about .col-12.col-lg-4 {
+    flex: 0 0 30%; /* Make profile column smaller */
+    max-width: 30%;
+  }
+  
+  #about .col-12.col-lg-8 {
+    flex: 0 0 70%; /* Make biography text column larger */
+    max-width: 70%;
+  }
+  
+  /* Add right margin to text to create space from profile */
+  #about .terminal-text-container {
+    padding-right: 20px;
+  }
+  
+  /* Make profile more compact */
+  #about #profile {
+    text-align: center;
+  }
+  
+  /* Circular border for profile picture */
+  #about .avatar-circle {
+    margin: 0 auto 15px;
+    display: block;
+  }
+  
+  /* Make name slightly smaller */
+  #about .terminal-text {
+    font-size: 1.3rem !important;
+  }
+  
+  /* Make profile text more compact */
+  #about .portrait-title h3 {
+    margin: 5px 0 !important;
+    font-size: 0.85rem !important;
+  }
+  
+  /* Compact social icons */
+  #about .network-icon {
+    margin-top: 10px !important;
+    justify-content: center !important;
+  }
+  
+  /* Remove extra spacing in terminal content */
+  #about .terminal-content {
+    padding: 10px !important;
+  }
+  
+  /* Make biography text flow better */
+  #about .terminal-output p {
+    margin-bottom: 10px !important;
+    line-height: 1.4 !important;
+  }
