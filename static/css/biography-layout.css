@@ -1,95 +1,121 @@
-/* Custom Biography Layout - Centered Profile with Text Below */
-#about .row {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center horizontally */
-    text-align: center;
-  }
-  
-  /* Make profile section full width and centered */
-  #about .col-12.col-lg-4 {
-    flex: 0 0 100%;
-    max-width: 100%;
+/* Centered profile layout */
+.centered-profile {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     margin-bottom: 2rem;
-  }
-  
-  /* Make biography text section full width */
-  #about .col-12.col-lg-8 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  
-  /* Center the profile content */
-  #about #profile {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
-    max-width: 500px;
   }
   
-  /* Make avatar more prominent */
-  #about .avatar-circle {
-    margin: 0 auto 1rem;
-    display: block;
-    width: 200px;
-    height: 200px;
+  /* Make avatar larger and centered */
+  .profile-avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
   }
   
-  /* Center the name and role */
-  #about .portrait-title {
+  .profile-avatar .avatar {
+    width: 180px;
+    height: 180px;
+    border: 2px solid var(--eva-orange) !important;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3) !important;
+  }
+  
+  /* Center the name and titles */
+  .centered-profile .portrait-title {
     text-align: center;
+    margin-bottom: 1rem;
   }
   
-  /* Make name slightly larger */
-  #about .terminal-text {
+  .centered-profile .terminal-text {
     font-size: 1.8rem !important;
     margin-bottom: 0.5rem !important;
   }
   
+  .centered-profile .terminal-subtitle {
+    font-size: 1.1rem !important;
+  }
+  
+  .centered-profile .terminal-org {
+    font-size: 0.9rem !important;
+  }
+  
   /* Center the social icons */
-  #about .network-icon {
-    margin-top: 1.5rem !important;
-    justify-content: center !important;
+  .centered-profile .network-icon {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    margin-top: 1rem !important;
   }
   
-  /* Make social icons more prominent */
-  #about .network-icon li {
-    margin: 0 10px;
+  .centered-profile .network-icon li {
+    margin: 0 0.5rem 0.5rem;
   }
   
-  #about .network-icon .big-icon {
+  .centered-profile .network-icon .big-icon {
     font-size: 1.5rem;
+    transition: all 0.2s ease;
   }
   
-  /* Make biography text flow better */
-  #about .terminal-output {
-    text-align: left;
+  .centered-profile .network-icon .big-icon:hover {
+    color: var(--eva-orange) !important;
+    transform: scale(1.2);
+  }
+  
+  /* Improve the terminal text container */
+  .terminal-text-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
   }
   
-  #about .terminal-output p {
+  .terminal-output {
+    text-align: left;
+  }
+  
+  .terminal-output p {
     margin-bottom: 1rem !important;
     line-height: 1.5 !important;
   }
   
-  /* Remove extra spacing in terminal content */
-  #about .terminal-content {
-    padding: 2rem 1rem !important;
+  /* Add clear separation between profile and bio */
+  .terminal-text-container {
+    border-top: 1px dashed var(--eva-orange);
+    padding-top: 1.5rem;
+    margin-top: 1rem;
   }
   
-  /* Adjust terminal section */
-  #about .terminal-section {
-    width: 100%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+  /* Make sure the terminal prompt stands out */
+  .terminal-prompt {
+    color: var(--eva-green);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Clean layout for sections */
+  .terminal-section {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-left: 2px solid var(--eva-orange);
+  }
+  
+  .skills-section {
+    margin-top: 1.5rem;
+  }
+  
+  /* Make skill bars more attractive */
+  .skill-meter {
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    margin-top: 3px;
+  }
+  
+  .skill-fill {
+    height: 100%;
+    border-radius: 5px;
   }
