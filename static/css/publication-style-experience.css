@@ -1,0 +1,152 @@
+/* Publications-style compact experience section */
+
+/* Remove existing styling first */
+#experience .experience-item,
+#experience .experience-header,
+#experience .exp-title,
+#experience .exp-title-text,
+#experience .exp-company,
+#experience .exp-date-loc,
+#experience .exp-description,
+#experience .experience-timeline::before,
+#experience .experience-item::before {
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Match publications style - much more compact */
+#experience {
+  padding: 0 !important;
+}
+
+/* Add the horizontal line like in publications */
+#experience .terminal-heading {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px !important;
+}
+
+#experience .terminal-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+}
+
+/* Year styling like in publications */
+.experience-year {
+  color: #00FFFF !important;
+  font-size: 1.2rem !important;
+  margin-top: 20px !important;
+  margin-bottom: 10px !important;
+  display: block;
+}
+
+/* Experience item styling to match publication entries */
+#experience .experience-item {
+  margin-bottom: 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Job title styling like publication title */
+#experience .exp-title-text {
+  color: #FFFFFF !important;
+  font-size: 0.9rem !important;
+  font-weight: bold !important;
+  margin-bottom: 2px !important;
+  display: block !important;
+}
+
+/* Company styling like author list */
+#experience .exp-company {
+  color: #FF6600 !important;
+  font-size: 0.85rem !important;
+  margin-bottom: 2px !important;
+  display: block !important;
+}
+
+/* Dates and location styling */
+#experience .exp-date-loc {
+  color: #AAAAAA !important;
+  font-style: italic !important;
+  font-size: 0.8rem !important;
+  margin-bottom: 5px !important;
+  display: block !important;
+}
+
+/* Description list styling */
+#experience .exp-description ul {
+  list-style-type: decimal !important;
+  padding-left: 20px !important;
+  margin-top: 5px !important;
+}
+
+#experience .exp-description ul li {
+  color: #CCCCCC !important;
+  font-size: 0.8rem !important;
+  margin-bottom: 2px !important;
+  line-height: 1.3 !important;
+}
+
+/* Number styling for list items */
+#experience .exp-description ul li::marker {
+  color: #FF6600 !important;
+}
+
+/* Add numbering to description list */
+#experience .exp-description ul {
+  counter-reset: item;
+}
+
+#experience .exp-description ul li {
+  display: block;
+  position: relative;
+  padding-left: 5px !important;
+}
+
+#experience .exp-description ul li::before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  position: absolute;
+  left: -18px;
+  color: #FF6600 !important;
+}
+
+/* Space between jobs */
+#experience .experience-item + .experience-item {
+  margin-top: 20px !important;
+}
+
+/* Publication-style status indicators in top right */
+#experience .terminal-content {
+  position: relative;
+}
+
+#experience .terminal-content::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FF0000;
+}
+
+#experience .terminal-content::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #00FF00;
+}
