@@ -1,0 +1,71 @@
+/* Direct override for experience section elements */
+
+/* Target the exact container structure */
+#experience .terminal-content .experience-timeline .experience-item {
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding-left: 25px !important;
+    margin-bottom: 15px !important;
+  }
+  
+  /* Remove red borders around boxes */
+  #experience .experience-item {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+  
+  /* Make title text more compact */
+  #experience .exp-title-text {
+    font-size: 0.9rem !important;
+    color: var(--eva-cyan) !important;
+  }
+  
+  #experience .exp-company {
+    font-size: 0.8rem !important;
+    color: var(--eva-orange) !important;
+  }
+  
+  /* Adjust the vertical timeline */
+  #experience .experience-timeline::before {
+    left: 10px !important;
+    width: 1px !important;
+    background-color: var(--eva-cyan) !important;
+    opacity: 0.7 !important;
+  }
+  
+  /* Dots in timeline */
+  #experience .experience-item::before {
+    left: 5px !important;
+    width: 10px !important;
+    height: 10px !important;
+    background-color: var(--eva-cyan) !important;
+    border: 1px solid var(--eva-orange) !important;
+  }
+  
+  /* Make description more compact */
+  #experience .exp-description {
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
+    padding: 5px 10px !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  /* Add this important style to override any container padding */
+  #experience .terminal-content {
+    padding: 10px !important;
+  }
+  
+  /* Make dates and locations more compact */
+  #experience .exp-date, 
+  #experience .exp-location {
+    font-size: 0.7rem !important;
+    color: var(--eva-green) !important;
+  }
+  
+  /* Specifically target the red border boxes */
+  #experience .terminal-content .experience-item {
+    border: none !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+  }
