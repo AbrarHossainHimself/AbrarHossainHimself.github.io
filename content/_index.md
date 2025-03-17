@@ -132,12 +132,19 @@ sections:
       title: News
       text: |
         • **[March'25]** Received 2025 Midwest Research Computing and Data Travel Grant
+
         • **[March'25]** Received 2024 Bangladesh Sweden Trust Fund Scholarship
+
         • **[February'25]** Served as Reviewer for PEARC'25
+
         • **[December'24]** Received 2024 IEEE HiPC TCPP Travel Grant
+
         • **[November'24]** Received 2024 Friends Education Fund Travel Grant
+
         • **[November'24]** Received 2024 AGU Student Travel Grant
+
         • **[October'24]** Received 2024 SIParCS Student Travel Grant
+        
         • **[March'24]** Received 2024 CRA-WP Grad Cohort for IDEALS Scholarship
     design:
       columns: '1'
