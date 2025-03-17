@@ -131,11 +131,15 @@ sections:
     content:
       title: News
       text: |
+        • **[March'25]** Our paper got accepted to JSSPP'25
+
         • **[March'25]** Received 2025 Midwest Research Computing and Data Travel Grant
 
         • **[March'25]** Received 2024 Bangladesh Sweden Trust Fund Scholarship
 
         • **[February'25]** Served as Reviewer for PEARC'25
+
+        • **[February'25]** Our paper got accepted to IoTBDSPC'24
 
         • **[December'24]** Received 2024 IEEE HiPC TCPP Travel Grant
 
@@ -143,8 +147,12 @@ sections:
 
         • **[November'24]** Received 2024 AGU Student Travel Grant
 
+        • **[October'24]** Our paper got accepted to HiPC'24
+
         • **[October'24]** Received 2024 SIParCS Student Travel Grant
-        
+
+        • **[June'24]** Our paper got accepted to WSC'24
+
         • **[March'24]** Received 2024 CRA-WP Grad Cohort for IDEALS Scholarship
     design:
       columns: '1'
