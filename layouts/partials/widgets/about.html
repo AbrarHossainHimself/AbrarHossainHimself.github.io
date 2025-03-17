@@ -14,7 +14,7 @@
   {{ errorf "Could not find an author page at `%s`. Please check the value of `author` in your About widget and/or the `authors` front matter field in %q." $person_page_path .File }}
 {{end}}
 
-<!-- About widget centered profile layout -->
+<!-- About widget with top-centered profile -->
 <div class="eva-terminal">
   <!-- Terminal header -->
   <div class="terminal-header">
@@ -26,38 +26,37 @@
     </div>
   </div>
 
-  <!-- Terminal content -->
-  <div class="terminal-content">
-    <!-- Centered profile section -->
-    <div class="centered-profile">
-      <!-- Avatar image -->
-      <div class="profile-avatar">
-        {{ if site.Params.avatar.gravatar }}
-          <img class="avatar avatar-circle" src="https://s.gravatar.com/avatar/{{ md5 $person_page.Params.email }}?s=270')" alt="{{$person_page.Title}}">
-        {{ else if $person_page.Params.avatar }}
-          {{ $avatar_image := $person_page.Params.avatar }}
-          {{ $avatar_shape := site.Params.avatar.shape | default "circle" }}
-          {{with $avatar_image}}
-            <img class="avatar avatar-{{ $avatar_shape }}" src="{{ (printf "authors/%s/%s" $author $avatar_image) | relURL }}" alt="{{$person_page.Title}}">
-          {{end}}
-        {{ end }}
-      </div>
-      
-      <!-- Name and title -->
-      <div class="portrait-title">
-        <h2 class="terminal-text">{{ $person_page.Title }}</h2>
-        {{ with $person_page.Params.role }}<h3 class="terminal-subtitle">{{ . | markdownify | emojify }}</h3>{{ end }}
+  <!-- Terminal content with top-centered layout -->
+  <div class="terminal-content top-centered-layout">
+    <!-- Top centered profile image -->
+    <div class="top-centered-avatar">
+      {{ if site.Params.avatar.gravatar }}
+        <img class="avatar avatar-circle" src="https://s.gravatar.com/avatar/{{ md5 $person_page.Params.email }}?s=270')" alt="{{$person_page.Title}}">
+      {{ else if $person_page.Params.avatar }}
+        {{ $avatar_image := $person_page.Params.avatar }}
+        {{ $avatar_shape := site.Params.avatar.shape | default "circle" }}
+        {{with $avatar_image}}
+          <img class="avatar avatar-{{ $avatar_shape }}" src="{{ (printf "authors/%s/%s" $author $avatar_image) | relURL }}" alt="{{$person_page.Title}}">
+        {{end}}
+      {{ end }}
+    </div>
+    
+    <!-- Name and title -->
+    <div class="top-centered-title">
+      <h2 class="terminal-text">{{ $person_page.Title }}</h2>
+      {{ with $person_page.Params.role }}<h3 class="terminal-subtitle">{{ . | markdownify | emojify }}</h3>{{ end }}
 
-        {{ range $person_page.Params.organizations }}
-        <h3 class="terminal-org">
-          {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
-          <span>{{ .name }}</span>
-          {{ if .url }}</a>{{ end }}
-        </h3>
-        {{ end }}
-      </div>
+      {{ range $person_page.Params.organizations }}
+      <h3 class="terminal-org">
+        {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+        <span>{{ .name }}</span>
+        {{ if .url }}</a>{{ end }}
+      </h3>
+      {{ end }}
+    </div>
 
-      <!-- Social icons -->
+    <!-- Social icons under profile -->
+    <div class="top-centered-social">
       <ul class="network-icon" aria-hidden="true">
         {{ range $person_page.Params.social }}
         {{ $pack := or .icon_pack "fas" }}
@@ -82,15 +81,18 @@
       </ul>
     </div>
 
-    <!-- Biography section underneath -->
-    <div class="terminal-text-container">
-      <div class="terminal-prompt">> SYSTEM_DATA</div>
-      <div class="terminal-output">
-        {{/* Only display widget title in explicit instances of about widget, not in author pages. */}}
-        {{ if and $page.Params.widget $page.Title }}<h1 class="terminal-heading">{{ $page.Title | markdownify | emojify }}</h1>{{ end }}
+    <!-- Clear divider -->
+    <div class="profile-bio-divider"></div>
 
+    <!-- Biography section below -->
+    <div class="biography-section">
+      <h1 class="biography-heading">Biography</h1>
+      <div class="biography-content">
         {{ $person_page.Content }}
+      </div>
 
+      <!-- Hidden interests and education sections -->
+      <div class="hidden-sections" style="display: none;">
         <div class="row">
           {{ with $person_page.Params.interests }}
           <div class="col-md-5">

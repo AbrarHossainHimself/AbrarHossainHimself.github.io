@@ -1,121 +1,147 @@
-/* Centered profile layout */
-.centered-profile {
+/* Top-centered profile layout */
+
+/* Overall layout structure */
+.top-centered-layout {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    margin-bottom: 2rem;
-    width: 100%;
+    padding: 20px 15px;
   }
   
-  /* Make avatar larger and centered */
-  .profile-avatar {
+  /* Profile image styling */
+  .top-centered-avatar {
     display: flex;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
   }
   
-  .profile-avatar .avatar {
-    width: 180px;
-    height: 180px;
-    border: 2px solid var(--eva-orange) !important;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3) !important;
+  .top-centered-avatar .avatar {
+    width: 200px !important;
+    height: 200px !important;
+    border-radius: 50% !important;
+    border: 3px solid #FF4800 !important;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4) !important;
+    object-fit: cover;
   }
   
-  /* Center the name and titles */
-  .centered-profile .portrait-title {
+  /* Title styling */
+  .top-centered-title {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
   }
   
-  .centered-profile .terminal-text {
+  .top-centered-title .terminal-text {
+    color: #00FFFF !important;
     font-size: 1.8rem !important;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 5px !important;
   }
   
-  .centered-profile .terminal-subtitle {
+  .top-centered-title .terminal-subtitle {
+    color: #FF4800 !important;
     font-size: 1.1rem !important;
+    margin-bottom: 5px !important;
   }
   
-  .centered-profile .terminal-org {
+  .top-centered-title .terminal-org {
+    color: #FFFFFF !important;
     font-size: 0.9rem !important;
+    margin-bottom: 0 !important;
   }
   
-  /* Center the social icons */
-  .centered-profile .network-icon {
+  /* Social icons styling */
+  .top-centered-social {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 1rem !important;
+    margin-top: 10px;
+    margin-bottom: 30px;
   }
   
-  .centered-profile .network-icon li {
-    margin: 0 0.5rem 0.5rem;
+  .top-centered-social .network-icon {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
   
-  .centered-profile .network-icon .big-icon {
-    font-size: 1.5rem;
+  .top-centered-social .network-icon li {
+    margin: 0 10px;
+  }
+  
+  .top-centered-social .network-icon .big-icon {
+    font-size: 1.8rem;
+    color: #FFFFFF !important;
     transition: all 0.2s ease;
   }
   
-  .centered-profile .network-icon .big-icon:hover {
-    color: var(--eva-orange) !important;
+  .top-centered-social .network-icon .big-icon:hover {
+    color: #FF4800 !important;
     transform: scale(1.2);
   }
   
-  /* Improve the terminal text container */
-  .terminal-text-container {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+  /* Divider between profile and biography */
+  .profile-bio-divider {
+    width: 80%;
+    max-width: 600px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #FF4800, transparent);
+    margin: 10px 0 30px 0;
   }
   
-  .terminal-output {
+  /* Biography section styling */
+  .biography-section {
+    width: 100%;
+    max-width: 900px;
     text-align: left;
   }
   
-  .terminal-output p {
-    margin-bottom: 1rem !important;
-    line-height: 1.5 !important;
+  .biography-heading {
+    color: #FF4800 !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 20px !important;
+    text-align: left;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
   }
   
-  /* Add clear separation between profile and bio */
-  .terminal-text-container {
-    border-top: 1px dashed var(--eva-orange);
-    padding-top: 1.5rem;
-    margin-top: 1rem;
+  .biography-content {
+    color: #CCCCFF !important;
+    line-height: 1.6 !important;
+    font-size: 1rem !important;
   }
   
-  /* Make sure the terminal prompt stands out */
-  .terminal-prompt {
-    color: var(--eva-green);
-    font-weight: bold;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+  .biography-content p {
+    margin-bottom: 15px !important;
   }
   
-  /* Clean layout for sections */
-  .terminal-section {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.2);
-    border-left: 2px solid var(--eva-orange);
+  /* Hide unwanted sections */
+  .biography-section .hidden-sections {
+    display: none !important;
   }
   
-  .skills-section {
-    margin-top: 1.5rem;
+  /* Ensure all profile elements are centered */
+  @media (max-width: 768px) {
+    .top-centered-avatar .avatar {
+      width: 150px !important;
+      height: 150px !important;
+    }
+    
+    .top-centered-title .terminal-text {
+      font-size: 1.5rem !important;
+    }
+    
+    .top-centered-social .network-icon .big-icon {
+      font-size: 1.5rem;
+    }
   }
   
-  /* Make skill bars more attractive */
-  .skill-meter {
-    height: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.3);
-    margin-top: 3px;
-  }
-  
-  .skill-fill {
-    height: 100%;
-    border-radius: 5px;
+  /* Ensure no artifacts from EVA orbital effects */
+  .avatar::after,
+  .avatar-circle::after,
+  .avatar::before,
+  .avatar-circle::before {
+    display: none !important;
+    content: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
   }

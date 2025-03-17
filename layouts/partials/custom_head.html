@@ -10,6 +10,29 @@
 <link rel="stylesheet" href="{{ "css/biography-layout.css" | relURL }}">
 <link rel="stylesheet" href="{{ "css/clean-profile.css" | relURL }}">
 
+<style>
+  /* Force circular profile image - extra insurance */
+  .avatar, .avatar-circle {
+    border-radius: 50% !important;
+    border: 3px solid #FF4800 !important; 
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4) !important;
+    overflow: hidden !important;
+  }
+  
+  /* Remove any rotating elements around avatar */
+  .avatar::after, .avatar-circle::after,
+  .avatar::before, .avatar-circle::before {
+    display: none !important;
+    content: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  
+  /* Override any parent positioning that might interfere */
+  #profile, .portrait-title {
+    position: static !important;
+  }
+  </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
