@@ -1,59 +1,95 @@
-/* Custom Biography Layout */
+/* Custom Biography Layout - Centered Profile with Text Below */
 #about .row {
     display: flex;
-    flex-direction: row-reverse; /* Switch columns order */
-  }
-  
-  #about .col-12.col-lg-4 {
-    flex: 0 0 30%; /* Make profile column smaller */
-    max-width: 30%;
-  }
-  
-  #about .col-12.col-lg-8 {
-    flex: 0 0 70%; /* Make biography text column larger */
-    max-width: 70%;
-  }
-  
-  /* Add right margin to text to create space from profile */
-  #about .terminal-text-container {
-    padding-right: 20px;
-  }
-  
-  /* Make profile more compact */
-  #about #profile {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
     text-align: center;
   }
   
-  /* Circular border for profile picture */
+  /* Make profile section full width and centered */
+  #about .col-12.col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Make biography text section full width */
+  #about .col-12.col-lg-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  /* Center the profile content */
+  #about #profile {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Make avatar more prominent */
   #about .avatar-circle {
-    margin: 0 auto 15px;
+    margin: 0 auto 1rem;
     display: block;
+    width: 200px;
+    height: 200px;
   }
   
-  /* Make name slightly smaller */
+  /* Center the name and role */
+  #about .portrait-title {
+    text-align: center;
+  }
+  
+  /* Make name slightly larger */
   #about .terminal-text {
-    font-size: 1.3rem !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 0.5rem !important;
   }
   
-  /* Make profile text more compact */
-  #about .portrait-title h3 {
-    margin: 5px 0 !important;
-    font-size: 0.85rem !important;
-  }
-  
-  /* Compact social icons */
+  /* Center the social icons */
   #about .network-icon {
-    margin-top: 10px !important;
+    margin-top: 1.5rem !important;
     justify-content: center !important;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Make social icons more prominent */
+  #about .network-icon li {
+    margin: 0 10px;
+  }
+  
+  #about .network-icon .big-icon {
+    font-size: 1.5rem;
+  }
+  
+  /* Make biography text flow better */
+  #about .terminal-output {
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #about .terminal-output p {
+    margin-bottom: 1rem !important;
+    line-height: 1.5 !important;
   }
   
   /* Remove extra spacing in terminal content */
   #about .terminal-content {
-    padding: 10px !important;
+    padding: 2rem 1rem !important;
   }
   
-  /* Make biography text flow better */
-  #about .terminal-output p {
-    margin-bottom: 10px !important;
-    line-height: 1.4 !important;
+  /* Adjust terminal section */
+  #about .terminal-section {
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
