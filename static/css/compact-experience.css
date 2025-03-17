@@ -1,0 +1,134 @@
+/* Compact styling for Experience section */
+
+/* Remove boxes and make timeline more compact */
+.experience-item {
+    position: relative;
+    padding-left: 25px !important;
+    margin-bottom: 15px !important; /* Reduced from 25px */
+    border-left: 1px solid var(--eva-orange);
+    background: none !important; /* Remove background */
+    box-shadow: none !important; /* Remove any shadow */
+  }
+  
+  /* Make timeline marker more subtle */
+  .experience-item::before {
+    content: '>';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: auto !important;
+    height: auto !important;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    border: none !important;
+    color: var(--eva-cyan);
+    font-weight: bold;
+  }
+  
+  /* Remove box around header */
+  .experience-header {
+    margin-bottom: 5px !important; /* Reduced from 10px */
+    background-color: transparent !important;
+    padding: 0 !important;
+    border-left: none !important;
+  }
+  
+  /* More compact title styling */
+  .exp-title {
+    margin-bottom: 2px !important;
+  }
+  
+  .exp-title-text {
+    font-size: 0.9rem !important; /* Reduced from 1rem */
+    margin-bottom: 0 !important;
+  }
+  
+  .exp-company {
+    font-size: 0.8rem !important; /* Reduced from 0.9rem */
+  }
+  
+  /* More compact date and location */
+  .exp-date-loc {
+    font-size: 0.75rem !important; /* Reduced from 0.8rem */
+    margin-bottom: 5px !important;
+  }
+  
+  /* More compact description */
+  .exp-description {
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    border-left: none !important;
+  }
+  
+  .exp-description ul {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  
+  .exp-description ul li {
+    margin-bottom: 3px !important;
+  }
+  
+  /* Remove excess space above/below experience section */
+  #experience {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+  
+  /* More hacker-style data format */
+  .exp-date {
+    font-family: 'Courier New', monospace !important;
+    color: var(--eva-green) !important;
+    font-size: 0.7rem !important;
+  }
+  
+  /* Add terminal-like data prefix to dates */
+  .exp-date::before {
+    content: "[TS:";
+    margin-right: 2px;
+  }
+  
+  .exp-date::after {
+    content: "]";
+    margin-left: 2px;
+  }
+  
+  /* Add similar styling to location */
+  .exp-location {
+    font-family: 'Courier New', monospace !important;
+    color: var(--eva-orange) !important;
+    font-size: 0.7rem !important;
+  }
+  
+  .exp-location::before {
+    content: "[LOC:";
+    margin-right: 2px;
+  }
+  
+  .exp-location::after {
+    content: "]";
+    margin-left: 2px;
+  }
+  
+  /* Add a faint vertical line to connect experiences */
+  .experience-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    width: 1px;
+    background: linear-gradient(to bottom, 
+      transparent 0%,
+      var(--eva-orange) 10%, 
+      var(--eva-orange) 90%,
+      transparent 100%);
+    opacity: 0.5;
+  }
+  
+  /* Remove any extra margin/padding in description lists */
+  .exp-description ul {
+    padding-left: 15px !important;
+  }
