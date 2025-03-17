@@ -1,0 +1,80 @@
+/* Direct override for experience widget using ultra-specific selectors */
+
+/* Target the exact widget structure */
+body .home-section#experience .container .row .col-12 .eva-terminal .terminal-content {
+    padding: 10px !important;
+  }
+  
+  /* Remove all margins and paddings from all elements inside experience */
+  #experience * {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  /* Then selectively add back necessary spacing */
+  #experience .terminal-heading {
+    margin-bottom: 15px !important;
+    padding-bottom: 5px !important;
+    border-bottom: 1px solid #333 !important;
+    text-align: center !important;
+  }
+  
+  /* Experience item specific spacing */
+  #experience .experience-item {
+    margin-bottom: 15px !important;
+  }
+  
+  /* Consistent spacing for content */
+  #experience .exp-title-text {
+    display: block !important;
+    margin-bottom: 2px !important;
+    color: #00FFFF !important;
+  }
+  
+  #experience .exp-company {
+    display: block !important;
+    margin-bottom: 2px !important;
+    color: #FF6600 !important;
+  }
+  
+  #experience .exp-date-loc {
+    display: block !important;
+    margin-bottom: 5px !important;
+    color: #AAAAAA !important;
+    font-style: italic !important;
+  }
+  
+  /* Description list spacing */
+  #experience .exp-description ul {
+    margin-top: 5px !important;
+    margin-left: 15px !important;
+  }
+  
+  #experience .exp-description ul li {
+    margin-bottom: 3px !important;
+  }
+  
+  /* Add !important to every property to ensure override */
+  #experience {
+    border: none !important;
+    background-color: #111111 !important;
+  }
+  
+  /* Force plain background */
+  #experience .home-section,
+  #experience .container,
+  #experience .row,
+  #experience .col-12,
+  #experience .eva-terminal,
+  #experience .terminal-content,
+  #experience .experience-timeline,
+  #experience .experience-item {
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Insert JavaScript to modify DOM structure */
