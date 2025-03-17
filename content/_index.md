@@ -69,7 +69,7 @@ sections:
           date_start: '2023-08-01'
           date_end: ''
           description: |2-
-              Research focus:
+              
               * Developed TARDIS, a power-aware HPC scheduler using GNNs, cost reduction: 18% (temporal), 10-20% (spatial)
               * Developed LASP, a multi-armed bandit-based tuning strategy for HPC on edge devices, achieving 2.5% average performance gain over default settings.
               * Developed a SST-based scalable job scheduler, ensuring high accuracy in wait times, node usage, parallelization
@@ -82,7 +82,7 @@ sections:
           date_start: '2024-08-01'
           date_end: '2024-12-31'
           description: |2-
-              Responsibilities included:
+              
               * Set up CouchDB, Chords, and Streampipes on ACCESS Jetstreams for community weather data storage
               * Built data orchestrator for efficient data routing, achieving 30% transmission efficiency gain
               * Reduced deployment costs by 25% for communities implementing the project
@@ -95,7 +95,7 @@ sections:
           date_start: '2024-05-01'
           date_end: '2024-08-31'
           description: |2-
-              Key achievements:
+              
               * Designed private LoRa network for 6+ data types with Raspberry Pi gateways and central server
               * Improved wind forecasting with edge-ML, achieving 20% accuracy gain on Raspberry Pi
               * Image analysis with TensorFlow, 25% accuracy gain, 3x faster training, and 95% precision on 10,000+ images
