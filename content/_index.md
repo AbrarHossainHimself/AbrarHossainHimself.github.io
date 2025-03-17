@@ -113,6 +113,10 @@ sections:
         1. "**Enhanced Intrusion Detection in IIoT Networks: A Lightweight Approach with Autoencoder-Based Feature Learning**"  
            Tasnimul Hasan, Abrar Hossain, Mufakir Qamar Ansari, Talha Hussain Syed   
            *International Conference on Internet of Things, Big Data and Security (IoTBDS 2025)*   
+        
+        2. "**Power-Aware Scheduling for Multi-Center HPC Electricity Cost Optimization**"  
+           Abrar Hossain, Abubeker Abdurahman, Mohammad Atiqul Islam, Kishwar Ahmed   
+           *International Parallel and Distributed Processing Symposium (IPDPS JSSPP 2025)*   
 
         ### 2024
         1. "**HPC Application Parameter Autotuning on Edge Devices: A Bandit Learning Approach**"  
