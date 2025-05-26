@@ -108,4 +108,4 @@ user_groups:
   - Researchers
 ---
 
-I'm Graduate Research Assistant at The University of Toledo, and a past Visitor and Intern at the NSF National Center for Atmospheric Research (NCAR). My research focuses on High-Performance Computing (HPC) and Parallel and Distributed Computing. My current research involves optimizing scientific workflows and HPC systems resource management.
+I am a Graduate Research Assistant at The University of Toledo, pursuing a Master’s in Computer Science with a focus on High-Performance and Distributed Computing (HPC/DC). My research centers on developing system software solutions to improve the efficiency, reliability, and cost-effectiveness of distributed and HPC systems, leveraging techniques such as stochastic modeling, control, and optimization. Alongside my work at Toledo, I have contributed to HPC network infrastructure improvements at NCSA and community data solutions at NCAR. 
