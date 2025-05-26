@@ -71,9 +71,9 @@ sections:
         **National Center for Supercomputing Applications**  
         June 2025 - August 2025 · Urbana, IL
 
-        • Improved CONECTnet reliability across 50+ resource providers using Layer 3 VPN on Internet2
-        • Deployed and optimized Globus and perfSONAR, boosting data throughput by 30% in tests environments
-        • Conducted network performance analysis and connectivity optimization for 10+ RPs, reducing latency and loss
+        * Improved CONECTnet reliability across 50+ resource providers using Layer 3 VPN on Internet2
+        * Deployed and optimized Globus and perfSONAR, boosting data throughput by 30% in tests environments
+        * Conducted network performance analysis and connectivity optimization for 10+ RPs, reducing latency and loss
 
         ### Graduate Research Assistant
         **The University of Toledo**  

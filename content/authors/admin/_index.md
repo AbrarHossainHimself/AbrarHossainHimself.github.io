@@ -108,4 +108,4 @@ user_groups:
   - Researchers
 ---
 
-I am a Graduate Research Assistant at The University of Toledo, pursuing a Master’s in Computer Science with a focus on High-Performance and Distributed Computing (HPC/DC). My research centers on developing system software solutions to improve the efficiency, reliability, and cost-effectiveness of distributed and HPC systems, leveraging techniques such as stochastic modeling, control, and optimization. Alongside my work at Toledo, I have contributed to HPC network infrastructure improvements at NCSA and community data solutions at NCAR. 
+I am a Graduate Research Assistant at The University of Toledo, pursuing a Master’s in Computer Science with a focus on High-Performance and Distributed Computing (HPC/DC). My research centers on developing system software solutions to improve the efficiency, reliability, and cost-effectiveness of distributed and HPC systems, leveraging techniques such as stochastic modeling, control, and optimization. Alongside my work at UToledo, I have contributed to HPC network infrastructure improvements at NCSA and community data solutions at NCAR. 
