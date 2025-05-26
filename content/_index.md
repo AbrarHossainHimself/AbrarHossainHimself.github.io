@@ -67,7 +67,7 @@ sections:
       title: Experience
       text: |
 
-        ### Visitor
+        ### Intern
         **National Center for Supercomputing Applications**  
         June 2025 - August 2025 · Urbana, IL
 
