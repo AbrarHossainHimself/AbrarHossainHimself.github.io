@@ -101,7 +101,7 @@ sections:
         ### 2025
         1. "**Power-Aware Scheduling for Multi-Center HPC Electricity Cost Optimization**"  
            Abrar Hossain, Abubeker Abdurahman, Mohammad Atiqul Islam, Kishwar Ahmed   
-           *International Parallel and Distributed Processing Symposium (IPDPS JSSPP 2025)*  
+           *International Parallel and Distributed Processing Symposium (IPDPS  2025)*  
 
         2. "**Enhanced Intrusion Detection in IIoT Networks: A Lightweight Approach with Autoencoder-Based Feature Learning**"  
            Tasnimul Hasan, Abrar Hossain, Mufakir Qamar Ansari, Talha Hussain Syed   
@@ -148,6 +148,12 @@ sections:
     content:
       title: News
       text: |
+        • **[June'25]** Started Internship at NCSA. Will be working with the NDTS team
+        
+        • **[May'25]** Received UToledo Graduate Research Assistant Recognition Award
+
+        • **[April'25]** Attended Midwest RCD Workshop in Cleveland, OH
+
         • **[March'25]** Our paper got accepted to IPDPS JSSPP'25
 
         • **[March'25]** Received 2025 Midwest Research Computing and Data Travel Grant
@@ -157,6 +163,8 @@ sections:
         • **[February'25]** Served as Reviewer for PEARC'25
 
         • **[February'25]** Our paper got accepted to IoTBDS'24
+
+        • **[December'24]** Presented my NSF NCAR openIoTwx project at AGU'25
 
         • **[December'24]** Received 2024 IEEE HiPC TCPP Travel Grant
 
@@ -170,7 +178,11 @@ sections:
 
         • **[June'24]** Our paper got accepted to WSC'24
 
-        • **[March'24]** Received 2024 CRA-WP Grad Cohort for IDEALS Scholarship
+        • **[August'24]** Started Internship at NCSA. Will be working the NDTS team
+
+        • **[May'24]** Extended my tenure at NSF NCAR as a visitior
+
+        • **[March'24]** Started Internship at NSF NCAR. Will be working the openIoTwx team
 
         • **[September'23]** Our poster got accepted to SC'23
     design:
