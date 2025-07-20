@@ -110,11 +110,15 @@ sections:
         ### 2025
         1. "**Power-Aware Scheduling for Multi-Center HPC Electricity Cost Optimization**"  
            Abrar Hossain, Abubeker Abdurahman, Mohammad Atiqul Islam, Kishwar Ahmed   
-           *International Parallel and Distributed Processing Symposium (IPDPS  2025)*  
+           *International Parallel and Distributed Processing Symposium (JSSPP  2025)*  
 
         2. "**Enhanced Intrusion Detection in IIoT Networks: A Lightweight Approach with Autoencoder-Based Feature Learning**"  
            Tasnimul Hasan, Abrar Hossain, Mufakir Qamar Ansari, Talha Hussain Syed   
-           *International Conference on Internet of Things, Big Data and Security (IoTBDS 2025)*   
+           *International Conference on Internet of Things, Big Data and Security (IoTBDS 2025)*
+
+        3. "**CROSS- HPC System Bayesian Optimization with Adaptive Transfer **"  
+           Abrar Hossain, Kishwar Ahmed   
+           *IEEE International Conference on Cluster Computing (CLUSTER 2025)*    
         
          
 
