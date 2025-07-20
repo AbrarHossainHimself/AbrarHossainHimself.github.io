@@ -116,7 +116,7 @@ sections:
            Tasnimul Hasan, Abrar Hossain, Mufakir Qamar Ansari, Talha Hussain Syed   
            *International Conference on Internet of Things, Big Data and Security (IoTBDS 2025)*
 
-        3. "**CROSS- HPC System Bayesian Optimization with Adaptive Transfer **"  
+        3. "**CROSS- HPC System Bayesian Optimization with Adaptive Transfer**"  
            Abrar Hossain, Kishwar Ahmed   
            *IEEE International Conference on Cluster Computing (CLUSTER 2025)*    
         
@@ -161,6 +161,14 @@ sections:
     content:
       title: News
       text: |
+        • **[August'25]** Attended 2025 CI4FAIR Workshop
+
+        • **[July'25]** Served as Session chair for Systems and Software Systems Track Session at PEARC'25
+
+        • **[July'25]** Served as Poster and Visualization Judge at PEARC'25
+
+        • **[July'25]** Served as Student Volunteer at PEARC'25
+
         • **[June'25]** Started Internship at NCSA. Will be working with the NDTS team
         
         • **[May'25]** Received UToledo Graduate Research Assistant Recognition Award
