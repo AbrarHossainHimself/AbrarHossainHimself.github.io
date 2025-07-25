@@ -71,9 +71,9 @@ sections:
         **National Center for Supercomputing Applications**  
         June 2025 - August 2025 · Urbana, IL
 
-        * Improved CONECTnet reliability across 50+ resource providers using Layer 3 VPN on Internet2
-        * Deployed and optimized Globus and perfSONAR, boosting data throughput by 30% in tests environments
-        * Conducted network performance analysis and connectivity optimization for 10+ RPs, reducing latency and loss
+        * Built parser for eBPF maps for 80+ VLANs and ports with configurable polling intervals via REST API
+        * Integrated with InfluxDB v3 for efficient storage and Grafana for real-time visualization
+        * Added configurable logging, reducing manual reconfiguration time by 40%
 
         ### Graduate Research Assistant
         **The University of Toledo**  
@@ -146,11 +146,14 @@ sections:
     id: review-volunteer
     content:
       title: Review and Volunteer Activity
-      text: |
+      text:
+       |
         ### Reviewer
         - **PEARC'25 Tutorials and Workshops**
+        - **PEARC'25 Poster and Visualization**
         
         ### Student Volunteer
+        - **PEARC'25**
         - **HiPC'24**
         - **AGU'24**
       design:
@@ -175,7 +178,7 @@ sections:
 
         • **[April'25]** Attended Midwest RCD Workshop in Cleveland, OH
 
-        • **[March'25]** Our paper got accepted to IPDPS JSSPP'25
+        • **[March'25]** Our paper got accepted to JSSPP'25
 
         • **[March'25]** Received 2025 Midwest Research Computing and Data Travel Grant
 
