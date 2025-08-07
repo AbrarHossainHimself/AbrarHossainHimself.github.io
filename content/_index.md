@@ -164,6 +164,8 @@ sections:
     content:
       title: News
       text: |
+        • **[August'25]** Received Cluster 2025 NSF Travel Grant
+
         • **[August'25]** Attended 2025 CI4FAIR Workshop
 
         • **[July'25]** Served as Session chair for Systems and Software Systems Track Session at PEARC'25
