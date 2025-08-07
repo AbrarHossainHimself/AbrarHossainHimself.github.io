@@ -166,6 +166,8 @@ sections:
       text: |
         • **[August'25]** Received Cluster 2025 NSF Travel Grant
 
+        **[August'25]** Our poster got accepted to CLUSTER'25 to be held in Edinburgh, Scotland
+
         • **[August'25]** Attended 2025 CI4FAIR Workshop
 
         • **[July'25]** Served as Session chair for Systems and Software Systems Track Session at PEARC'25
@@ -180,7 +182,7 @@ sections:
 
         • **[April'25]** Attended Midwest RCD Workshop in Cleveland, OH
 
-        • **[March'25]** Our paper got accepted to JSSPP'25
+        • **[March'25]** Our paper got accepted to JSSPP'25 to be held in Edinburgh, Scotland
 
         • **[March'25]** Received 2025 Midwest Research Computing and Data Travel Grant
 
@@ -198,7 +200,7 @@ sections:
 
         • **[November'24]** Received 2024 AGU Student Travel Grant
 
-        • **[October'24]** Our paper got accepted to HiPC'24
+        • **[October'24]** Our paper got accepted to HiPC'24 to be held in Bangalore, India
 
         • **[October'24]** Received 2024 SIParCS Student Travel Grant
 
