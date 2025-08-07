@@ -168,7 +168,7 @@ sections:
 
         • **[August'25]** Our poster got accepted to CLUSTER'25 to be held in Edinburgh, Scotland
 
-        • **[August'25]** Attended 2025 CI4FAIR Workshop
+        • **[August'25]** Attended 2025 CI4FAIR Workshop held at Purdue University
 
         • **[July'25]** Served as Session chair for Systems and Software Systems Track Session at PEARC'25
 
@@ -180,9 +180,9 @@ sections:
         
         • **[May'25]** Received UToledo Graduate Research Assistant Recognition Award
 
-        • **[April'25]** Attended Midwest RCD Workshop in Cleveland, OH
+        • **[April'25]** Attended Midwest RCD Workshop in Cleveland, Ohio
 
-        • **[March'25]** Our paper got accepted to JSSPP'25 to be held in Edinburgh, Scotland
+        • **[March'25]** Our paper got accepted to JSSPP'25 to be held in Milan, Italy
 
         • **[March'25]** Received 2025 Midwest Research Computing and Data Travel Grant
 
@@ -205,8 +205,6 @@ sections:
         • **[October'24]** Received 2024 SIParCS Student Travel Grant
 
         • **[June'24]** Our paper got accepted to WSC'24
-
-        • **[August'24]** Started Internship at NCSA. Will be working the NDTS team
 
         • **[May'24]** Extended my tenure at NSF NCAR as a visitior
 
