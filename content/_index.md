@@ -164,6 +164,10 @@ sections:
     content:
       title: News
       text: |
+        • **[August'25]** Received eScience 2025 NSF Travel Grant
+        
+        • **[August'25]** Our poster got accepted to eScience'25 to be held in Chicago, Illinois
+
         • **[August'25]** Received Cluster 2025 NSF Travel Grant
 
         • **[August'25]** Our poster got accepted to CLUSTER'25 to be held in Edinburgh, Scotland
