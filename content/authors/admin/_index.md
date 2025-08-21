@@ -30,9 +30,12 @@ interests:
 # Education to show in About widget
 education:
   courses:
+    - course: PhD in Computer Science
+      institution: The University of Toledo
+      year: 2027 (expected) 
     - course: MSc in Computer Science
       institution: The University of Toledo
-      year: 2025 (Expected)
+      year: 2025 
     - course: BSc in Electrical and Electronic Engineering
       institution: Chittagong University of Engineering & Technology
       year: 2019

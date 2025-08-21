@@ -119,6 +119,10 @@ sections:
         3. "**CROSS- HPC System Bayesian Optimization with Adaptive Transfer**"  
            Abrar Hossain, Kishwar Ahmed   
            *IEEE International Conference on Cluster Computing (CLUSTER 2025)*    
+
+        4. "**Candwidth Allocation for Heterogeneous HPC Data Ingestion using Dynamic Auctions**"  
+           Abrar Hossain, Kishwar Ahmed   
+           *IEEE eScience 2025 (eScience 2025)*  
         
          
 
@@ -131,7 +135,11 @@ sections:
            Abubeker Abdurahman, Abrar Hossain, Kevin A Brown, Kazutomo Yoshii, Kishwar Ahmed  
            *Winter Simulation Conference (WSC'24)*
 
-        3. "**Environmental Data Sensing and Monitoring System Using Community-based Private LoRa Network**"  
+        3. "** Hands-On Approach To Teaching Parallel and Heterogeneous Computing**"  
+           Abubeker Abdurahman, Arihant Singh, Abrar Hossain, Kishwar Ahmed  
+           *Workshop on Education for High Performance Computinge (EduHiPC'24)*
+
+        4. "**Environmental Data Sensing and Monitoring System Using Community-based Private LoRa Network**"  
             Abrar Hossain, Keith Maull, Agbeli Ameko
            *American Geophysical Union (AGU'24)*
         
@@ -166,11 +174,11 @@ sections:
       text: |
         • **[August'25]** Received eScience 2025 NSF Travel Grant
         
-        • **[August'25]** Our poster got accepted to eScience'25 to be held in Chicago, Illinois
+        • **[August'25]** Our work on Network Ingestion got accepted to eScience'25 to be held in Chicago, Illinois
 
         • **[August'25]** Received Cluster 2025 NSF Travel Grant
 
-        • **[August'25]** Our poster got accepted to CLUSTER'25 to be held in Edinburgh, Scotland
+        • **[August'25]** Our work on Bandwidth Allocation got accepted to CLUSTER'25 to be held in Edinburgh, Scotland
 
         • **[August'25]** Attended 2025 CI4FAIR Workshop held at Purdue University
 
@@ -186,7 +194,7 @@ sections:
 
         • **[April'25]** Attended Midwest RCD Workshop in Cleveland, Ohio
 
-        • **[March'25]** Our paper got accepted to JSSPP'25 to be held in Milan, Italy
+        • **[March'25]** Our work on Power Aware Scheduling got accepted to JSSPP'25 to be held in Milan, Italy
 
         • **[March'25]** Received 2025 Midwest Research Computing and Data Travel Grant
 
@@ -204,17 +212,17 @@ sections:
 
         • **[November'24]** Received 2024 AGU Student Travel Grant
 
-        • **[October'24]** Our paper got accepted to HiPC'24 to be held in Bangalore, India
+        • **[October'24]** Our work on HPC Autotuning got accepted to HiPC'24 to be held in Bangalore, India
 
         • **[October'24]** Received 2024 SIParCS Student Travel Grant
 
-        • **[June'24]** Our paper got accepted to WSC'24
+        • **[June'24]** Our work on SST based scheduling got accepted to WSC'24
 
         • **[May'24]** Extended my tenure at NSF NCAR as a visitior
 
-        • **[March'24]** Started Internship at NSF NCAR. Will be working the openIoTwx team
+        • **[March'24]** Started Internship at NSF NCAR. Will be working with the openIoTwx team
 
-        • **[September'23]** Our poster got accepted to SC'23
+        • **[September'23]** Our work on lightweight HPC Autotuning got accepted to SC'23
     design:
       columns: '1'
 
