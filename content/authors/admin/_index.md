@@ -113,7 +113,5 @@ user_groups:
 
 I am a Graduate Research Assistant at The University of Toledo, pursuing a PhD in Computer Science with a focus on High-Performance and Distributed Computing (HPC/DC). My research centers on developing system software solutions to improve the efficiency, reliability, and cost-effectiveness of distributed and HPC systems, leveraging techniques such as stochastic modeling, control, and optimization. Alongside my work at UToledo, I have contributed to HPC network infrastructure improvements at NCSA and community data solutions at NCAR. 
 
-In the rare moments I’m not chasing performance metrics, I chase perfect albums and films. Browse my questionable taste on 
-<a href="https://open.spotify.com/user/abrarhimself" style="color: #00ffff; font-weight: bold; text-decoration: underline;">Spotify</a> and 
-<a href="https://letterboxd.com/Hoessain/" style="color: #00ffff; font-weight: bold; text-decoration: underline;">Letterboxd</a>.
+
 
