@@ -172,13 +172,19 @@ sections:
     content:
       title: News
       text: |
+        • **[October'25]** Awarded SGX3 Rising Stars Award for my work at NCAR.
+
+        • **[October'25]** Presented our work on Network Ingestion at USRSE in Philadelphia, Pennsylvania
+
+        • **[September'25]** Our work on Cross System Autotuning got accepted to SC'25 to be held in Edinburgh, Scotland
+
         • **[August'25]** Received eScience 2025 NSF Travel Grant
         
         • **[August'25]** Our work on Network Ingestion got accepted to eScience'25 to be held in Chicago, Illinois
 
         • **[August'25]** Received Cluster 2025 NSF Travel Grant
 
-        • **[August'25]** Our work on Bandwidth Allocation got accepted to CLUSTER'25 to be held in Edinburgh, Scotland
+        • **[August'25]** Our work on Cross System Autotuning got accepted to CLUSTER'25 to be held in Edinburgh, Scotland
 
         • **[August'25]** Attended 2025 CI4FAIR Workshop held at Purdue University
 
