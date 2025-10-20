@@ -118,7 +118,7 @@ sections:
 
         3. "**CROSS- HPC System Bayesian Optimization with Adaptive Transfer**"  
            Abrar Hossain, Kishwar Ahmed   
-           *IEEE International Conference on Cluster Computing (CLUSTER 2025)*    
+           *IEEE International Conference on Cluster Computing (SC 2025)*    
 
         4. "**Bandwidth Allocation for Heterogeneous HPC Data Ingestion using Dynamic Auctions**"  
            Abrar Hossain, Kishwar Ahmed   
@@ -135,7 +135,7 @@ sections:
            Abubeker Abdurahman, Abrar Hossain, Kevin A Brown, Kazutomo Yoshii, Kishwar Ahmed  
            *Winter Simulation Conference (WSC'24)*
 
-        3. "** Hands-On Approach To Teaching Parallel and Heterogeneous Computing**"  
+        3. "**Hands-On Approach To Teaching Parallel and Heterogeneous Computing**"  
            Abubeker Abdurahman, Arihant Singh, Abrar Hossain, Kishwar Ahmed  
            *Workshop on Education for High Performance Computinge (EduHiPC'24)*
 
