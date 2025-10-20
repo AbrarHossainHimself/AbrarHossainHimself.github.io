@@ -120,7 +120,7 @@ sections:
            Abrar Hossain, Kishwar Ahmed   
            *IEEE International Conference on Cluster Computing (CLUSTER 2025)*    
 
-        4. "**Candwidth Allocation for Heterogeneous HPC Data Ingestion using Dynamic Auctions**"  
+        4. "**Bandwidth Allocation for Heterogeneous HPC Data Ingestion using Dynamic Auctions**"  
            Abrar Hossain, Kishwar Ahmed   
            *IEEE eScience 2025 (eScience 2025)*  
         
@@ -176,7 +176,7 @@ sections:
 
         • **[October'25]** Presented our work on Network Ingestion at USRSE in Philadelphia, Pennsylvania
 
-        • **[September'25]** Our work on Cross System Autotuning got accepted to SC'25 to be held in Edinburgh, Scotland
+        • **[September'25]** Our work on Cross System Autotuning got accepted to SC'25 to be held in St. Louis, Missouri
 
         • **[August'25]** Received eScience 2025 NSF Travel Grant
         
