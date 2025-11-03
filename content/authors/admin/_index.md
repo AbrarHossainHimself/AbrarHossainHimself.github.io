@@ -30,7 +30,7 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - #course: PhD in Computer Science
+    #- course: PhD in Computer Science
       #institution: The University of Toledo
       #year: 2027 (expected) 
     - course: MSc in Computer Science
