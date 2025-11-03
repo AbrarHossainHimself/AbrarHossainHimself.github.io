@@ -30,9 +30,9 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course: PhD in Computer Science
-      institution: The University of Toledo
-      year: 2027 (expected) 
+    - #course: PhD in Computer Science
+      #institution: The University of Toledo
+      #year: 2027 (expected) 
     - course: MSc in Computer Science
       institution: The University of Toledo
       year: 2025 
@@ -111,7 +111,7 @@ user_groups:
   - Researchers
 ---
 
-I am a Graduate Research Assistant at The University of Toledo, pursuing a Ph.D. in Computer Science with a focus on High-Performance and Distributed Computing (HPC/DC). My research centers on developing system software solutions to improve the efficiency, reliability, and cost-effectiveness of distributed and HPC systems, leveraging techniques such as stochastic modeling, control, and optimization. Alongside my work at UToledo, I have contributed to HPC network infrastructure improvements at the National Center for Supercomputing Applications (NCSA) and community data solutions at the National Center for Atmospheric Research (NCAR). I also serve as the NSF ACCESS Student Champion at The University of Toledo and was honored with the SGX3 Rising Stars Award for my contributions to the HPC and IoT community through my work at NCAR.
+I am a Graduate Research Assistant at The University of Toledo, with a research focus on High-Performance and Distributed Computing (HPC/DC). My research centers on developing system software solutions to improve the efficiency, reliability, and cost-effectiveness of distributed and HPC systems, leveraging techniques such as stochastic modeling, control, and optimization. Alongside my work at UToledo, I have contributed to HPC network infrastructure improvements at the National Center for Supercomputing Applications (NCSA) and community data solutions at the National Center for Atmospheric Research (NCAR). I also serve as the NSF ACCESS Student Champion at The University of Toledo and was honored with the SGX3 Rising Stars Award for my contributions to the HPC and IoT community through my work at NCAR.
 
 
 
