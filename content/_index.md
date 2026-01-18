@@ -172,7 +172,9 @@ sections:
     content:
       title: News
       text: |
-        • **[October'25]** Awarded SGX3 Rising Stars Award for my work at NCAR.
+        • **[January'26]** Attended 2026 RMACC HPC Sys Admin Workshop held at UC Boulder
+
+        • **[October'25]** Awarded SGX3 Rising Stars Award for my research work
 
         • **[October'25]** Presented our work on Network Ingestion at USRSE in Philadelphia, Pennsylvania
 
