@@ -172,6 +172,8 @@ sections:
     content:
       title: News
       text: |
+        • **[August'25]** Our work on Network Ingestion got accepted to PASC'26 to be held in Bern, Switzerland
+
         • **[January'26]** Attended 2026 RMACC HPC Sys Admin Workshop held at UC Boulder
 
         • **[October'25]** Awarded SGX3 Rising Stars Award for my research work
