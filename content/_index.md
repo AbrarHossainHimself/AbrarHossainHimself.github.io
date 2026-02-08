@@ -107,6 +107,12 @@ sections:
       title: Publications
       text: |
 
+        ### 2026
+        1. "**XOR Bidding and Knapsack Formulations for HPC Network Resource Allocation**"  
+           Abrar Hossain, Kishwar Ahmed   
+           *Platform for Advanced Scientific Computing (PASC)  (PASC  2026)* 
+        
+        
         ### 2025
         1. "**Power-Aware Scheduling for Multi-Center HPC Electricity Cost Optimization**"  
            Abrar Hossain, Abubeker Abdurahman, Mohammad Atiqul Islam, Kishwar Ahmed   
@@ -172,7 +178,7 @@ sections:
     content:
       title: News
       text: |
-        • **[August'25]** Our work on Network Ingestion got accepted to PASC'26 to be held in Bern, Switzerland
+        • **[February'26]** Our work on Network Ingestion got accepted to PASC'26 to be held in Bern, Switzerland
 
         • **[January'26]** Attended 2026 RMACC HPC Sys Admin Workshop held at UC Boulder
 
