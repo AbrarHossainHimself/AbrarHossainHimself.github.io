@@ -148,6 +148,7 @@ sections:
         4. "**Environmental Data Sensing and Monitoring System Using Community-based Private LoRa Network**"  
             Abrar Hossain, Keith Maull, Agbeli Ameko
            *American Geophysical Union (AGU'24)*
+           
         
         ### 2023
         3. "**Automating HPC Model Selection on Edge Devices**"  
