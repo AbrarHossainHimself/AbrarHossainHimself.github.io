@@ -179,6 +179,8 @@ sections:
     content:
       title: News
       text: |
+        • **[March'26]** Attended 2026 BRICCS Pathway Workshop held at Alexandria, Virginia
+        
         • **[February'26]** Our work on Network Ingestion got accepted to PASC'26 to be held in Bern, Switzerland
 
         • **[January'26]** Attended 2026 RMACC HPC Sys Admin Workshop held at UC Boulder
