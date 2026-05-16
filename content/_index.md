@@ -179,7 +179,7 @@ sections:
     content:
       title: News
       text: |
-        • **[May'26]** Attended 2026 ESIIL Innovation Summit Workshop held at Boulder, Colorado
+        • **[May'26]** Attended 2026 ESIIL Innovation Summit held at Boulder, Colorado
 
         • **[May'26]** Attended 2026 Attended Midwest RCD Workshop in Rosemont, Illinois
 
