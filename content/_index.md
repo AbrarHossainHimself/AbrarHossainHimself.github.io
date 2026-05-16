@@ -67,14 +67,6 @@ sections:
       title: Experience
       text: |
 
-        ### Intern
-        **National Center for Supercomputing Applications**  
-        June 2025 - August 2025 · Urbana, IL
-
-        * Built parser for eBPF maps for 80+ VLANs and ports with configurable polling intervals via REST API
-        * Integrated with InfluxDB v3 for efficient storage and Grafana for real-time visualization
-        * Added configurable logging, reducing manual reconfiguration time by 40%
-
         ### Graduate Research Assistant
         **The University of Toledo**  
         August 2023 - Present · Toledo, OH
@@ -82,6 +74,14 @@ sections:
         * Developed TARDIS, a power-aware HPC scheduler using GNNs, cost reduction: 18% (temporal), 10-20% (spatial)
         * Developed LASP, a multi-armed bandit-based tuning strategy for HPC on edge devices, achieving 2.5% average performance gain over default settings.
         * Developed a SST-based scalable job scheduler, ensuring high accuracy in wait times, node usage, parallelization
+        
+        ### Intern
+        **National Center for Supercomputing Applications**  
+        June 2025 - August 2025 · Urbana, IL
+
+        * Built parser for eBPF maps for 80+ VLANs and ports with configurable polling intervals via REST API
+        * Integrated with InfluxDB v3 for efficient storage and Grafana for real-time visualization
+        * Added configurable logging, reducing manual reconfiguration time by 40%
 
         ### Visitor
         **NSF National Center for Atmospheric Research**  
@@ -180,6 +180,8 @@ sections:
       title: News
       text: |
         • **[May'26]** Attended 2026 ESIIL Innovation Summit Workshop held at Boulder, Colorado
+
+        • **[May'26]** Attended 2026 Attended Midwest RCD Workshop in Rosemont, Illinois
 
         • **[March'26]** Attended 2026 BRICCS Pathway Workshop held at Alexandria, Virginia
         
