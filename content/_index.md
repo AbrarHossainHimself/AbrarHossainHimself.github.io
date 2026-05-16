@@ -179,6 +179,8 @@ sections:
     content:
       title: News
       text: |
+        • **[May'26]** Attended 2026 ESIIL Innovation Summit Workshop held at Boulder, Colorado
+
         • **[March'26]** Attended 2026 BRICCS Pathway Workshop held at Alexandria, Virginia
         
         • **[February'26]** Our work on Network Ingestion got accepted to PASC'26 to be held in Bern, Switzerland
