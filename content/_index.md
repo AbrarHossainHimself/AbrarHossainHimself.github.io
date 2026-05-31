@@ -113,7 +113,7 @@ sections:
         ### 2026
         1. "**XOR Bidding and Knapsack Formulations for HPC Network Resource Allocation**"  
            Abrar Hossain, Kishwar Ahmed   
-           *Platform for Advanced Scientific Computing (PASC)  (PASC  2026)* 
+           *Platform for Advanced Scientific Computing (PASC  2026)* 
         
         
         ### 2025
