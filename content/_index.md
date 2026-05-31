@@ -52,7 +52,10 @@ sections:
   #   content:
   #     title: Education
   #     text: |
-  #       ### MSc in Computer Science, 2025 (Expected)
+  #       ### PhD in Computer Science, 2027 (Expected)
+  #       **The University of Toledo**
+
+          ### MSc in Computer Science, 2025 (Expected)
   #       **The University of Toledo**
         
   #       ### BSc in Electrical and Electronic Engineering, 2019
