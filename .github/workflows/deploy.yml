@@ -1,3 +1,4 @@
+# Builds the Hugo site (0.119.0 extended) and deploys it to GitHub Pages on every push to main.
 name: Deploy to GitHub Pages
 
 on:
@@ -40,8 +41,6 @@ jobs:
       - name: Build site
         run: |
           hugo --minify --baseURL "https://abrarhossainhimself.github.io/"
-          echo "Checking public directory contents:"
-          ls -la public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

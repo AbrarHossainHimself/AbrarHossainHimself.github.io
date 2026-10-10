@@ -1,4 +1,4 @@
-module github.com/HugoBlox/theme-academic-cv
+module github.com/AbrarHossainHimself/AbrarHossainHimself.github.io
 
 go 1.15
 

@@ -1,10 +1,17 @@
-# IDEs
-.idea/
-
-# Hugo
-resources/
+# Hugo build output and caches
 public/
-jsconfig.json
-node_modules/
-go.sum
+resources/
 .hugo_build.lock
+hugo_stats.json
+
+# Node / tooling
+node_modules/
+jsconfig.json
+
+# Editors and IDEs
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
