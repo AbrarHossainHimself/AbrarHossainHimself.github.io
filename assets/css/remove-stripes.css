@@ -1,0 +1,40 @@
+/* Direct targeting of horizontal stripes */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111111;
+    z-index: -2;
+    pointer-events: none;
+  }
+  
+  /* Override any horizontal striped patterns */
+  body > *, 
+  div[style*="linear-gradient"],
+  div[style*="repeating-linear-gradient"],
+  .home-section {
+    background-color: #111111 !important;
+    background-image: none !important;
+  }
+  
+  /* Target those specific horizontal stripes */
+  body > div:not(.navbar):not(.page-footer):not(.article):not(.home-section) {
+    background-color: #111111 !important;
+    background-image: none !important;
+  }
+  
+  /* Force a dark overlay over the entire page */
+  .page-wrapper::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.95);
+    z-index: -1;
+    pointer-events: none;
+  }
