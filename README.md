@@ -5,46 +5,66 @@ Source for my personal academic website, live at https://abrarhossainhimself.git
 
 ## Tech stack
 
-- [Hugo](https://gohugo.io/) **extended 0.119.0** (the version pinned in CI)
-- [Hugo Blox](https://hugoblox.com/) (Academic CV template), pulled in as Hugo Modules (see `go.mod` and `config/_default/module.yaml`)
-- [Go](https://go.dev/) is required locally so Hugo can fetch the modules
+- [Hugo](https://gohugo.io/) 0.167 (the version pinned in CI)
+- No theme, no Hugo Modules, no Go: a small custom layout lives in `layouts/`, with plain CSS and JS in `assets/` (fingerprinted via Hugo Pipes)
+- All page content is rendered from YAML files in `data/`
 
 ## Local development
 
-1. Install Go and Hugo extended 0.119.0.
-2. Clone the repo and start the dev server:
+```sh
+hugo server
+```
 
-   ```sh
-   git clone https://github.com/AbrarHossainHimself/AbrarHossainHimself.github.io.git
-   cd AbrarHossainHimself.github.io
-   hugo server
-   ```
-
-3. Open http://localhost:1313/. Production build: `hugo --minify`.
+Then open http://localhost:1313/. Production build: `hugo --minify` (output in `public/`).
 
 ## Deployment
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site with Hugo and publishes it to GitHub Pages. It can also be run manually from the Actions tab.
+Pushing to `main` runs `.github/workflows/deploy.yml`, which builds with Hugo 0.167.0 and publishes to GitHub Pages.
 
-## Repository layout
+## Editing content
 
-| Path | Contents |
+The homepage is generated entirely from `data/`; `content/_index.md` only holds the page title.
+
+| File | Controls |
 | --- | --- |
-| `config/_default/` | Site configuration: `hugo.yaml`, `params.yaml`, `menus.yaml` (top navigation and the CV link), `module.yaml`, `languages.yaml` |
-| `content/_index.md` | Homepage sections (biography, experience, publications list, news, talks) |
-| `content/authors/admin/` | Author profile (`_index.md`) and avatar |
-| `content/publication/` | One folder per publication page (`index.md`) |
-| `content/home/` | Extra homepage widget pages |
-| `content/privacy.md`, `content/terms.md` | Legal pages |
-| `layouts/partials/` | Custom widget and theme overrides, including `custom_head.html` and `custom_js.html` |
-| `static/` | Files served as-is; the CV PDF is `static/uploads/resume.pdf` |
-| `assets/media/` | Images used by the theme (`header.png`, `icon.png`) |
-| `data/` | Theme data files (fonts, themes) |
+| `data/profile.yaml` | Name, title, affiliation, photo path, SEO description, bio (markdown), job-market line, header links |
+| `data/research.yaml` | Research intro, current themes, and the earlier "past" block (e.g. Master's research) |
+| `data/publications.yaml` | Publication list: "Under review" first, then by year descending |
+| `data/news.yaml` | News items, newest first; the first 6 show, the rest sit behind "Show all" |
+| `data/experience.yaml` | Experience entries with bullet points |
+| `data/education.yaml` | Degrees |
+| `data/talks.yaml` | Talks, with optional video and slides links |
+| `data/awards.yaml` | Honors (name, year) and grants (one line each) |
+| `data/service.yaml` | Service groups, each with a heading and items |
 
-Custom theme CSS/JS lives in `static/` and `assets/` and is wired up via `layouts/partials/custom_head.html` and `custom_js.html`.
+Fields documented as markdown (bio, research bodies, news text, bullets, talk descriptions, grants, service items) accept inline markdown such as `**bold**` and links. Empty sections are hidden automatically.
 
-## Common edits
+### Add a publication
 
-- **Update the CV:** replace `static/uploads/resume.pdf` (linked from the "CV" menu entry in `config/_default/menus.yaml`).
-- **Add a publication:** create `content/publication/<name>/index.md`, using an existing one such as `content/publication/wsc-2024/index.md` as a template. The homepage "Publications" list is written by hand in `content/_index.md`, so add the entry there too.
-- **Edit homepage sections:** change the blocks under `sections:` in `content/_index.md`. Menu links such as `#experience` in `menus.yaml` point to the block `id`s.
+Append an entry to `data/publications.yaml`. Only the link keys you include are rendered (`pdf`, `doi`, `code`, `slides`, `video`, `bibtex`), and the abstract toggle appears only if `abstract` is non-empty. Your name is bolded automatically by matching `name` in `profile.yaml`.
+
+```yaml
+- title: "Paper title"
+  authors: ["Abrar Hossain", "Co Author"]
+  venue: "Full venue name"
+  venue_short: "VENUE 2026"
+  year: 2026
+  type: "Conference"      # Conference | Journal | Workshop | Poster | Book chapter
+  status: "published"     # published | under review
+  links:
+    pdf: "https://example.com/paper.pdf"
+    code: "https://github.com/me/repo"
+  abstract: ""
+```
+
+### Add a news item
+
+Add a line at the top of `data/news.yaml`:
+
+```yaml
+- { date: "2026-06", text: "Paper accepted to **VENUE 2026**" }
+```
+
+### Update the CV PDF
+
+Replace `static/uploads/resume.pdf` with the new file (keep the filename). The nav and header "CV" links point to `/uploads/resume.pdf`.

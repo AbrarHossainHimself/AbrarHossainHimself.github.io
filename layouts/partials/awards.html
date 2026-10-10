@@ -1,0 +1,19 @@
+{{- $a := hugo.Data.awards -}}
+{{- if or $a.honors $a.grants }}
+<section id="awards"><div class="wrap">
+  <h2>Awards &amp; grants</h2>
+  {{- with $a.honors }}
+  <dl class="svc award-list">
+    {{- range . }}
+    <dt>{{ .year }}</dt><dd>{{ .name }}</dd>
+    {{- end }}
+  </dl>
+  {{- end }}
+  {{- with $a.grants }}
+  <h3 class="sub">Travel &amp; workshop grants</h3>
+  <ul class="grants">
+    {{- range . }}<li>{{ . | markdownify }}</li>{{ end }}
+  </ul>
+  {{- end }}
+</div></section>
+{{- end }}

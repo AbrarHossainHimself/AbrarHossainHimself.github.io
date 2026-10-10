@@ -1,0 +1,5 @@
+baseURL = "https://abrarhossainhimself.github.io/"
+locale = "en-us"
+title = "Abrar Hossain"
+disableKinds = ["taxonomy", "term", "section", "RSS"]
+enableRobotsTXT = true

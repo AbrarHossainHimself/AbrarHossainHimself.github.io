@@ -1,0 +1,15 @@
+{{- with hugo.Data.talks }}
+<section id="talks"><div class="wrap">
+  <h2>Talks</h2>
+  {{- range . }}
+  <div class="talk">
+    <h3>{{ .title }}</h3>
+    <div class="meta">{{ .venue }}{{ with .date }} &middot; {{ . }}{{ end }}</div>
+    {{- with .description }}<p>{{ . | markdownify }}</p>{{ end }}
+    {{- if or .video .slides }}
+    <div class="pl">{{ with .video }}<a href="{{ . }}">video</a>{{ end }}{{ with .slides }}<a href="{{ . }}">slides</a>{{ end }}</div>
+    {{- end }}
+  </div>
+  {{- end }}
+</div></section>
+{{- end }}

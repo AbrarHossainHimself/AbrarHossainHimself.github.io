@@ -1,0 +1,144 @@
+- title: "Structured Reinforcement Learning for Loop Transformation in MLIR"
+  authors: ["Abrar Hossain", "Kishwar Ahmed"]
+  venue: "IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing (CCGrid)"
+  venue_short: "CCGrid 2027"
+  year: 2027
+  type: "Conference"
+  status: "under review"
+  links: {}
+  abstract: ""
+- title: "Risk-Controlling Multi-Fidelity Conformal Prediction"
+  authors: ["Abrar Hossain", "Kishwar Ahmed"]
+  venue: "ACM SIGMETRICS"
+  venue_short: "SIGMETRICS 2027"
+  year: 2027
+  type: "Conference"
+  status: "under review"
+  links: {}
+  abstract: ""
+- title: "CAWS: Congestion-Aware Warp Scheduling for GPU Memory-NoC Bottlenecks"
+  authors: ["Faeghe Farrokhpey", "Abrar Hossain", "Kishwar Ahmed"]
+  venue: "ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPoPP)"
+  venue_short: "PPoPP 2027"
+  year: 2027
+  type: "Conference"
+  status: "under review"
+  links: {}
+  abstract: ""
+- title: "Autotuning Across the High-Performance Computing Stack: Hardware, Software, and Application Optimization Techniques"
+  authors: ["Abrar Hossain", "Xingfu Wu", "Jason Liu", "Tapasya Patki", "Kishwar Ahmed"]
+  venue: "ACM Transactions on Parallel Computing"
+  venue_short: "ACM TOPC"
+  year: 2026
+  type: "Journal"
+  status: "under review"
+  links: {}
+  abstract: ""
+- title: "XOR Bidding and Knapsack Formulations for HPC Network Resource Allocation"
+  authors: ["Abrar Hossain", "Kishwar Ahmed"]
+  venue: "Platform for Advanced Scientific Computing (PASC)"
+  venue_short: "PASC 2026"
+  year: 2026
+  type: "Conference"
+  status: "published"
+  links: {}
+  abstract: ""
+- title: "Dynamic Instrumentation for Dataflow Accelerators"
+  authors: ["Md. Azahar Alam", "Abrar Hossain", "Kishwar Ahmed"]
+  venue: "European Conference on Computer Systems (EuroSys)"
+  venue_short: "EuroSys 2026"
+  year: 2026
+  type: "Conference"
+  status: "published"
+  links: {}
+  abstract: ""
+- title: "Power-Aware Scheduling for Multi-Center HPC Electricity Cost Optimization"
+  authors: ["Abrar Hossain", "Abubeker Abdurahman", "Mohammad Atiqul Islam", "Kishwar Ahmed"]
+  venue: "Job Scheduling Strategies for Parallel Processing (JSSPP), held with IPDPS"
+  venue_short: "JSSPP 2025"
+  year: 2025
+  type: "Conference"
+  status: "published"
+  links: {}
+  abstract: ""
+- title: "Enhanced Intrusion Detection in IIoT Networks: A Lightweight Approach with Autoencoder-Based Feature Learning"
+  authors: ["Tasnimul Hasan", "Abrar Hossain", "Mufakir Qamar Ansari", "Talha Hussain Syed"]
+  venue: "International Conference on Internet of Things, Big Data and Security (IoTBDS)"
+  venue_short: "IoTBDS 2025"
+  year: 2025
+  type: "Conference"
+  status: "published"
+  links: {}
+  abstract: ""
+- title: "An Interactive Learning Module for Introducing Parallel Computing"
+  authors: ["Abubeker Abdurahman", "Abrar Hossain", "Kishwar Ahmed"]
+  venue: "Topics in Parallel and Distributed Computing (TPCPD)"
+  venue_short: "TPCPD 2025"
+  year: 2025
+  type: "Book chapter"
+  status: "published"
+  links: {}
+  abstract: ""
+- title: "Cross-HPC System Bayesian Optimization with Adaptive Transfer"
+  authors: ["Abrar Hossain", "Kishwar Ahmed"]
+  venue: "SC: International Conference for High Performance Computing, Networking, Storage and Analysis"
+  venue_short: "SC 2025"
+  year: 2025
+  type: "Poster"
+  status: "published"
+  links: {}
+  abstract: ""
+- title: "Bandwidth Allocation for Heterogeneous HPC Data Ingestion using Dynamic Auctions"
+  authors: ["Abrar Hossain", "Kishwar Ahmed"]
+  venue: "IEEE International Conference on e-Science"
+  venue_short: "eScience 2025"
+  year: 2025
+  type: "Poster"
+  status: "published"
+  links: {}
+  abstract: ""
+- title: "HPC Application Parameter Autotuning on Edge Devices: A Bandit Learning Approach"
+  authors: ["Abrar Hossain", "Abdel-Hameed Badawy", "Mohammad Atiqul Islam", "Tapasya Patki", "Kishwar Ahmed"]
+  venue: "IEEE International Conference on High Performance Computing, Data, and Analytics (HiPC)"
+  venue_short: "HiPC 2024"
+  year: 2024
+  type: "Conference"
+  status: "published"
+  links: {}
+  abstract: ""
+- title: "Scalable HPC Job Scheduling and Resource Management in SST"
+  authors: ["Abubeker Abdurahman", "Abrar Hossain", "Kevin A Brown", "Kazutomo Yoshii", "Kishwar Ahmed"]
+  venue: "Winter Simulation Conference (WSC)"
+  venue_short: "WSC 2024"
+  year: 2024
+  type: "Conference"
+  status: "published"
+  links: {}
+  abstract: ""
+- title: "A Hands-On Approach To Teaching Parallel and Heterogeneous Computing"
+  authors: ["Abubeker Abdurahman", "Arihant Singh", "Abrar Hossain", "Kishwar Ahmed"]
+  venue: "Workshop on Education for High-Performance Computing (EduHiPC), held with HiPC"
+  venue_short: "EduHiPC 2024"
+  year: 2024
+  type: "Workshop"
+  status: "published"
+  links: {}
+  abstract: ""
+- title: "Environmental Data Sensing and Monitoring System Using Community-based Private LoRa Network"
+  authors: ["Abrar Hossain", "Keith Maull", "Agbeli Ameko"]
+  venue: "AGU Fall Meeting"
+  venue_short: "AGU 2024"
+  year: 2024
+  type: "Poster"
+  status: "published"
+  links: {}
+  abstract: ""
+- title: "Automating HPC Model Selection on Edge Devices"
+  authors: ["Abrar Hossain", "Kishwar Ahmed"]
+  venue: "SC: International Conference for High Performance Computing, Networking, Storage and Analysis"
+  venue_short: "SC 2023"
+  year: 2023
+  type: "Poster"
+  status: "published"
+  links: {}
+  abstract: ""

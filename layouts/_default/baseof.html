@@ -1,0 +1,44 @@
+{{- $p := hugo.Data.profile -}}
+{{- $css := resources.Get "css/main.css" | minify | fingerprint -}}
+{{- $js := resources.Get "js/main.js" | minify | fingerprint -}}
+{{- $desc := $p.description -}}
+{{- $pageTitle := printf "%s · %s, %s" $p.name $p.title $p.affiliation -}}
+{{- $img := $p.avatar | absURL -}}
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en" }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ $pageTitle }}{{ else }}{{ .Title }} · {{ $p.name }}{{ end }}</title>
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta name="theme-color" content="#faf6ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#171412" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ $p.name }}">
+<meta property="og:title" content="{{ $pageTitle }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ $img }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ $pageTitle }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $img }}">
+<link rel="icon" type="image/png" href="{{ "favicon.png" | relURL }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<script>
+(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}})();
+</script>
+{{- $same := slice -}}
+{{- range $p.links }}{{ if or (strings.HasPrefix .url "http://") (strings.HasPrefix .url "https://") }}{{ $same = $same | append .url }}{{ end }}{{ end }}
+{{- $ld := dict "@context" "https://schema.org" "@type" "Person" "name" $p.name "jobTitle" $p.title "url" site.Home.Permalink "image" $img "affiliation" (dict "@type" "CollegeOrUniversity" "name" $p.affiliation "url" $p.affiliation_url) "sameAs" $same }}
+<script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+</head>
+<body>
+{{ block "main" . }}{{ end }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+</body>
+</html>

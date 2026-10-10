@@ -1,0 +1,20 @@
+{{- $name := hugo.Data.profile.name -}}
+{{- $all := hugo.Data.publications -}}
+{{- if $all }}
+{{- $review := where $all "status" "under review" -}}
+{{- $pub := where $all "status" "published" -}}
+{{- $years := slice -}}
+{{- range $pub }}{{ $years = $years | append .year }}{{ end -}}
+{{- $years = sort ($years | uniq) "value" "desc" -}}
+<section id="publications"><div class="wrap">
+  <h2>Publications</h2>
+  {{- if $review }}
+  <h3 class="year">Under review</h3>
+  {{- range $review }}{{ partial "pub.html" (dict "p" . "name" $name) }}{{ end }}
+  {{- end }}
+  {{- range $y := $years }}
+  <h3 class="year">{{ $y }}</h3>
+  {{- range where $pub "year" $y }}{{ partial "pub.html" (dict "p" . "name" $name) }}{{ end }}
+  {{- end }}
+</div></section>
+{{- end }}
