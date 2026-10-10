@@ -1,0 +1,10 @@
+{{- with hugo.Data.service.groups }}
+<section id="service"><div class="wrap">
+  <h2>Service</h2>
+  <dl class="svc">
+    {{- range . }}
+    <dt>{{ .heading }}</dt><dd><ul>{{ range .items }}<li>{{ . | markdownify }}</li>{{ end }}</ul></dd>
+    {{- end }}
+  </dl>
+</div></section>
+{{- end }}

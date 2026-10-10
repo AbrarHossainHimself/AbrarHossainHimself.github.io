@@ -4,10 +4,6 @@ resources/
 .hugo_build.lock
 hugo_stats.json
 
-# Node / tooling
-node_modules/
-jsconfig.json
-
 # Editors and IDEs
 .idea/
 .vscode/

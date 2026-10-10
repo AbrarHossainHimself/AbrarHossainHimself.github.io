@@ -1,0 +1,9 @@
+{{- $edu := hugo.Data.education -}}
+{{- if $edu }}
+<div{{ if ne . "first" }} class="edu"{{ end }}>
+  <h2{{ if ne . "first" }} style="margin-bottom:1.2rem"{{ end }}>Education</h2>
+  {{- range $edu }}
+  <div class="job"><div class="when">{{ .years }}{{ with .location }}<br>{{ . }}{{ end }}</div><div><h3>{{ .degree }}</h3><div class="org">{{ .institution }}</div></div></div>
+  {{- end }}
+</div>
+{{- end }}

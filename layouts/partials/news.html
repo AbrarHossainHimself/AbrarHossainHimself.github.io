@@ -1,0 +1,15 @@
+{{- $news := hugo.Data.news -}}
+{{- if $news }}
+{{- $n := 6 -}}
+<section id="news"><div class="wrap">
+  <h2>News</h2>
+  <ul class="news" id="news-list">
+    {{- range $i, $e := $news }}
+    <li{{ if ge $i $n }} class="more"{{ end }}><time datetime="{{ $e.date }}">{{ dateFormat "Jan 2006" (printf "%s-01" $e.date) }}</time><span>{{ $e.text | markdownify }}</span></li>
+    {{- end }}
+  </ul>
+  {{- if gt (len $news) $n }}
+  <button class="btn" id="news-toggle" type="button" aria-expanded="false" aria-controls="news-list">Show all ({{ len $news }})</button>
+  {{- end }}
+</div></section>
+{{- end }}

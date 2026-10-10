@@ -1,0 +1,21 @@
+{{- $p := hugo.Data.profile -}}
+<header class="hero" id="about">
+  <div class="wrap">
+    <div class="id">
+      <img src="{{ $p.avatar | relURL }}" alt="Portrait of {{ $p.name }}" width="116" height="116">
+      <div>
+        <h1>{{ $p.name }}</h1>
+        <p class="title">{{ $p.title }}<br>{{ if $p.affiliation_url }}<a href="{{ $p.affiliation_url }}">{{ $p.affiliation }}</a>{{ else }}{{ $p.affiliation }}{{ end }}{{ with $p.expected }} &middot; {{ . }}{{ end }}</p>
+      </div>
+    </div>
+    {{ with $p.bio }}<p class="bio">{{ . | markdownify }}</p>{{ end }}
+    {{ with $p.job_market }}<div class="market">{{ . }}</div>{{ end }}
+    {{ with $p.links }}
+    <ul class="links">
+      {{- range . }}
+      <li><a href="{{ if strings.HasPrefix .url "/" }}{{ .url | relURL }}{{ else }}{{ .url }}{{ end }}">{{ .label }}</a></li>
+      {{- end }}
+    </ul>
+    {{ end }}
+  </div>
+</header>

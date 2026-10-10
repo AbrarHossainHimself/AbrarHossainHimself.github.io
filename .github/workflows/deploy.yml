@@ -1,4 +1,4 @@
-# Builds the Hugo site (0.119.0 extended) and deploys it to GitHub Pages on every push to main.
+# Builds the Hugo site (Hugo 0.167.0) and deploys it to GitHub Pages on every push to main.
 name: Deploy to GitHub Pages
 
 on:
@@ -27,12 +27,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          submodules: recursive
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.119.0'
+          hugo-version: '0.167.0'
           extended: true
 
       - name: Setup Pages
@@ -40,7 +39,7 @@ jobs:
 
       - name: Build site
         run: |
-          hugo --minify --baseURL "https://abrarhossainhimself.github.io/"
+          hugo --minify
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

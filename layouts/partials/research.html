@@ -1,0 +1,24 @@
+{{- $r := hugo.Data.research -}}
+{{- if or $r.current $r.past.items }}
+<section id="research"><div class="wrap">
+  <h2>Research</h2>
+  {{ with $r.intro }}<p>{{ . | markdownify }}</p>{{ end }}
+  {{ with $r.current }}
+  <div class="theme">
+    {{- range . }}
+    <div class="tp"><h3>{{ .title }}</h3>
+    <p>{{ .body | markdownify }}</p></div>
+    {{- end }}
+  </div>
+  {{ end }}
+  {{ with $r.past }}{{ if .items }}
+  <div class="theme past">
+    {{ with .label }}<h3 class="sub">{{ . }}</h3>{{ end }}
+    {{- range .items }}
+    <div class="tp"><h3>{{ .title }}</h3>
+    <p>{{ .body | markdownify }}</p></div>
+    {{- end }}
+  </div>
+  {{ end }}{{ end }}
+</div></section>
+{{- end }}

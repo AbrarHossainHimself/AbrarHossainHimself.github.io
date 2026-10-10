@@ -1,0 +1,19 @@
+{{- $p := hugo.Data.profile -}}
+{{- $home := "/" | relURL -}}
+{{- $cv := "" -}}{{ range $p.links }}{{ if eq .label "CV" }}{{ $cv = .url }}{{ end }}{{ end -}}
+<nav aria-label="Primary">
+  <div class="wrap">
+    <a class="mark" href="{{ $home }}#top">{{ $p.name }}</a>
+    <div class="navr">
+      <ul>
+        <li><a href="{{ $home }}#about">About</a></li>
+        <li><a href="{{ $home }}#research">Research</a></li>
+        <li><a href="{{ $home }}#publications">Publications</a></li>
+        <li><a href="{{ $cv | default "/uploads/resume.pdf" | relURL }}">CV</a></li>
+      </ul>
+      <button id="theme" type="button" aria-label="Toggle dark mode" title="Toggle light / dark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>

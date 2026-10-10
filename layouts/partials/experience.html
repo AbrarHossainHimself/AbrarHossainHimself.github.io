@@ -1,0 +1,17 @@
+{{- $exp := hugo.Data.experience -}}
+{{- $edu := hugo.Data.education -}}
+{{- if or $exp $edu }}
+<section id="cv"><div class="wrap">
+  {{- if $exp }}
+  <h2>Experience</h2>
+  {{- range $exp }}
+  <div class="job"><div class="when">{{ .start }}{{ with .end }} &ndash; {{ if eq . "Present" }}present{{ else }}{{ . }}{{ end }}{{ end }}{{ with .location }}<br>{{ . }}{{ end }}</div>
+    <div><h3>{{ .role }}</h3><div class="org">{{ .org }}</div>
+    {{- with .bullets }}
+    <ul>{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ul>
+    {{- end }}</div></div>
+  {{- end }}
+  {{- end }}
+  {{ partial "education.html" (cond (not $exp) "first" "") }}
+</div></section>
+{{- end }}

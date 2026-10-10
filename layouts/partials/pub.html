@@ -1,0 +1,19 @@
+{{- $p := .p -}}
+{{- $name := .name -}}
+{{- $id := printf "abs-%s" (substr (md5 $p.title) 0 8) -}}
+{{- $links := $p.links | default dict -}}
+{{- $abs := trim ($p.abstract | default "") " \n" -}}
+{{- $keys := slice "pdf" "doi" "code" "slides" "video" "bibtex" -}}
+{{- $any := false -}}
+{{- range $keys }}{{ if index $links . }}{{ $any = true }}{{ end }}{{ end -}}
+<article class="pub">
+  <span class="t">{{ $p.title }}</span>
+  <div class="a">{{ range $i, $a := $p.authors }}{{ if $i }}, {{ end }}{{ if eq $a $name }}<b>{{ $a }}</b>{{ else }}{{ $a }}{{ end }}{{ end }}</div>
+  <div class="v"><em>{{ $p.venue }}</em>{{ with $p.venue_short }}<span class="tag">{{ . }}</span>{{ end }}{{ if and $p.type (ne $p.type "Conference") }}<span class="tag type">{{ $p.type }}</span>{{ end }}</div>
+  {{- if or $any $abs }}
+  <div class="pl">{{ range $k := $keys }}{{ with index $links $k }}<a href="{{ . }}">{{ $k }}</a>{{ end }}{{ end }}{{ if $abs }}<button type="button" aria-expanded="false" aria-controls="{{ $id }}" data-abs>abstract</button>{{ end }}</div>
+  {{- end }}
+  {{- if $abs }}
+  <p class="abs" id="{{ $id }}">{{ $abs }}</p>
+  {{- end }}
+</article>

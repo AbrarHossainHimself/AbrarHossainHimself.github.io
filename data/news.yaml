@@ -1,0 +1,33 @@
+- { date: "2026-05", text: "Attended 2026 ESIIL Innovation Summit held at Boulder, Colorado" }
+- { date: "2026-05", text: "Attended 2026 Midwest RCD Workshop in Rosemont, Illinois" }
+- { date: "2026-03", text: "Attended 2026 BRICCS Pathway Workshop held at Alexandria, Virginia" }
+- { date: "2026-02", text: "Our work on Network Ingestion was accepted to PASC'26, to be held in Bern, Switzerland" }
+- { date: "2026-01", text: "Attended 2026 RMACC HPC Sys Admin Workshop held at UC Boulder" }
+- { date: "2025-10", text: "Awarded the SGX3 Rising Star of the Year Award for my research work" }
+- { date: "2025-10", text: "Presented our work on Network Ingestion at USRSE in Philadelphia, Pennsylvania" }
+- { date: "2025-09", text: "Our poster on Cross-System Autotuning was accepted at SC'25, to be held in St. Louis, Missouri" }
+- { date: "2025-08", text: "Received eScience 2025 NSF Travel Grant" }
+- { date: "2025-08", text: "Our work on Network Ingestion was accepted to eScience'25, to be held in Chicago, Illinois" }
+- { date: "2025-08", text: "Received Cluster 2025 NSF Travel Grant" }
+- { date: "2025-08", text: "Attended 2025 CI4FAIR Workshop held at Purdue University" }
+- { date: "2025-07", text: "Served as Session Chair for the Systems and Software Systems Track Session at PEARC'25" }
+- { date: "2025-07", text: "Served as Poster and Visualization Judge at PEARC'25" }
+- { date: "2025-07", text: "Served as Student Volunteer at PEARC'25" }
+- { date: "2025-06", text: "Started internship at NCSA, working with the NDTS team" }
+- { date: "2025-05", text: "Received UToledo Graduate Research Assistant Recognition Award" }
+- { date: "2025-04", text: "Attended Midwest RCD Workshop in Cleveland, Ohio" }
+- { date: "2025-03", text: "Our work on Power-Aware Scheduling was accepted to JSSPP'25, to be held in Milan, Italy" }
+- { date: "2025-03", text: "Received 2025 Midwest RCD Symposium Scholarship" }
+- { date: "2025-03", text: "Received 2024 Bangladesh Sweden Trust Fund Scholarship" }
+- { date: "2025-02", text: "Served as Reviewer for PEARC'25" }
+- { date: "2025-02", text: "Our paper on lightweight IIoT intrusion detection was accepted to IoTBDS'25" }
+- { date: "2024-12", text: "Presented my NSF NCAR openIoTwx project at AGU'24" }
+- { date: "2024-12", text: "Received 2024 IEEE HiPC TCPP Travel Grant" }
+- { date: "2024-11", text: "Received 2024 Friends Education Fund Scholarship" }
+- { date: "2024-11", text: "Received 2024 AGU Student Travel Grant" }
+- { date: "2024-10", text: "Our work on HPC Autotuning was accepted to HiPC'24, to be held in Bangalore, India" }
+- { date: "2024-10", text: "Received 2024 SIParCS Student Travel Grant" }
+- { date: "2024-06", text: "Our work on SST-based scheduling was accepted to WSC'24" }
+- { date: "2024-05", text: "Extended my tenure at NSF NCAR as a visitor" }
+- { date: "2024-03", text: "Started internship at NSF NCAR, working with the openIoTwx team" }
+- { date: "2023-09", text: "Our poster on lightweight HPC Autotuning was accepted at SC'23" }

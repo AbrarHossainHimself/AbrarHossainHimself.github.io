@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ partial "nav.html" . }}
+<main id="top">
+<div class="wrap notfound">
+  <h2>404</h2>
+  <h1>Page not found</h1>
+  <p class="title">The page you were looking for does not exist.</p>
+  <p style="margin-top:1.4rem"><a href="{{ "/" | relURL }}">Back to the homepage</a></p>
+</div>
+</main>
+{{ partial "footer.html" . }}
+{{ end }}
