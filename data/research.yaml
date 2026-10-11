@@ -1,13 +1,17 @@
-intro: "My research makes high-performance systems faster and easier to tune, and makes their behavior easier to observe and predict."
+intro: "I work on making high-performance systems faster, easier to optimize, and more predictable."
+
 current:
   - title: "Autotuning & compiler optimization"
-    body: "I build learning-based autotuners that search the space of program and system configurations. LoopRL uses structured reinforcement learning to choose loop transformations in MLIR, the compiler infrastructure behind many modern ML and HPC toolchains. I also work on Bayesian optimization that transfers knowledge across HPC systems, on bandit-based tuning for edge devices (LASP), and on a survey of autotuning techniques across the HPC stack."
+    body: "I work on learning-based autotuning for compilers and HPC systems, including reinforcement learning for MLIR loop transformations (LoopRL), transfer-aware Bayesian optimization, and bandit-based tuning for edge devices (LASP). I also study autotuning techniques across the HPC stack."
+
   - title: "Instrumentation & performance analysis"
-    body: "I work on understanding where performance goes on modern accelerators. This includes dynamic instrumentation for dataflow accelerators and congestion-aware warp scheduling that targets memory and network-on-chip bottlenecks in GPUs."
+    body: "I work on performance analysis of modern accelerators, focusing on dynamic instrumentation for dataflow architectures and congestion-aware GPU warp scheduling."
+
   - title: "Reliable performance prediction"
-    body: "I study how to make performance models trustworthy when measurements come at different fidelities and costs. Risk-controlling multi-fidelity conformal prediction provides prediction guarantees while combining cheap and expensive sources of data."
+    body: "I work on risk-controlled multi-fidelity conformal prediction to improve the reliability of performance estimates using measurements with varying costs and accuracy."
+
 past:
   label: "Master's research"
   items:
     - title: "Power- and cost-aware HPC scheduling"
-      body: "I developed TARDIS, a power-aware scheduler that uses graph neural networks, and studied electricity cost optimization across multiple HPC centers. I also formulated network resource allocation for HPC data ingestion using auctions and knapsack models, and built a scalable job scheduling and resource management simulator on SST."
+      body: "I worked on power-aware HPC scheduling using graph neural networks (TARDIS), electricity cost optimization across HPC centers, auction-based network resource allocation, and scalable scheduling simulation using SST."
