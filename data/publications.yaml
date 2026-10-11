@@ -7,7 +7,7 @@
   status: "under review"
   links: {}
   abstract: ""
-- title: "Risk-Controlling Multi-Fidelity Conformal Prediction"
+- title: "Universal Acquisition for Risk Certification with Informative Completion Times"
   authors: ["Abrar Hossain", "Kishwar Ahmed"]
   venue: "ACM SIGMETRICS"
   venue_short: "SIGMETRICS 2027"
